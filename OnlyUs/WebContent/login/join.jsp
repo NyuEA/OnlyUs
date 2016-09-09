@@ -65,23 +65,22 @@
 			<td height="7" colspan="2">
 		</tr>
 		<tr>
-			<td align="center" colspan="2">
-			<input name="addr1" id="addr1" size="40"
-				readonly="" placeholder="도로명주소"> <br> <span
+			<td align="center" colspan="2"><input name="addr1" id="addr1"
+				size="40" readonly="" placeholder="도로명주소"> <br> <span
 				style="line-height: 10%;"><br></span> <input name="addr2"
 				id="addr2" size="40" placeholder="지번주소"> <!-- 다음주소 끝 --></td>
-		</td>
 		</tr>
 		<tr>
 			<td height="7" colspan="2">
 		</tr>
 		<tr>
-			<td colspan="2"  align="center">휴대폰 <select name="phone1" id="phone1">
+			<td colspan="2" align="center">휴대폰 <select name="phone1"
+				id="phone1">
 					<option value="010">010</option>
 					<option value="011">011</option>
 					<option value="017">017</option>
-			</select>- <input type="text" name="phone2" id="phone2" maxlength="4" size="2">- <input
-				type="text" name="phone3" id="phone3" maxlength="4" size="2">
+			</select>- <input type="text" name="phone2" id="phone2" maxlength="4" size="2">-
+				<input type="text" name="phone3" id="phone3" maxlength="4" size="2">
 			</td>
 		</tr>
 		<tr>
