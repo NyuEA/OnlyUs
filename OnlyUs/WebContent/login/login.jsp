@@ -4,55 +4,42 @@
 	src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="http://www.modernizr.com/downloads/modernizr-latest.js"></script>
 <script type="text/javascript" src="../js/placeholder.js"></script>
+
+<script type="text/javascript">
+<%-- class="placeholder" placeholder="<% if($(".BG").equals("사업자")){
+%>	사업자번호로 로그인<%}else{%>id<%}
+%> --%>
+</script>
+
 <link href="css/style.css" rel="stylesheet" type="text/css">
 
 <img id="slick-back" src="images/backG.png" />
 
-<img id="slick-logotitle" src="images/logotitle.png" />
 
 
 <form id="slick-login">
-	<img id="slick-logo" src="images/logo.png" />
-	<img id="slick-logo2" src="images/logo2.png" />
-	<table id="bisuser">
+	<img id="slick-logos" src="images/logo1.png" />
+	<table id="bisgen">
 		<tr>
-			<td><b>사업자번호로 로그인</b></td>			
+			<td><input type="radio" name="BG"  id="c1" value="사업자" >사업자</td>			
+			<td><input type="radio" name="BG" id="c2" value="일반">일반</td>			
+		</tr>
+		
+		<tr>
+			<td colspan="2"><label for="username">username</label>
+			<input type="text" name="username" value="사업자로그인"> </td>			
 		</tr>
 		<tr>
-			<td><label for="username">username</label><input type="text"
-			name="username" class="placeholder" placeholder="id"> </td>			
+			<td colspan="2"><label
+			for="password">password</label>
+			<input type="password" name="password"	class="placeholder" placeholder="password"></td>			
 		</tr>
 		<tr>
-			<td><label
-			for="password">password</label><input type="password" name="password"
-			class="placeholder" placeholder="password"></td>			
-		</tr>
-		<tr>
-			<td><input type="submit" value="LOGIN"></td>			
+			<td colspan="2"><input type="submit" value="LOGIN"></td>			
 		</tr>
 
 	</table>
 	
-	<table id="genuser">
-			<tr>
-			<td><b>일반회원 로그인</b></td>			
-		</tr>
-		<tr>
-			<td><label for="username">username</label><input type="text"
-			name="username" class="placeholder" placeholder="id"> </td>			
-		</tr>
-		<tr>
-			<td><label
-			for="password">password</label><input type="password" name="password"
-			class="placeholder" placeholder="password"></td>			
-		</tr>
-		<tr>
-			<td><input type="submit" value="LOGIN"></td>			
-		</tr>
-
-	</table>
-
-
 </form>
 
 <footer>

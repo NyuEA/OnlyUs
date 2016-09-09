@@ -144,6 +144,18 @@ body {
 	height: 850px;	
 }
 
+#bisgen{
+	
+	width: 220px;
+	height: 155px;
+	position:absolute;
+	left: 50%;
+	top: 57%;
+	margin-left: -110px;
+	margin-top: -75px;
+	
+}
+
 #bisuser{
 	
 	width: 220px;
@@ -184,6 +196,16 @@ body {
 	height: 680px;
 	position: absolute;
 	left: 65%;
+	top: 20%;
+	margin-left: -200px;
+	margin-top: -75px
+}
+
+#slick-logos {
+	width: 400px;
+	height: 680px;
+	position: absolute;
+	left: 50%;
 	top: 20%;
 	margin-left: -200px;
 	margin-top: -75px
