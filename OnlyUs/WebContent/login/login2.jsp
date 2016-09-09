@@ -2,8 +2,6 @@
 	pageEncoding="UTF-8"%>
 <script type="text/javascript"
 	src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="http://www.modernizr.com/downloads/modernizr-latest.js"></script>
-<script type="text/javascript" src="../js/placeholder.js"></script>
 <link href="css/style.css" rel="stylesheet" type="text/css">
 
 <img id="slick-back" src="images/backG.png" />
