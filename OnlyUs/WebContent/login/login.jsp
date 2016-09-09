@@ -52,7 +52,7 @@ $(document).ready(function(){
       <tr>
 
          <td colspan="1" ><input type="submit" value="LOGIN" id="login"></td>
-         <td colspan="1"><input type="submit" value="Join" id="join"></td>
+         <td colspan="1"><input type="submit" value="JOIN" id="join"></td>
          
       </tr>
 

@@ -19,7 +19,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 }
 
 html{
-      background:url(image/backG.png); 
+      background:url(../images/backG.png); 
    
 }
 
@@ -365,11 +365,11 @@ body {
    border-radius: 6px;
 
    background-color: #5466da;
-   background-image: -webkit-linear-gradient(bottom, #d4d4d4 0%, #d2d2d2 100%);
-   background-image: -moz-linear-gradient(bottom, #d4d4d4 0%, #d2d2d2 100%);
-   background-image: -o-linear-gradient(bottom, #d4d4d4 0%, #d2d2d2 100%);
-   background-image: -ms-linear-gradient(bottom, #d4d4d4 0%, #d2d2d2 100%);
-   background-image: linear-gradient(bottom, #d4d4d4 0%, #d2d2d2 100%);
+   background-image: -webkit-linear-gradient(bottom, #d4d4d4 0%, #d0d0d0 100%);
+   background-image: -moz-linear-gradient(bottom, #d4d4d4 0%, #d0d0d0 100%);
+   background-image: -o-linear-gradient(bottom, #d4d4d4 0%, #d0d0d0 100%);
+   background-image: -ms-linear-gradient(bottom, #d4d4d4 0%, #d0d0d0 100%);
+   background-image: linear-gradient(bottom, #d4d4d4 0%, #d0d0d0 100%);
    
    -webkit-box-shadow: inset 0px 1px 0px #9ab1ec;
    box-shadow: inset 0px 1px 0px #9ab1ec;
