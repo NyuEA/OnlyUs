@@ -11,8 +11,8 @@
 }
 </style>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-<script src="js/daum.js"></script>
-<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+<script src="../js/daum.js"></script>
+<script type="text/javascript" src="../js/jquery-3.1.0.js"></script>
 <!-- DAUM 주소 라이브러리 끝 -->
 <form action="MemberAddServlet">
 	<table>
