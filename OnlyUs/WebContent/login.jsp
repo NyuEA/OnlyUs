@@ -10,6 +10,6 @@
 <title>로그인</title>
 </head>
 <body>
-<jsp:include page="door/door.jsp" flush="true"></jsp:include>
+<jsp:include page="login/login.jsp" flush="true"></jsp:include>
 </body>
 </html>

@@ -18,8 +18,14 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 	display: block;
 }
 
+html{
+		background:url(image/backG.png); 
+	
+}
+
 body {
 	line-height: 1;
+	
 }
 
 ol,ul {
@@ -131,29 +137,61 @@ body {
 
 #slick-back {
 	width: 100%;
-	height: 850px;
-	
+	height: 850px;	
+}
+#slick-back2 {
+	width: 100%;
+	height: 850px;	
+}
+
+#bisuser{
+	text-align:left;
+	width: 220px;
+	height: 155px;
+	position: absolute;
+	left: 65%;
+	top: 57%;
+	margin-left: -110px;
+	margin-top: -75px;
 	
 }
+
+
+#genuser{
+	text-align:right;
+	width: 220px;
+	height: 155px;
+	position: absolute;
+	left: 35%;
+	top: 57%;
+	margin-left: -110px;
+	margin-top: -75px;
+}
+
 
 #slick-logo {
 	width: 400px;
 	height: 680px;
 	position: absolute;
-	left: 43%;
+	left: 65%;
 	top: 20%;
-	margin-left: -110px;
+	margin-left: -200px;
 	margin-top: -75px
 }
 
-#slick-login {
-	width: 220px;
-	height: 155px;
+#slick-logo2 {
+	width: 400px;
+	height: 680px;
 	position: absolute;
-	left: 50%;
-	top: 57%;
-	margin-left: -110px;
-	margin-top: -75px;
+	left: 35%;
+	top: 20%;
+	margin-left: -200px;
+	margin-top: -75px
+}
+
+
+#slick-login {
+	
 
 	-webkit-animation: login 1s ease-in-out;
 	-moz-animation: login 1s ease-in-out;
@@ -163,6 +201,9 @@ body {
 }
 
 #slick-login label {
+	display: none;
+}
+#slick-login2 label {
 	display: none;
 }
 
@@ -272,6 +313,8 @@ body {
 	box-shadow: inset 0px 1px 0px #93a9e9;
 }
 
+
+
 footer{
 	background-color:#d9d9d9;
 	text-align:center;
@@ -285,3 +328,10 @@ footer,div {
 	
 	
 }
+img{
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
