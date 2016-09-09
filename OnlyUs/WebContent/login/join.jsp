@@ -68,7 +68,8 @@
 			<td align="center" colspan="2"><input name="addr1" id="addr1"
 				size="40" readonly="" placeholder="도로명주소"> <br> <span
 				style="line-height: 10%;"><br></span> <input name="addr2"
-				id="addr2" size="40" placeholder="지번주소"> <!-- 다음주소 끝 --></td>
+				id="addr2" size="40" placeholder="지번주소"> <!-- 다음주소 끝 -->
+				</td>
 		</tr>
 		<tr>
 			<td height="7" colspan="2">
