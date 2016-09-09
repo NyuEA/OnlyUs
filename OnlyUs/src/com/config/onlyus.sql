@@ -17,8 +17,10 @@ create table bisUser
   ( userid varchar2(10) primary key,
    passwd varchar2(20) not null,
    nickname varchar2(10) not null,
+  birthday Date default null,
    preferbis varchar2(10));
    
+   drop table genUser;
    insert into genUser values('admin','admin','°ü¸®ÀÚ',null);
    commit;
   
