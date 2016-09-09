@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<meta name="description" content="slick Login">
+<meta name="author" content="Webdesigntuts+">
+
+
+<title>로그인</title>
 </head>
 <body>
-
+<jsp:include page="door/door.jsp" flush="true"></jsp:include>
 </body>
 </html>
