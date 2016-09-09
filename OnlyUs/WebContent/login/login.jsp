@@ -8,12 +8,16 @@
 
 <img id="slick-back" src="images/backG.png" />
 
-
+<img id="slick-logotitle" src="images/logotitle.png" />
 
 
 <form id="slick-login">
-	<img id="slick-logo" src="images/mooon1.png" />
+	<img id="slick-logo" src="images/logo.png" />
+	<img id="slick-logo2" src="images/logo2.png" />
 	<table id="bisuser">
+		<tr>
+			<td><b>사업자번호로 로그인</b></td>			
+		</tr>
 		<tr>
 			<td><label for="username">username</label><input type="text"
 			name="username" class="placeholder" placeholder="id"> </td>			
@@ -30,7 +34,9 @@
 	</table>
 	
 	<table id="genuser">
-		<img id="slick-logo2" src="images/mooon2.png" />
+			<tr>
+			<td><b>일반회원 로그인</b></td>			
+		</tr>
 		<tr>
 			<td><label for="username">username</label><input type="text"
 			name="username" class="placeholder" placeholder="id"> </td>			
