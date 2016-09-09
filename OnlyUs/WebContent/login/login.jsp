@@ -37,6 +37,9 @@
 		<tr>
 			<td colspan="2"><input type="submit" value="LOGIN"></td>			
 		</tr>
+		<tr>
+			<td colspan="2"><input type="submit" value="Join"></td>			
+		</tr>
 
 	</table>
 	
