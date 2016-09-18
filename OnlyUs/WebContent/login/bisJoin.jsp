@@ -14,7 +14,7 @@
 <script src="../js/daum.js"></script>
 <script type="text/javascript" src="../js/jquery-3.1.0.js"></script>
 <!-- DAUM 주소 라이브러리 끝 -->
-<form action="MemberAddServlet">
+<form action="bisMemberAddServlet">
 	<table>
 		<tr>
 			<th colspan="2"><font size="6">사업자 회원가입</font></th>
