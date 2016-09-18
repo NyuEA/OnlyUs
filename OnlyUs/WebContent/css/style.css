@@ -253,7 +253,9 @@ body {
 /* 회원가입 뒷 배경 */
 #slick-backjoin {
 
-margin-left: -325px;
+
+height: 600px;
+width: 100%;
 	
 }
 
@@ -542,6 +544,7 @@ img {
 	position: absolute;
 	left: -17%;
 	top: -30%;
+
 	
 		
 }

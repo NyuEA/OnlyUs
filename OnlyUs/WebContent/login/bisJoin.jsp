@@ -15,11 +15,11 @@
 <script src="../js/daum.js"></script>
 <script type="text/javascript" src="../js/jquery-3.1.0.js"></script>
 
-
+<img id="slick-backjoin" src="../images/BbackG.png" />
 <!-- action="bisMemberAddServlet" -->
-<form id="slick-login" action="genMemberAddServlet" >
-   <img id="slick-logos" src="../images/logo1.png" />
-   <table id="bisgen">
+<form id="slick-join" action="genMemberAddServlet" >
+  
+   <table id="bisjoin">
     <tr>
 			<th colspan="2"><font size="6">사업자 회원가입</font></th>
 		</tr>
@@ -39,7 +39,7 @@
 		<tr>
 			<th>비밀번호</th>
 			<td><input type="password" name="passwd" id="passwd"><span
-				id="result2"></span></td>
+				id="result2" style="width: 400px"></span></td>
 		</tr>
 		<tr>
 			<td height="7" colspan="2">
@@ -84,8 +84,8 @@
 					<option value="010">010</option>
 					<option value="011">011</option>
 					<option value="017">017</option>
-			</select>- <input type="text" name="phone2" id="phone2" maxlength="4" size="2">-
-				<input type="text" name="phone3" id="phone3" maxlength="4" size="2">
+			</select>- <input type="text" name="phone2" id="phone2" maxlength="4" size="1" style="width: 100px">-
+				<input type="text" name="phone3" id="phone3" maxlength="4" size="1" style="width: 100px">
 			</td>
 		</tr>
 		<tr>
@@ -111,9 +111,9 @@
 			var p = $("#passwd").val();
 			var p2 = $("#passwd2").val();
 			if (p == p2) {
-				$("#result2").text("일치").addClass("blue");
+				$("#result2").text("일치합니다").addClass("blue");
 			} else {
-				$("#result2").text("불일치").addClass("red");
+				$("#result2").text("일치하지않습니다").addClass("red");
 				;
 			}
 		});
