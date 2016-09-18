@@ -17,7 +17,7 @@
 
 
 <!-- action="bisMemberAddServlet" -->
-<form id="slick-login" >
+<form id="slick-login" action="genMemberAddServlet" >
    <img id="slick-logos" src="../images/logo1.png" />
    <table id="bisgen">
     <tr>
@@ -125,7 +125,7 @@
 
 
 		// 아이디 중복체크 Ajax 연동
-		$("#userid").on("keyup", function(event) {
+		$("#bisid").on("keyup", function(event) {
 
 			//Ajax 연동 
 			//ajax통신
@@ -134,7 +134,7 @@
 				url : "idCheck.jsp",
 				dataType : "text",
 				data : {
-					userid : $("#userid").val()
+					userid : $("#bisid").val()
 				},
 				success : function(responseData, status, xhr) {
 					console.log(responseData);
