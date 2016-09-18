@@ -20,26 +20,13 @@ center {
 	height:520px;
 }
 
-#footer {
-	fixed: 0;
-	bottom: 0px;
-	width: 100%;
-	height: 200px;
-	margin-top: 50px;
-}
+
 #login{
 	text-align: center;
 	
 }
 
-#foo {
-	background-color:gray;
-	fixed: 0;
-	bottom: 0px;
-	width: 100%;
-	height: 300px;
-	margin-top: 50px;
-}
+
 #gray1 {
 	color:#000000;
 	background-color:gray;	
@@ -56,9 +43,11 @@ center {
 }
 
 /*헤더 메뉴입니다*/
- ul.mn {  }
- ul.mn li { position:relative; float:left; padding:0 20px; font:normal 14px/30px "나눔고딕", "돋움", "굴림";}
- ul.mn li ul { display:none; position:absolute; top:30px; left:0; }
- ul.mn li:hover ul { display: inline; }
- ul.mn li ul li { font:normal 12px/20px "나눔고딕", "돋움", "굴림"; }
+#logoimg{
+	padding-top : 20px;
+	padding-bottom : 20px;
+	width:200px;
+	height: auto;
+	
+}
 
