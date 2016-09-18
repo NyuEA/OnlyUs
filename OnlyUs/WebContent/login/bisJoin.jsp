@@ -17,7 +17,7 @@
 
 
 <!-- action="bisMemberAddServlet" -->
-<form id="slick-login" >
+<form id="slick-login" action="genMemberAddServlet" >
    <img id="slick-logos" src="../images/logo1.png" />
    <table id="bisgen">
     <tr>
@@ -134,7 +134,7 @@
 				url : "idCheck.jsp",
 				dataType : "text",
 				data : {
-					bisid : $("#bisid").val()
+					userid : $("#bisid").val()
 				},
 				success : function(responseData, status, xhr) {
 					console.log(responseData);
