@@ -48,7 +48,7 @@
 
 		<DIV id="container">
 			<!--비쥬얼영역-->
-			<DIV class="visual"></DIV>
+			<DIV class="visual"><img src ="../images/visual.png"/></DIV>
 			<!--//visual-->
 			<!--컨텐츠 영역-->
 
