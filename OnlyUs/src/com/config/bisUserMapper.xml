@@ -4,7 +4,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="genUser">
 	
-	<select id="one" parameterType="int" resultType="EmpDTO">
+	<select id="addBisUser" parameterType="int" resultType="EmpDTO">
 		select
 		empno,
 		ename, job, mgr, to_char(hiredate,'yyyy/mm/dd') hiredate, sal
