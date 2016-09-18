@@ -321,6 +321,14 @@ width: 100%;
 }
 
 #slick-login {
+	width: 250px;
+	height: auto;
+	position: absolute;
+	left: 55%;
+	top: 20%;
+	margin-left: -200px;
+	margin-top: 50px;
+	
 	-webkit-animation: login 1s ease-in-out;
 	-moz-animation: login 1s ease-in-out;
 	-ms-animation: login 1s ease-in-out;
@@ -556,4 +564,6 @@ img {
 	margin: 0 auto;
 		
 }
+
+
 
