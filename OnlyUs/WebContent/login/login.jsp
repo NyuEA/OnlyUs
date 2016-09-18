@@ -17,7 +17,7 @@
 
       <tr>
          <td colspan="2"><label for="username">username</label> <input
-            type="text" name="username" id="userid" placeholder="회원구분해주세요"></td>
+            type="text" name="username" id="userid" placeholder="아이디를 입력해주세요"></td>
 
       </tr>
       <tr>

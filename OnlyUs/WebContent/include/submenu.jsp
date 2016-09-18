@@ -9,7 +9,7 @@
 					<!--☆ 현재페이지 표시 class="on"-->
 					<li><a class="on" href="../home/home_.jsp">서비스소개</a></li>
 					<li><a href="../login/login_.jsp">로그인</a></li>
-					<li><a href="../home/home_.jsp">회원가입</a></li>
+					<li><a href="../login/bisJoin_.jsp">회원가입</a></li>
 				</ul>
 			</DIV>
 			<!--//nav-->

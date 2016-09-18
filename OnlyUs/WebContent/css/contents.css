@@ -185,44 +185,10 @@ a.sfa_down:hover span.on {
 	width: 100% !important;
 }
 table {
-	width: 80%; font-size: 12px; border-collapse: collapse; table-layout: fixed; border-spacing: 0;
+	text-align: center;
 }
-.tbl_gray {
-	width: 100%; margin-top: 1px;
-}
-.tbl_gray th {
-	background: url("../images/qna-7.gif") repeat-x rgb(217, 217, 217);
-}
-.tbl_gray td {
-	background: url("../images/qna-8.gif") repeat-x rgb(227, 227, 227);
-}
-.tbl_gray td img {
-	vertical-align: middle;
-}
-.tbl_gray td {
-	padding: 8px; border: 1px solid rgb(204, 204, 204); border-image: none; text-align: center; line-height: 1.7; vertical-align: middle;
-}
-.tbl_gray th {
-	padding: 8px; border: 1px solid rgb(204, 204, 204); border-image: none; text-align: center; line-height: 1.7; vertical-align: middle;
-}
-.tbl_gray .con_tit {
-	text-align: left;
-}
-.tbl_gray .con_tit img {
-	margin-right: 3px;
-}
-.tbl_gray th {
-	font-weight: bold;
-}
-.tbl_gray .reply {
-	padding: 20px 0px;
-}
-.tbl_gray .reply > * {
-	background: rgb(255, 255, 255);
-}
-.tbl_gray .reply .con_tit {
-	padding: 16px;
-}
+
+
 button.base {
 	background: url("../images/qna-8.gif") repeat-x rgb(227, 227, 227); padding: 1px; border-radius: 4px; border: 1px solid rgb(204, 204, 204); border-image: none; -webkit-border-radius: 4px;
 }

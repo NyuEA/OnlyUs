@@ -10,6 +10,6 @@
 <div id="header">		
 				<a href=""><img	alt="요깄넹" src="../images/logotitle.png" id="logoimg"></a>
 			
-			<P class="page_note">실시간 쿠폰생성 최강 솔루션</P>
+			<P class="page_note">내 위치 쿠폰 제공 최강 솔루션</P>
 			
 		</div>

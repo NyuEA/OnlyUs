@@ -15,13 +15,12 @@
 <script src="../js/daum.js"></script>
 <script type="text/javascript" src="../js/jquery-3.1.0.js"></script>
 
-<img id="slick-backjoin" src="../images/BbackG.png" />
-<!-- action="bisMemberAddServlet" -->
-<form id="slick-join" action="genMemberAddServlet" >
-  
-   <table id="bisjoin">
+<center>
+<form id="joinF" action="genMemberAddServlet" >
+
+   <table id="joinT">
     <tr>
-			<th colspan="2"><font size="6">사업자 회원가입</font></th>
+			<th colspan="6" ><font size="6"><br>사업자 회원가입</font><br><br><br><br></th>
 		</tr>
 		<tr>
 			<td colspan="2">
@@ -89,17 +88,19 @@
 			</td>
 		</tr>
 		<tr>
-			<td height="7" colspan="2">
+			<td height="7" colspan="7">
 		</tr>
 		<tr>
-			<td colspan="2" align="center"><input type="submit" value="회원가입">
-				<input type="reset" value="취소"></td>
+		
+			<td colspan="6" ><br><br><input type="submit" value="회원가입">
+				<input type="reset" value="취소"><br><br></td>
 		</tr>
+		
 	</table>
 
 
 </form>
-
+</center>
 
 
 <script type="text/javascript">
