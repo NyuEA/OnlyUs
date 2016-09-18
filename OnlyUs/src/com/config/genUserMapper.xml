@@ -3,12 +3,10 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="genUser">
-	<insert id="genUserInsert" parameterType="genUserDTO">
-		insert into genUser( bisid, passwd,
-		bisname, post1, post2, addr1, addr2,
-		phone1, phone2, phone3)
-		values(#{bisid},#{passwd},#{bisname},#{post1},#{post2},#{addr1},#{addr1},
-		#{addr2},#{phone1},#{phone2},#{phone3});
+	<insert id="addGenUser" parameterType="genUserDTO">
+		insert into genUser( userid, passwd,
+		nickname, birthday, preferbis)
+		values(#{userid},#{passwd},#{nickname},#{birthday},#{preferbis});
 	</insert>
 </mapper>
 

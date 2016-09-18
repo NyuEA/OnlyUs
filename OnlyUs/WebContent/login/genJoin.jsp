@@ -42,6 +42,12 @@
 			<td height="7" colspan="2">
 		</tr>
 		<tr>
+			<th colspan="2">------추가사항-------</th>
+		</tr>
+		<tr>
+			<td height="7" colspan="2">
+		</tr>
+		<tr>
 			<th>생일</th>
 			<td><input type="text" name="birthday" id="birthday">ex)2015/01/01</td>
 		</tr>
@@ -49,7 +55,7 @@
 			<td height="7" colspan="2">
 		</tr>
 		<tr>
-			<th>선호업종(꼭 쓸필요 없음)</th>
+			<th>선호업종</th>
 			<td><input type="text" name="preferbis" id="preferbis"></td>
 		</tr>
 		<tr>

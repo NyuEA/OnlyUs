@@ -15,7 +15,7 @@ public class bizUserService {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("회원등록 실패");
+			throw new CommonException("사업자회원등록 실패");
 		} finally {
 			session.close();
 		}
