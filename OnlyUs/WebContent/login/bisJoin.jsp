@@ -39,7 +39,7 @@
 		<tr>
 			<th>비밀번호</th>
 			<td><input type="password" name="passwd" id="passwd"><span
-				id="result2" style="width: 400px"></span></td>
+				id="result2"></span></td>
 		</tr>
 		<tr>
 			<td height="7" colspan="2">
