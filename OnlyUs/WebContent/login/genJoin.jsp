@@ -89,7 +89,6 @@
 
 
 
-
 		// 아이디 중복체크 Ajax 연동
 		$("#userid").on("keyup", function(event) {
 

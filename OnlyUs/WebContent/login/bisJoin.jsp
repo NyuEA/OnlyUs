@@ -125,7 +125,7 @@
 
 
 		// 아이디 중복체크 Ajax 연동
-		$("#userid").on("keyup", function(event) {
+		$("#bisid").on("keyup", function(event) {
 
 			//Ajax 연동 
 			//ajax통신
@@ -134,7 +134,7 @@
 				url : "idCheck.jsp",
 				dataType : "text",
 				data : {
-					userid : $("#userid").val()
+					bisid : $("#bisid").val()
 				},
 				success : function(responseData, status, xhr) {
 					console.log(responseData);
