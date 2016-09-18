@@ -2,9 +2,9 @@
 
 body {
 	text-align: center;
-	width: 960px;
+	width: 100%;
 	margin: 0 auto;
-	height: 900px;
+	height: 100%;
 }
 
 div {
@@ -54,3 +54,11 @@ center {
 	height: 25px;
 
 }
+
+/*헤더 메뉴입니다*/
+ ul.mn {  }
+ ul.mn li { position:relative; float:left; padding:0 20px; font:normal 14px/30px "나눔고딕", "돋움", "굴림";}
+ ul.mn li ul { display:none; position:absolute; top:30px; left:0; }
+ ul.mn li:hover ul { display: inline; }
+ ul.mn li ul li { font:normal 12px/20px "나눔고딕", "돋움", "굴림"; }
+

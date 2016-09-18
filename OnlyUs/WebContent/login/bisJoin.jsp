@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!-- DAUM 주소 라이브러리 시작 -->
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 .blue {
 	color: blue;
@@ -13,10 +14,13 @@
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script src="../js/daum.js"></script>
 <script type="text/javascript" src="../js/jquery-3.1.0.js"></script>
-<!-- DAUM 주소 라이브러리 끝 -->
-<form action="bisMemberAddServlet">
-	<table>
-		<tr>
+
+
+<!-- action="bisMemberAddServlet" -->
+<form id="slick-login" >
+   <img id="slick-logos" src="../images/logo1.png" />
+   <table id="bisgen">
+    <tr>
 			<th colspan="2"><font size="6">사업자 회원가입</font></th>
 		</tr>
 		<tr>
@@ -92,7 +96,11 @@
 				<input type="reset" value="취소"></td>
 		</tr>
 	</table>
+
+
 </form>
+
+
 
 <script type="text/javascript">
 
