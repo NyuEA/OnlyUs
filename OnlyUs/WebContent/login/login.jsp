@@ -6,6 +6,14 @@
 
 <link href="css/login.css" rel="stylesheet" type="text/css">
 
+	<div class="nav">
+		<h2 class="blind">로컬네이게이션</h2>
+		<ul class="nav_ul fix">
+			<!-- 	☆ 현재페이지 표시 class="on" -->
+			<li id="submli1"><a href="home_.jsp?" id="subm1">서비스소개</a></li>
+			<li id="submli2"><a href="board_.jsp" id="subm2">문의하기</a></li>
+		</ul>
+	</div>
 
 
 
@@ -16,11 +24,11 @@
 	<div class="box">
 		<table>			
 			<tr>
-				<td><input type="text" class="iText" placeholder="아이디 or 이메일"/>
+				<td><input type="text" class="iText" placeholder="아이디 or 이메일" name="userid" id="userid"/>
 					</td>
 			</tr>
 			<tr>
-				<td><input type="password" name="" id="" class="iText" placeholder="비밀번호">
+				<td><input type="password" name="passwd" id="passwd" class="iText" placeholder="비밀번호">
 					<br></td>
 			</tr>
 			<tr>
