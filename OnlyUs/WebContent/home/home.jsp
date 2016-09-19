@@ -7,11 +7,16 @@
 <LINK href="css/common.css" rel="stylesheet" type="text/css">
 <SCRIPT src="js/jquery-3.1.0.js"></SCRIPT>
 
-<SCRIPT src="전령_files/main.js" type="text/javascript"></SCRIPT>
+	<div class="nav">
+		<h2 class="blind">로컬네이게이션</h2>
+		<ul class="nav_ul fix">
+			<!-- 	☆ 현재페이지 표시 class="on" -->
+			<li id="submli1"><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
+			<li id="submli2"><a href="board_.jsp" id="subm2">문의하기</a></li>
+		</ul>
+	</div>
 
 
-</HEAD>
-<BODY>	
 	<DIV id="wrapper">
 		<!--운행일지 블로그 링크 이동 버튼-->
 		<DIV class="btn_blog">
@@ -43,11 +48,12 @@
 			<!--//video-->
 		</DIV>
 		<!--//video_wrap-->
-		
+
 		<HR>
 
 		<DIV id="container">
 			<!--비쥬얼영역-->
+
 			<DIV class="visual"><img src ="images/main.jpg"/></DIV>
 			<!--//visual-->
 			<!--컨텐츠 영역-->
@@ -80,13 +86,15 @@
 								<P>3</P>
 							</DIV>
 							<DIV class="listTitle">여기저기 쿠폰 드롭</DIV>
-							<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV></LI>
+							<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV>
+						</LI>
 						<LI>
 							<DIV class="numberBackground">
 								<P>4</P>
 							</DIV>
 							<DIV class="listTitle">여기저기 쿠폰 드롭</DIV>
-							<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV></LI>
+							<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV>
+						</LI>
 						<LI>
 							<DIV class="numberBackground">
 								<P>5</P>
@@ -101,7 +109,7 @@
 							<DIV class="listTitle">여기저기 쿠폰 드롭</DIV>
 							<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV>
 						</LI>
-						
+
 					</UL>
 				</DIV>
 				<!--//cont01-->
@@ -231,7 +239,7 @@
 		<!--//container-->
 
 		<HR>
-		
+
 	</DIV>
 	<!--//wrapper-->
 	<!--메일폼-->
@@ -408,5 +416,3 @@
 
 		}
 	</SCRIPT>
-</BODY>
-</HTML>

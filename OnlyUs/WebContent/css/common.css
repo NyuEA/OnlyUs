@@ -11,9 +11,7 @@
 .page_note {
 	text-align: center; color: rgb(191, 192, 194); font-size: 12px;
 }
-.nav {
-	background: #518031; margin-top: 15px;
-}
+
 .nav1 {
 	background: #ddd; text-align: right;
 }
@@ -32,6 +30,11 @@
 .nav_ul1 li a.on {
 	color: rgb(0, 0, 0);
 }
+
+.nav {
+	background: #518031; margin-top: 15px;
+}
+
 .nav_ul {
 	margin: 0px auto; width: 900px; height: 40px; text-align: right;
 }
