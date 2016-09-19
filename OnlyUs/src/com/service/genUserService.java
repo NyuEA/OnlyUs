@@ -1,5 +1,7 @@
 package com.service;
 
+import java.util.HashMap;
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.config.MySqlSessionFactory;
@@ -21,4 +23,21 @@ public class genUserService {
 		}
 
 	}// end addMember
+
+
+		//로그인
+	public genUserDTO login(HashMap<String, String> map) throws CommonException {
+		genUserDTO dto = null;
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			dto = session.selectOne("login", map);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("로그인 실패");
+		} finally {
+			session.close();
+		}
+		return dto;	
+		}// 로그인 끝
+	
 }

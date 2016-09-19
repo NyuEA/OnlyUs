@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
+<link href="../css/login.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 .blue {
 	color: blue;
@@ -20,7 +21,7 @@
 
    <table id="joinT">
     <tr>
-			<th colspan="6" ><font size="6"><br>사업자 회원가입</font><br><br><br><br></th>
+			<th colspan="6" ><font size="6"><br></font><br><br><br><br></th>
 		</tr>
 		<tr>
 			<td colspan="2">
@@ -92,8 +93,8 @@
 		</tr>
 		<tr>
 		
-			<td colspan="6" ><br><br><input type="submit" value="회원가입">
-				<input type="reset" value="취소"><br><br></td>
+			<td colspan="6" ><br><br><input type="submit" value="회원가입" class="joinBtn">
+				<input type="reset" value="취소" class="joinBtn"><br><br></td>
 		</tr>
 		
 	</table>

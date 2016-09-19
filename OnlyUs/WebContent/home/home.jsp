@@ -53,9 +53,9 @@
 			<!--컨텐츠 영역-->
 
 			<DIV class="content02">
-				<!--차량관제는 왜?-->
+				<!--쿠폰제는 왜?-->
 				<H3 class="title">
-					<STRONG class="line01">차량관제 솔루션 “<SPAN>전령</SPAN>”의 <SPAN>7</SPAN>가지
+					<STRONG class="line01">쿠폰제 솔루션 “<SPAN>전령</SPAN>”의 <SPAN>7</SPAN>가지
 						특장점
 					</STRONG>
 				</H3>
@@ -120,7 +120,7 @@
 			<!--4대 서비스-->
 			<DIV class="content03_sub">
 				<H3 class="title">
-					<STRONG class="line01">차량관제 솔루션 “<SPAN>전령</SPAN>” 4대 서비스
+					<STRONG class="line01">쿠폰제 솔루션 “<SPAN>전령</SPAN>” 4대 서비스
 					</STRONG>
 				</H3>
 				<DIV class="cont02">

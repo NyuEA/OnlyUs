@@ -1,6 +1,4 @@
-body {
-	letter-spacing: -0.5px; font-family: "¸¼Àº °íµñ", "Malgun Gothic", "³ª´®°íµñ", "Nanum Gothic", ng, "µ¸¿ò",Dotum,Helvetica,AppleGothic,Sans-serif; font-size: 13px;
-}
+
 #wrapper {
 	background: rgb(122, 0, 7); width: 100%; min-width: 900px;
 }
@@ -15,6 +13,24 @@ body {
 }
 .nav {
 	background: #518031; margin-top: 15px;
+}
+.nav1 {
+	background: #ddd; text-align: right;
+}
+.nav_ul1 {
+	margin: 0px auto; width: 900px; height: 30px; text-align: right;
+}
+.nav_ul1 li {
+	margin: 0px 10px 0px 36px; display: inline-block;
+}
+.nav_ul1 li a {
+	color: rgb(255, 255, 255); line-height: 30px; display: block;
+}
+.nav_ul1 li a:hover {
+	color: rgb(0, 0, 0);
+}
+.nav_ul1 li a.on {
+	color: rgb(0, 0, 0);
 }
 .nav_ul {
 	margin: 0px auto; width: 900px; height: 40px; text-align: right;

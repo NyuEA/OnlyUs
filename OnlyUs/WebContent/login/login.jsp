@@ -1,43 +1,43 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <script type="text/javascript"
-   src="http://code.jquery.com/jquery-latest.min.js"></script>
+	src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+<link href="../css/login.css" rel="stylesheet" type="text/css">
 
 
 
 
-<link href="css/style.css" rel="stylesheet" type="text/css">
 
+<div class="loginForm">
 
-
-
-<form id="slick-login">
-
-   <table id="bisgen">
-
-      <tr>
-         <td colspan="2"><label for="username">username</label> <input
-            type="text" name="username" id="userid" placeholder="아이디를 입력해주세요"></td>
-
-      </tr>
-      <tr>
-
-
-         <td colspan="2"><label for="password">password</label> <input
-            type="password" name="password" class="placeholder"
-            placeholder="password"><br>
-      <br></td>
-
-      </tr>
-      
-      <tr>
-
-         <td colspan="1" ><input type="submit" value="LOGIN" id="login"></td>
-         <td colspan="1"><input type="submit" value="JOIN" id="join"></td>
-         
-      </tr>
-
-   </table>
-
-</form>
-
+	<form name="" action="LoginServlet">
+	<div class="box">
+		<table>
+			
+			<tr>
+				<td><input type="text" class="iText" value="아이디를 입력하세요.">
+					</td>
+			</tr>
+			<tr>
+				<td><input type="password" name="" id="" class="iText">
+					<br></td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						<span class="fleft"><input type="checkbox" id=""><label
+							for=""> 아이디 저장</label></span> <span class="fright"><a href="">아이디
+								찾기</a>&nbsp;|&nbsp;<a href="">비밀번호 찾기</a></span>
+					</p>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><input type="submit" value="로그인"  class="loginBtn"></td>
+			</tr>
+		</table>
+		</div>
+	</form>
+</div>
