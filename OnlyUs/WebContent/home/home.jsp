@@ -55,7 +55,7 @@
 			<DIV class="content02">
 				<!--쿠폰제는 왜?-->
 				<H3 class="title">
-					<STRONG class="line01">쿠폰제 솔루션 “<SPAN>전령</SPAN>”의 <SPAN>7</SPAN>가지
+					<STRONG class="line01">쿠폰제 솔루션 “<SPAN>요깄넹</SPAN>”의 <SPAN>7</SPAN>가지
 						특장점
 					</STRONG>
 				</H3>
@@ -65,53 +65,43 @@
 							<DIV class="numberBackground">
 								<P>1</P>
 							</DIV>
-							<DIV class="listTitle">교통안전공단 운행자료 자동제출</DIV>
-							<DIV class="listWord">전령을 이용하는 고객은 아무런 액션없이 시스템에서 자동제출 가능</DIV>
+							<DIV class="listTitle">여기저기 쿠폰 드롭</DIV>
+							<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV>
 						</LI>
 						<LI>
 							<DIV class="numberBackground">
 								<P>2</P>
 							</DIV>
-							<DIV class="listTitle">녹색물류에너지 기반 에코드라이브 유도</DIV>
-							<DIV class="listWord">차량관제를 통한 급가속, 급감속, 유류정보 등을 분석하여 매일
-								사용자에게 제공</DIV>
+							<DIV class="listTitle">여기저기 쿠폰 드롭</DIV>
+							<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV>
 						</LI>
 						<LI>
 							<DIV class="numberBackground">
 								<P>3</P>
 							</DIV>
-							<DIV class="listTitle">도로교통현황 표시</DIV>
-							<DIV class="listWord">지도상의 차량의 교통정보를 실시간으로 제공</DIV>
-						</LI>
+							<DIV class="listTitle">여기저기 쿠폰 드롭</DIV>
+							<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV></LI>
 						<LI>
 							<DIV class="numberBackground">
 								<P>4</P>
 							</DIV>
-							<DIV class="listTitle">CCTV 교통현황표시 및 교통사고 현황표시</DIV>
-							<DIV class="listWord">국내 각 지역권별 CCTV 및 교통사고 현황정보를 실시간으로 제공</DIV>
-						</LI>
+							<DIV class="listTitle">여기저기 쿠폰 드롭</DIV>
+							<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV></LI>
 						<LI>
 							<DIV class="numberBackground">
 								<P>5</P>
 							</DIV>
-							<DIV class="listTitle">주변 주유정보 표시 [APP]</DIV>
-							<DIV class="listWord">최신 유류비를 차량위치에 맞게 저렴한 주유소로 정보 표시 – 경유,
-								휘발유, LPG</DIV>
+							<DIV class="listTitle">여기저기 쿠폰 드롭</DIV>
+							<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV>
 						</LI>
 						<LI>
 							<DIV class="numberBackground">
 								<P>6</P>
 							</DIV>
-							<DIV class="listTitle">멀티언어 지원</DIV>
-							<DIV class="listWord">다국어 지원 가능</DIV>
+							<DIV class="listTitle">여기저기 쿠폰 드롭</DIV>
+							<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV>
 						</LI>
-						<LI>
-							<DIV class="numberBackground">
-								<P>7</P>
-							</DIV>
-							<DIV class="listTitle">고객사에 맞는 커스터마이징 [기간계 연동가능]</DIV>
-							<DIV class="listWord">다양한 래퍼런스 보유</DIV>
-						</LI>
+						
 					</UL>
 				</DIV>
 				<!--//cont01-->
@@ -120,7 +110,7 @@
 			<!--4대 서비스-->
 			<DIV class="content03_sub">
 				<H3 class="title">
-					<STRONG class="line01">쿠폰제 솔루션 “<SPAN>전령</SPAN>” 4대 서비스
+					<STRONG class="line01">쿠폰제 솔루션 “<SPAN>요깄넹</SPAN>” 4대 서비스
 					</STRONG>
 				</H3>
 				<DIV class="cont02">
@@ -129,7 +119,7 @@
 							<DIV class="foulImage1"
 								onclick="layer_open('layer2' , '1' );return false;">차량관제
 								이미지</DIV>
-							<DIV class="foulTitle">차량관제 [법인차량관제 포함]</DIV>
+							<DIV class="foulTitle">요깄넹</DIV>
 							<DIV class="layer">
 								<DIV class="bg"></DIV>
 								<DIV class="pop-layer" id="layer2">
@@ -158,19 +148,19 @@
 							<DIV class="foulImage2"
 								onclick="layer_open('layer2' , '2' );return false;">차량관제
 								이미지</DIV>
-							<DIV class="foulTitle">TMS [배차관리시스템]</DIV>
+							<DIV class="foulTitle">요깄넹</DIV>
 						</LI>
 						<LI>
 							<DIV class="foulImage3"
 								onclick="layer_open('layer2' , '3' );return false;">차량관제
 								이미지</DIV>
-							<DIV class="foulTitle">차량관리 [차계부 등]</DIV>
+							<DIV class="foulTitle">요깄넹</DIV>
 						</LI>
 						<LI>
 							<DIV class="foulImage4"
 								onclick="layer_open('layer2' , '4' );return false;">차량관제
 								이미지</DIV>
-							<DIV class="foulTitle">녹색물류에너지</DIV>
+							<DIV class="foulTitle">요깄넹</DIV>
 						</LI>
 					</UL>
 				</DIV>
@@ -180,44 +170,32 @@
 			<DIV class="content">
 				<!--기대효과-->
 				<H3 class="title">
-					<STRONG class="line01">전령 <SPAN>기대효과</SPAN></STRONG>
+					<STRONG class="line01">요깄넹 <SPAN>기대효과</SPAN></STRONG>
 				</H3>
-				<P class="featute_note">실시간 관제ㆍ체계적인 관리를 원한다면?</P>
+				<P class="featute_note">실시간 쿠폰ㆍ광고 관리를 원한다면?</P>
 				<UL class="sevice01 fix">
 					<LI>
 						<H4 class="s01">
-							<SPAN>안전운전 문화 정착</SPAN>
+							<SPAN>쿠폰문화 정착</SPAN>
 						</H4>
 						<P class="line03">
-							<SPAN class="br">급가속/급제동/과속/장시간</SPAN> <SPAN class="br">운전
-								등 차량관제를 통한</SPAN> <SPAN class="br">안전사고 예방</SPAN><SPAN class="br2"></SPAN><SPAN
-								class="br">경제운전 습관 정착</SPAN><SPAN class="br2"></SPAN><SPAN
-								class="br">정부 당국 벌점/과태료 방지</SPAN>
+							<SPAN class="br">쿠폰</SPAN>
 						</P>
 					</LI>
 					<LI>
 						<H4 class="s02">
-							<SPAN>운영비용 절감</SPAN>
+							<SPAN>쿠폰문화 정착</SPAN>
 						</H4>
 						<P class="line03">
-							<SPAN class="br">연비 개선을 통한 유류비 절감</SPAN> <SPAN class="br a_left">-
-								디지털운행기록계(약12~15%)</SPAN> <SPAN class="br a_left">- 공회전제한장치(약8%)</SPAN><SPAN
-								class="br2"></SPAN><SPAN class="br">사고 감소로 보험요율 인하</SPAN> <SPAN
-								class="br a_left">- 사고 처리비용 절감</SPAN><SPAN class="br2"></SPAN><SPAN
-								class="br">안전운행으로 소모품비 감소</SPAN> <SPAN class="br a_left">-
-								배터리/타이어</SPAN> <SPAN class="br a_left">- 기타 소모품비</SPAN>
+							<SPAN class="br">쿠폰</SPAN>
 						</P>
 					</LI>
 					<LI>
 						<H4 class="s03">
-							<SPAN>차량 가동율 향상 등</SPAN>
+							<SPAN>쿠폰문화 정착</SPAN>
 						</H4>
 						<P class="line03">
-							<SPAN class="br">차량의 운행현황 파악 및</SPAN> <SPAN class="br">운행계획
-								수립을 통한</SPAN> <SPAN class="br">차량 가동율 향상</SPAN><SPAN class="br2"></SPAN><SPAN
-								class="br">차량의 상태 진단 및 능동적</SPAN> <SPAN class="br">대처로 차량
-								성능 관리</SPAN><SPAN class="br2"></SPAN><SPAN class="br">사고 발생시 정확한
-								사고 원인</SPAN> <SPAN class="br">파악이 가능한 객관적 자료 제공</SPAN>
+							<SPAN class="br">쿠폰</SPAN>
 						</P>
 					</LI>
 				</UL>
@@ -227,10 +205,10 @@
 				<DIV class="cont01">
 					<!--티지오넷 선택-->
 					<H3 class="title txt_gray">
-						<STRONG class="line02">전령 <SPAN>선택</SPAN>하는 이유?
+						<STRONG class="line02">요깄넹 <SPAN>선택</SPAN>하는 이유?
 						</STRONG>
 					</H3>
-					<P class="featute_note">유류비와 차량 부속품 비용 절감과 간편한 운행 기록 전송 기능까지!</P>
+					<P class="featute_note">쿠폰기능까지!</P>
 					<OL>
 						<LI><SPAN class="num">1</SPAN> S식품, K택배, L물류기업, Y물류기업 등의 다양한
 							업종에 <EM>차량관제 서비스 제공</EM> 및 운영 경험 보유</LI>

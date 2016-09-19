@@ -5,7 +5,7 @@
  .loginForm .box p{margin-top:1em}
  .loginForm .box p span,
  .loginForm .box p input{height:18px;font-size:11px;color:#737373;line-height:18px;vertical-align:middle}
- .loginForm .loginBtn{position:absolute;top:30%;right:0;width:80px;height:60px;padding:10px;border-radius:5px;
+ .loginForm .loginBtn{position:absolute;top:30%;right:-10px;width:80px;height:60px;padding:10px;border-radius:5px;
  font-size:14px;color:#fff;line-height:40px;text-align:center;text-shadow:1px 1px 1px #004773;background:#333}
 
 .loginForm table{

@@ -14,14 +14,13 @@
 
 	<form name="" action="LoginServlet">
 	<div class="box">
-		<table>
-			
+		<table>			
 			<tr>
-				<td><input type="text" class="iText" value="아이디를 입력하세요.">
+				<td><input type="text" class="iText" placeholder="아이디 or 이메일"/>
 					</td>
 			</tr>
 			<tr>
-				<td><input type="password" name="" id="" class="iText">
+				<td><input type="password" name="" id="" class="iText" placeholder="비밀번호">
 					<br></td>
 			</tr>
 			<tr>
