@@ -14,7 +14,7 @@
 				<ul class="nav_ul1 fix">
 				<!-- 	☆ 현재페이지 표시 class="on" -->
 				
-					<li><a class="on" href="login_.jsp">로그인</a></li>
+					<li><a class="on" href="LoginFormServlet">로그인</a></li>
 					<li><a href="bisJoin_.jsp">회원가입</a></li>
 					<li><a href="bisJoin_.jsp"><img src="images/header_top_contact.png" id="header_top_contact"></a></li>
 				</ul>
