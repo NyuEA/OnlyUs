@@ -16,7 +16,7 @@
 				
 					<li><a class="on" href="login_.jsp">로그인</a></li>
 					<li><a href="bisJoin_.jsp">회원가입</a></li>
-					<li><a href="bisJoin_.jsp"><img src="images/header_top_contact.png" id="header_top_contact"></a></li>
+					<li><a href="genJoin_.jsp"><img src="images/header_top_contact.png" id="header_top_contact"></a></li>
 				</ul>
 			</div>
 			

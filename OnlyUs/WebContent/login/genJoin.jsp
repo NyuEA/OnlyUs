@@ -19,87 +19,15 @@
 <center>
 <form id="joinF" action="genMemberAddServlet" >
 
-   <table id="joinT">
-    <tr>
-			<th colspan="6" ><font size="6"><br></font><br><br><br><br></th>
-		</tr>
-		<tr>
-			<td colspan="2">
-				<hr size="1" color="CCCCCC">
-			</td>
-		</tr>
-		<tr>
-			<th>사업자번호</th>
-			<td><input type="text" name="bisid" id="bisid"><span
-				id="result"></span></td>
-		</tr>
-		<tr>
-			<td height="7" colspan="2">
-		</tr>
-		<tr>
-			<th>비밀번호</th>
-			<td><input type="password" name="passwd" id="passwd"><span
-				id="result2"></span></td>
-		</tr>
-		<tr>
-			<td height="7" colspan="2">
-		</tr>
-		<tr>
-			<th>비밀번호 확인</th>
-			<td><input type="password" name="passwd2" id="passwd2"></td>
-		</tr>
-		<tr>
-			<td height="7" colspan="2">
-		</tr>
-		<tr>
-			<th>업체이름</th>
-			<td><input type="text" name="bisname" id="bisname"></td>
-		</tr>
-		<tr>
-			<td height="7" colspan="2">
-		</tr>
-		<tr>
-			<td colspan="2" align="center">
-				<!-- 다음주소 시작--> <input name="post1" id="post1" size="5" readonly="">
-				- <input name="post2" id="post2" size="5" readonly=""> <input
-				onclick="openDaumPostcode()" type="button" value="우편번호찾기">
-			</td>
-		</tr>
-		<tr>
-			<td height="7" colspan="2">
-		</tr>
-		<tr>
-			<td align="center" colspan="2"><input name="addr1" id="addr1"
-				size="40" readonly="" placeholder="도로명주소"> <br> <span
-				style="line-height: 10%;"><br></span> <input name="addr2"
-				id="addr2" size="40" placeholder="지번주소"> <!-- 다음주소 끝 -->
-				</td>
-		</tr>
-		<tr>
-			<td height="7" colspan="2">
-		</tr>
-		<tr>
-			<td colspan="2" align="center">휴대폰 <select name="phone1"
-				id="phone1">
-					<option value="010">010</option>
-					<option value="011">011</option>
-					<option value="017">017</option>
-			</select>- <input type="text" name="phone2" id="phone2" maxlength="4" size="1" style="width: 100px">-
-				<input type="text" name="phone3" id="phone3" maxlength="4" size="1" style="width: 100px">
-			</td>
-		</tr>
-		<tr>
-			<td height="7" colspan="7">
-		</tr>
-		<tr>
-		
-			<td colspan="6" ><br><br><input type="submit" value="회원가입" class="joinBtn">
-				<input type="reset" value="취소" class="joinBtn"><br><br></td>
-		</tr>
-		
-	</table>
-
-
+	아이디<input type="text" name="userid" id="userid"> <span
+		id="result"></span><br> 비밀번호<input type="password" name="passwd"
+		id="passwd"> <span id="result2"></span><br> 비밀번호확인<input
+		type="password" name="passwd2" id="passwd2"><br> 닉네임<input
+		type="text" name="nickname" id="nickname"><br> 생일<input
+		type="text" name="birthday" id="birthday"><br>좋아하는 업종<select>
+		<option>음식</option>
+	</select><br> <input type="submit" value="회원가입"> <input
+		type="reset" value="취소">
 </form>
 </center>
 
