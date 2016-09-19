@@ -1,4 +1,4 @@
-package com.login;
+package com.controller;
 
 import java.io.IOException;
 
@@ -11,29 +11,42 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.dto.genUserDTO;
+import com.exception.CommonException;
+import com.service.genUserService;
 
-@WebServlet("/LogOutServlet")
-public class LogOutServlet extends HttpServlet {
+/**
+ * Servlet implementation class LognFormServlet
+ */
+@WebServlet("/MyPageServlet")
+public class MyPageServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession session = request.getSession();
-		genUserDTO dto =
+		genUserDTO dto = 
 				(genUserDTO)session.getAttribute("login");
-		 String title="";
-		 String target="";
-		if(dto==null){
-			title= "로그인 하세요";
-			String link="LoginFormServlet";
-			target="error.jsp";
-			request.setAttribute("title", title);
-			request.setAttribute("link", link);
+		String target="";
+		String title="";
+		if(dto!=null){
+			target="mypage_.jsp";
+			
+			String userid = dto.getUserid();
+			genUserService service = new genUserService();
+			try {
+				genUserDTO my = service.mypage(userid);
+				request.setAttribute("mypage", my);
+			} catch (CommonException e) {
+				title= e.getMessage();
+				String link="LoginFormServlet";
+				target="error.jsp";
+				request.setAttribute("title", title);
+				request.setAttribute("link", link);
+			}
+			
 		}else{
-			target="home_.jsp";
-	request.setAttribute("logout", "로그아웃이 정상적으로 되었습니다.");
-		    session.invalidate();	
+			target="LoginFormServlet";
 		}
-		
+
 		RequestDispatcher dis =
 				request.getRequestDispatcher(target);
 		dis.forward(request, response);

@@ -1,56 +1,43 @@
+<%@page import="com.dto.genUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<!-- DAUM 주소 라이브러리 시작 -->
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script src="js/daum.js"></script>
 <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+<!-- DAUM 주소 라이브러리 끝 -->
+<%
+	genUserDTO dto = (genUserDTO) request.getAttribute("mypage");
+	String userid = dto.getUserid();
+	String passwd = dto.getPasswd();
+	String nickname = dto.getNickname();
+	String birthday = dto.getBirthday();
+	String preferbis = dto.getPreferbis();
+%>
 
-<form>
-	아이디<input type="text" name="userid" id="userid"> <span
-		id="result"></span><br> 비밀번호<input type="password" name="passwd"
-		id="passwd"> <span id="result2"></span><br> 비밀번호확인<input
-		type="password" name="passwd2" id="passwd2"><br> 닉네임<input
-		type="text" name="nickname" id="nickname"><br> 생일<input
-		type="text" name="birthday" id="birthday"><br>좋아하는 업종<select>
-		<option>음식</option>
-	</select><br> <input type="submit" value="회원가입"> <input
-		type="reset" value="취소">
+
+<form name="myform">
+	아이디<input type="text" name="userid" id="userid" value="<%=userid%>"
+		readonly> <br>비밀번호<input type="text" name="passwd"
+		id="passwd" value="<%=passwd%>"><br> 닉네임<input
+		type="text" name="username" id="username" value="<%=nickname%>"
+		readonly><br> 생일<input type="text" name="username"
+		id="username" value="<%=birthday%>" readonly><br> 선호업종<input
+		type="text" name="username" id="username" value="<%=birthday%>"><br>
+	<button onclick="memberUpdate(myform)">수정</button>
+	<button onclick="memberDelete(myform)">탈퇴</button>
 </form>
 
 <script type="text/javascript">
+	function memberUpdate(f) {
+		f.action = "MemberUpdateServlet";
+	}
+
+	function memberDelete(f) {
+		f.action = "MemberDeleteServlet";
+	}
+
 	$(document).ready(function() {
-
-		$("#passwd2").on("keyup", function(event) {
-			$("#result2").removeClass();
-			var p = $("#passwd").val();
-			var p2 = $("#passwd2").val();
-			if (p == p2) {
-				$("#result2").text("일치").addClass("blue");
-			} else {
-				$("#result2").text("불일치").addClass("red");
-				;
-			}
-		});
-
-		// 아이디 중복체크 Ajax 연동
-		$("#userid").on("keyup", function(event) {
-			//Ajax 연동 
-			//ajax통신
-			jQuery.ajax({
-				type : "GET",
-				url : "idCheck.jsp",
-				dataType : "text",
-				data : {
-					userid : $("#userid").val()
-				},
-				success : function(responseData, status, xhr) {
-					console.log(responseData);
-					$("#result").text(responseData);
-				},
-				error : function(xhr, status, error) {
-					console.log("error");
-				}
-			});
-		});
 
 		$("form").on("submit", function(event) {
 
