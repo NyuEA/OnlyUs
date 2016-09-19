@@ -7,7 +7,7 @@
 <form>
 	아이디<input type="text" name="userid" id="userid"> <span
 		id="result"></span><br> 비밀번호<input type="password" name="passwd"
-		id="passwd"> <span id="result2"></span><br> 비밀번호<input
+		id="passwd"> <span id="result2"></span><br> 비밀번호확인<input
 		type="password" name="passwd2" id="passwd2"><br> 닉네임<input
 		type="text" name="nickname" id="nickname"><br> 생일<input
 		type="text" name="birthday" id="birthday"><br>좋아하는 업종<select>
@@ -36,6 +36,7 @@
 
 			//Ajax 연동 
 			//ajax통신
+			
 			jQuery.ajax({
 				type : "GET",
 				url : "idCheck.jsp",
