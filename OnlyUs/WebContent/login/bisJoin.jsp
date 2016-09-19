@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-<link href="../css/login.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/login.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 .blue {
 	color: blue;
@@ -40,7 +40,7 @@
 		</tr>
 		<tr>
 			<th>아이디</th>
-			<td><input type="text" name="bisid" id="bisid" value="admin"><span
+			<td><input type="text" name="bisid" id="bisid" value=""><span
 				id="result"></span></td>
 		</tr>
 		<tr>
@@ -63,28 +63,28 @@
 		</tr>
 		<tr>
 			<th>생일</th>
-			<td><input type="text" name="bisname" id="bisname" value="1995/09/03"></td>
+			<td><input type="text" name="bisname" id="bisname" value=""></td>
 		</tr>
 		<tr>
 			<td height="7" colspan="2">
 		</tr>
 		<tr>
 			<th>닉네임</th>
-			<td><input type="text" name="bisname" id="bisname" value="우리만살자"></td>
+			<td><input type="text" name="bisname" id="bisname" value=""></td>
 		</tr>
 		<tr>
 			<td height="7" colspan="2">
 		</tr>
 		<tr>
 			<th>선호업종</th>
-			<td><input type="text" name="bisname" id="bisname" value="admin"></td>
+			<td><input type="text" name="bisname" id="bisname" value=""></td>
 		</tr>
 		<tr>
 			<td height="7" colspan="7">
 		</tr>
 		<tr>
 		
-			<td colspan="6" ><br><br><input type="submit" value="정보수정" class="joinBtn">
+			<td colspan="6" ><input type="submit" value="가입" class="joinBtn">
 				<input type="reset" value="취소" class="joinBtn"><br><br></td>
 		</tr>
 		

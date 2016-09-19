@@ -1,11 +1,37 @@
 <%@page import="com.dto.genUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!-- DAUM 주소 라이브러리 시작 -->
-<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-<script src="js/daum.js"></script>
+
 <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
-<!-- DAUM 주소 라이브러리 끝 -->
+<link href="css/mypage.css" rel="stylesheet" type="text/css">
+<link href="css/login.css" rel="stylesheet" type="text/css">
+
+
+<%
+	String logout = (String) request.getAttribute("logout");
+	if (logout != null) {
+%>
+<script type="text/javascript">
+      var str = "<%=logout%>";
+      alert("<%=logout%>");
+</script>
+<%
+	}
+%>
+<div class="nav">
+	<h2 class="blind">로컬네이게이션</h2>
+	<ul class="nav_ul fix">
+		<!-- 	☆ 현재페이지 표시 class="on" -->
+
+		<li><a href="board_.jsp" id="subm2">내 쿠폰함</a></li>
+		<li><a href="board_.jsp" id="subm2">TOP10</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<li><a href="home_.jsp?" id="subm1">서비스소개</a></li>
+		<li><a href="board_.jsp" id="subm2">문의하기</a></li>
+
+
+	</ul>
+</div>
+
 <%
 	genUserDTO dto = (genUserDTO) request.getAttribute("mypage");
 	String userid = dto.getUserid();
@@ -17,15 +43,48 @@
 
 
 <form name="myform">
-	아이디<input type="text" name="userid" id="userid" value="<%=userid%>"
-		readonly> <br>비밀번호<input type="text" name="passwd"
-		id="passwd" value="<%=passwd%>"><br> 닉네임<input
-		type="text" name="username" id="username" value="<%=nickname%>"
-		readonly><br> 생일<input type="text" name="username"
-		id="username" value="<%=birthday%>" readonly><br> 선호업종<input
-		type="text" name="username" id="username" value="<%=birthday%>"><br>
-	<button onclick="memberUpdate(myform)">수정</button>
-	<button onclick="memberDelete(myform)">탈퇴</button>
+	<table align="center" id="mytable">
+		<tr>
+			<th>아이디</th>
+		<td><input type="text" name="userid" id="userid"
+				value="<%=userid%>" readonly>
+			</td>
+		</tr>
+
+		<tr>
+			<th>비밀번호</th>
+		<td><input type="text" name="passwd" id="passwd" value="<%=passwd%>"></td>
+		</tr>
+		<tr>
+			<th>비밀번호확인</th>
+		<td><input type="text" name="passwd" id="passwd" value="<%=passwd%>"></td>
+		</tr>
+		
+		 <tr>
+			<th>닉네임</th>
+		<td><input type="text" name="username" id="username" value="<%=nickname%>" readonly></th>
+		</tr>
+			
+		<tr>
+			<th> 생일</th>
+		<td>
+		<input type="text" name="username" id="username" value="<%=birthday%>"
+			readonly></td>
+		</tr>
+			
+		 <tr>
+			<th>선호업종</th>
+		<td>
+		<input type="text" name="username" id="username" value="<%=birthday%>"></td>
+		</tr>
+		
+		<tr>
+			<td colspan="2">
+		<button onclick="memberUpdate(myform)" class="mypageBtn">수정</button>
+		<button onclick="memberDelete(myform)"  class="mypageBtn">탈퇴</button></td>
+		</tr>
+		
+	</table>
 </form>
 
 <script type="text/javascript">

@@ -14,3 +14,11 @@
 
 .joinBtn{width:80px;height:40px;padding:0px;border-radius:5px;
  font-size:14px;color:#fff;line-height:40px;text-shadow:1px 1px 1px #004773;background:#333}
+
+
+#joinF{
+	height: 450px;
+}
+
+.mypageBtn{width:80px;height:40px;padding:0px;border-radius:5px;
+ font-size:14px;color:#fff;line-height:40px;text-shadow:1px 1px 1px #004773;background:#333}
