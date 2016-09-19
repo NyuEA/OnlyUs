@@ -14,6 +14,7 @@
 				<ul class="nav_ul fix">
 				<!-- 	☆ 현재페이지 표시 class="on" -->
 					<li><a class="on" href="../home/home_.jsp">서비스소개</a></li>
+					<li><a  href="../home/home_.jsp">문의하기</a></li>
 				
 				</ul>
 			</div>
