@@ -5,6 +5,7 @@ import java.util.HashMap;
 import org.apache.ibatis.session.SqlSession;
 
 import com.config.MySqlSessionFactory;
+import com.dto.bisUserDTO;
 import com.dto.genUserDTO;
 import com.exception.CommonException;
 
@@ -17,7 +18,7 @@ public class genUserService {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("�Ϲ�ȸ����� ����");
+			throw new CommonException("회원등록 실패");
 		} finally {
 			session.close();
 		}
@@ -25,7 +26,7 @@ public class genUserService {
 	}// end addMember
 
 
-		//�α���
+		//占싸깍옙占쏙옙
 	public genUserDTO login(HashMap<String, String> map) throws CommonException {
 		genUserDTO dto = null;
 		SqlSession session = MySqlSessionFactory.getSession();
@@ -33,12 +34,12 @@ public class genUserService {
 			dto = session.selectOne("login", map);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("�α��� ����");
+			throw new CommonException("로그인실패");
 		} finally {
 			session.close();
 		}
 		return dto;	
-		}// �α��� ��
+		}// 占싸깍옙占쏙옙 占쏙옙
 
 
 	public genUserDTO mypage(String userid) throws CommonException {
@@ -48,11 +49,23 @@ public class genUserService {
 			dto = session.selectOne("mypage", userid);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("�α��� ����");
+			throw new CommonException("마이페이지 불러오기 실패");
 		} finally {
 			session.close();
 		}
 		return dto;	
 	}
-	
+	public void updateGenUser(genUserDTO dto) throws CommonException {
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			int n = session.update("updateGenUser", dto);
+			session.commit();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("회원수정 실패");
+		} finally {
+			session.close();
+		}
+	}
 }

@@ -23,6 +23,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		from genUser
 		where userid = #{userid}
 	</select>
+	<update id="updateGenUser" parameterType="genUserDTO">
+		update member
+		set passwd = #{passwd},
+		nickname = #{nickname},
+		preferbis = #{preferbis}
+	   where userid = #{userid}	
+	</update>
 </mapper>
 
 
