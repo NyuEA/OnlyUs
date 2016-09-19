@@ -4,16 +4,24 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="genUser">
 	<insert id="addGenUser" parameterType="genUserDTO">
-		insert into genUser( userid, passwd,
+		insert into genUser(
+		userid, passwd,
 		nickname, birthday, preferbis)
 		values(#{userid},#{passwd},#{nickname},#{birthday},#{preferbis});
 	</insert>
-		<select id="login" parameterType="hashmap" resultType="genUserDTO">
+	<select id="login" parameterType="hashmap" resultType="genUserDTO">
 		select
 		userid, passwd,
 		nickname, birthday, preferbis
 		from genUser
 		where userid = #{userid} and passwd=#{passwd}
+	</select>
+	<select id="mypage" parameterType="String" resultType="genUserDTO">
+		select
+		userid, passwd,
+		nickname, birthday, preferbis
+		from genUser
+		where userid = #{userid}
 	</select>
 </mapper>
 

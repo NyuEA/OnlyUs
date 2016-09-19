@@ -17,7 +17,7 @@ public class genUserService {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("ÀÏ¹ÝÈ¸¿øµî·Ï ½ÇÆÐ");
+			throw new CommonException("ï¿½Ï¹ï¿½È¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		} finally {
 			session.close();
 		}
@@ -25,7 +25,7 @@ public class genUserService {
 	}// end addMember
 
 
-		//·Î±×ÀÎ
+		//ï¿½Î±ï¿½ï¿½ï¿½
 	public genUserDTO login(HashMap<String, String> map) throws CommonException {
 		genUserDTO dto = null;
 		SqlSession session = MySqlSessionFactory.getSession();
@@ -33,11 +33,26 @@ public class genUserService {
 			dto = session.selectOne("login", map);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("·Î±×ÀÎ ½ÇÆÐ");
+			throw new CommonException("ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		} finally {
 			session.close();
 		}
 		return dto;	
-		}// ·Î±×ÀÎ ³¡
+		}// ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½
+
+
+	public genUserDTO mypage(String userid) throws CommonException {
+		genUserDTO dto = null;
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			dto = session.selectOne("mypage", userid);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+		} finally {
+			session.close();
+		}
+		return dto;	
+	}
 	
 }
