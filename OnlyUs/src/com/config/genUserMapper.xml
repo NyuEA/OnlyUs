@@ -8,6 +8,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		nickname, birthday, preferbis)
 		values(#{userid},#{passwd},#{nickname},#{birthday},#{preferbis});
 	</insert>
+		<select id="login" parameterType="hashmap" resultType="genUserDTO">
+		select
+		userid, passwd,
+		nickname, birthday, preferbis
+		from genUser
+		where userid = #{userid} and passwd=#{passwd}
+	</select>
 </mapper>
 
 
