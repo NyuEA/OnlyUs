@@ -10,10 +10,10 @@
 <title>로그인</title>
 </head>
 <body>
-<jsp:include page="../include/topmenu.jsp" flush="true"></jsp:include><br>
-<jsp:include page="../include/top.jsp" flush="true"></jsp:include>
-<jsp:include page="../include/submenu.jsp" flush="true"></jsp:include><br>
-<jsp:include page="genJoin.jsp" flush="true"></jsp:include>
-<jsp:include page="../include/footer.jsp" flush="true"></jsp:include>
+<jsp:include page="include/topmenu.jsp" flush="true"></jsp:include><br>
+<jsp:include page="include/top.jsp" flush="true"></jsp:include>
+<jsp:include page="include/submenu.jsp" flush="true"></jsp:include><br>
+<jsp:include page="login/bisJoin.jsp" flush="true"></jsp:include>
+<jsp:include page="include/footer.jsp" flush="true"></jsp:include>
 </body>
 </html>

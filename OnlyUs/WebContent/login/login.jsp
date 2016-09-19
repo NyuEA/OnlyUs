@@ -4,7 +4,7 @@
 	src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 
-<link href="../css/login.css" rel="stylesheet" type="text/css">
+<link href="css/login.css" rel="stylesheet" type="text/css">
 
 
 

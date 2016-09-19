@@ -1,5 +1,5 @@
 
---¾÷Ã¼ È¸¿ø Å×ÀÌºí
+--ï¿½ï¿½Ã¼ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½
 create table bisUser
 ( bisid varchar2(10) primary key,
   passwd varchar2(20) not null,
@@ -14,7 +14,7 @@ create table bisUser
     drop table bisUser;
     drop table ad;
     drop table coupon;
-  --ÀÏ¹Ý È¸¿ø Å×ÀÌºí/ °ü¸®ÀÚ´Â ¾ÆÀÌµð¸¦ adminÀ¸·Î ÀÏ¹Ý È¸¿ø Å×ÀÌºí¿¡ µî·Ï
+  --ï¿½Ï¹ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½/ ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ adminï¿½ï¿½ï¿½ï¿½ ï¿½Ï¹ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½ï¿½
   create table genUser
   ( userid varchar2(10) primary key,
    passwd varchar2(20) not null,
@@ -23,10 +23,10 @@ create table bisUser
    preferbis varchar2(10));
    
    drop table genUser;
-   insert into genUser values('admin','admin','°ü¸®ÀÚ',null);
+   insert into genUser values('admin','admin','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',null);
    commit;
   
-  -- ±¤°í Å×ÀÌºí
+  -- ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½
   create table ad
   ( adid varchar2(10) primary key,
     adurl varchar2(200) not null,
@@ -38,24 +38,24 @@ create table bisUser
     constraint ad_bisuser_fk foreign key(bisid) references bisUser(bisid)
   );
   
-  -- ÄíÆù Å×ÀÌºí
+  -- ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½
   create table coupon
   ( couid varchar2(10) primary key,
     amount number(2) not null,
-    period_f date not null, --½ÃÀÛ³¯Â¥
-    period_t date not null, --Á¾·á³¯Â¥
+    period_f date not null, --ï¿½ï¿½ï¿½Û³ï¿½Â¥
+    period_t date not null, --ï¿½ï¿½ï¿½á³¯Â¥
     show_yn char(1) default 'n' not null,
     clickcount number(4) default 0,
     bisid varchar2(10),
     constraint coupon_bisuser_fk foreign key(bisid) references bisUser(bisid)
   );
   
-  --È¸¿ø ÄíÆù
+  --È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
   create table downCoupon
-  ( dcouid varchar2(10) primary key, --´Ù¿î¹ÞÀº ÄíÆù¾ÆÀÌµð
-    couid varchar2(10)  not null, -- ¾î¶²ÄíÆùÀÎÁö
-    use_yn char(1) default 'n' not null, --»ç¿ë¿©ºÎ »ç¿ëÈÄ y·Î º¯°æ
-    userid varchar2(10), --´©°¡¹Þ¾Ò´ÂÁö
+  ( dcouid varchar2(10) primary key, --ï¿½Ù¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½
+    couid varchar2(10)  not null, -- ï¿½î¶²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    use_yn char(1) default 'n' not null, --ï¿½ï¿½ë¿©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ yï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    userid varchar2(10), --ï¿½ï¿½ï¿½ï¿½ï¿½Þ¾Ò´ï¿½ï¿½ï¿½
     constraint downcoupon_genuser_fk foreign key(userid) references genuser(userid),
     constraint downcoupon_coupon_fk foreign key(couid) references coupon(couid)
   );
@@ -63,3 +63,5 @@ create table bisUser
   drop table downCoupon;
   
   commit;
+  
+  purge RECYCLEBIN;
