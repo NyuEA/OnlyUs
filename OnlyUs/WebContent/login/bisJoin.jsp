@@ -39,8 +39,8 @@
 			</td>
 		</tr>
 		<tr>
-			<th>사업자번호</th>
-			<td><input type="text" name="bisid" id="bisid"><span
+			<th>아이디</th>
+			<td><input type="text" name="bisid" id="bisid" value="admin"><span
 				id="result"></span></td>
 		</tr>
 		<tr>
@@ -48,7 +48,7 @@
 		</tr>
 		<tr>
 			<th>비밀번호</th>
-			<td><input type="password" name="passwd" id="passwd"><span
+			<td><input type="password" name="passwd" id="passwd" ><span
 				id="result2"></span></td>
 		</tr>
 		<tr>
@@ -62,48 +62,29 @@
 			<td height="7" colspan="2">
 		</tr>
 		<tr>
-			<th>업체이름</th>
-			<td><input type="text" name="bisname" id="bisname"></td>
+			<th>생일</th>
+			<td><input type="text" name="bisname" id="bisname" value="1995/09/03"></td>
 		</tr>
 		<tr>
 			<td height="7" colspan="2">
 		</tr>
 		<tr>
-			<td colspan="2" align="center">
-				<!-- 다음주소 시작--> <input name="post1" id="post1" size="5" readonly="">
-				- <input name="post2" id="post2" size="5" readonly=""> <input
-				onclick="openDaumPostcode()" type="button" value="우편번호찾기">
-			</td>
+			<th>닉네임</th>
+			<td><input type="text" name="bisname" id="bisname" value="우리만살자"></td>
 		</tr>
 		<tr>
 			<td height="7" colspan="2">
 		</tr>
 		<tr>
-			<td align="center" colspan="2"><input name="addr1" id="addr1"
-				size="40" readonly="" placeholder="도로명주소"> <br> <span
-				style="line-height: 10%;"><br></span> <input name="addr2"
-				id="addr2" size="40" placeholder="지번주소"> <!-- 다음주소 끝 -->
-				</td>
-		</tr>
-		<tr>
-			<td height="7" colspan="2">
-		</tr>
-		<tr>
-			<td colspan="2" align="center">휴대폰 <select name="phone1"
-				id="phone1">
-					<option value="010">010</option>
-					<option value="011">011</option>
-					<option value="017">017</option>
-			</select>- <input type="text" name="phone2" id="phone2" maxlength="4" size="1" style="width: 100px">-
-				<input type="text" name="phone3" id="phone3" maxlength="4" size="1" style="width: 100px">
-			</td>
+			<th>선호업종</th>
+			<td><input type="text" name="bisname" id="bisname" value="admin"></td>
 		</tr>
 		<tr>
 			<td height="7" colspan="7">
 		</tr>
 		<tr>
 		
-			<td colspan="6" ><br><br><input type="submit" value="회원가입" class="joinBtn">
+			<td colspan="6" ><br><br><input type="submit" value="정보수정" class="joinBtn">
 				<input type="reset" value="취소" class="joinBtn"><br><br></td>
 		</tr>
 		

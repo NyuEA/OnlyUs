@@ -33,10 +33,8 @@
 
 		// 아이디 중복체크 Ajax 연동
 		$("#userid").on("keyup", function(event) {
-
 			//Ajax 연동 
 			//ajax통신
-			
 			jQuery.ajax({
 				type : "GET",
 				url : "idCheck.jsp",

@@ -4,7 +4,7 @@
 	src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 
-<link href="../css/login.css" rel="stylesheet" type="text/css">
+<link href="css/login.css" rel="stylesheet" type="text/css">
 
 	<div class="nav">
 		<h2 class="blind">로컬네이게이션</h2>

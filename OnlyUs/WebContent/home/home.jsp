@@ -2,10 +2,10 @@
 	pageEncoding="UTF-8"%>
 
 
-<LINK href="../css/master.css" rel="stylesheet" type="text/css">
-<LINK href="../css/contents.css" rel="stylesheet" type="text/css">
-<LINK href="../css/common.css" rel="stylesheet" type="text/css">
-<SCRIPT src="../js/jquery-3.1.0.js"></SCRIPT>
+<LINK href="css/master.css" rel="stylesheet" type="text/css">
+<LINK href="css/contents.css" rel="stylesheet" type="text/css">
+<LINK href="css/common.css" rel="stylesheet" type="text/css">
+<SCRIPT src="js/jquery-3.1.0.js"></SCRIPT>
 
 <SCRIPT src="전령_files/main.js" type="text/javascript"></SCRIPT>
 
@@ -14,9 +14,10 @@
 		<ul class="nav_ul fix">
 			<!-- 	☆ 현재페이지 표시 class="on" -->
 			<li id="submli1"><a class="on" href="../home/home_.jsp?" id="subm1">서비스소개</a></li>
-			<li id="submli2"><a href="../board/board_.jsp" id="subm2">문의하기</a></li>
+			<li id="submli2"><a href="board_.jsp" id="subm2">문의하기</a></li>
 		</ul>
 	</div>
+
 
 	<DIV id="wrapper">
 		<!--운행일지 블로그 링크 이동 버튼-->
@@ -54,9 +55,8 @@
 
 		<DIV id="container">
 			<!--비쥬얼영역-->
-			<DIV class="visual">
-				<img src="../images/main.jpg" />
-			</DIV>
+
+			<DIV class="visual"><img src ="images/main.jpg"/></DIV>
 			<!--//visual-->
 			<!--컨텐츠 영역-->
 

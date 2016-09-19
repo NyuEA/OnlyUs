@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="ghome.jsp" flush="true"></jsp:include>
+<jsp:include page="../include/topmenu.jsp" flush="true"></jsp:include><br>
+<jsp:include page="../include/top.jsp" flush="true"></jsp:include>
+
+<jsp:include page="../home/home.jsp" flush="true"></jsp:include>
+<jsp:include page="../include/footer.jsp" flush="true"></jsp:include>
 </body>
 </html>
