@@ -36,7 +36,7 @@ public class LoginServlet extends HttpServlet {
 		try {
 			genUserDTO dto = service.login(map);
 			if (dto == null) {
-				title = "ì•„ì´ë”” ë˜ëŠ” ë¹„ë°€ë²ˆí˜¸ ë¶ˆì¼ì¹˜";
+				title = "¾ÆÀÌµğ ºñ¹Ğ¹øÈ£ ºÒÀÏÄ¡";
 				String link = "LoginFormServlet";
 				target = "error.jsp";
 				request.setAttribute("title", title);
@@ -49,7 +49,7 @@ public class LoginServlet extends HttpServlet {
 
 		} catch (CommonException e) {
 			title = e.getMessage();
-			String link = "LognFormServlet";
+			String link = "LoginFormServlet";
 			target = "error.jsp";
 			request.setAttribute("title", title);
 			request.setAttribute("link", link);

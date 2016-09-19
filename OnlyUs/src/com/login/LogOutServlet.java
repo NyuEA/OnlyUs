@@ -29,8 +29,8 @@ public class LogOutServlet extends HttpServlet {
 			request.setAttribute("title", title);
 			request.setAttribute("link", link);
 		}else{
-			target="home.jsp";
-	request.setAttribute("logout", "정상적으로 로그아웃");
+			target="home_.jsp";
+	request.setAttribute("logout", "로그아웃이 정상적으로 되었습니다.");
 		    session.invalidate();	
 		}
 		
