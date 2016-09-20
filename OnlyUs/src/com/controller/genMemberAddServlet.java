@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.dto.bisUserDTO;
 import com.dto.genUserDTO;
 import com.exception.CommonException;
-import com.service.bizUserService;
+import com.service.bisUserService;
 import com.service.genUserService;
 
 /**

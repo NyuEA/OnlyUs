@@ -20,12 +20,12 @@
 
 	<div class="loginForm">
 
-		<form name="" action="LoginServlet">
+		<form name="" action="bisLoginServlet">
 			<div class="box">
 				<table>
 					<tr>
 						<td><input type="text" class="iText" placeholder="사업자 등록 번호"
-							name="userid" id="userid" /></td>
+							name="bisid" id="bisid" /></td>
 					</tr>
 					<tr>
 						<td><input type="password" name="passwd" id="passwd"
@@ -59,7 +59,7 @@
 			<div class="box">
 				<table>
 					<tr>
-						<td><input type="text" class="iText" placeholder="아이디 or 이메일"
+						<td><input type="text" class="iText" placeholder="아이디"
 							name="userid" id="userid" /></td>
 					</tr>
 					<tr>

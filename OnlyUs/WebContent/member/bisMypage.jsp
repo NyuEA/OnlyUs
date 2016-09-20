@@ -1,30 +1,44 @@
+<%@page import="com.dto.bisUserDTO"%>
 <%@page import="com.dto.genUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<!-- DAUM 주소 라이브러리 시작 -->
+<style type="text/css">
 
+   .blue{
+     color:blue;
+   }
+   .red{
+     color:red;
+   }
+</style>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script src="js/daum.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+<!-- DAUM 주소 라이브러리 끝 -->  
 <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 <link href="css/mypage.css" rel="stylesheet" type="text/css">
 <link href="css/login.css" rel="stylesheet" type="text/css">
 
 
 <%
-	String logout = (String) request.getAttribute("logout");
-	if (logout != null) {
+	String bislogout = (String) request.getAttribute("logout");
+	if (bislogout != null) {
 %>
 <script type="text/javascript">
-      var str = "<%=logout%>";
-      alert("<%=logout%>");
+	var str = "<%=bislogout%>";
+	alert("<%=bislogout%>");
 </script>
 <%
 	}
 %>
 <%
-	String update = (String) request.getAttribute("update");
-	if (update != null) {
+	String bisupdate = (String) request.getAttribute("bisupdate");
+	if (bisupdate != null) {
 %>
 <script type="text/javascript">
-      var str = "<%=update%>";
-      alert("<%=update%>");
+	var str = "<%=bisupdate%>";
+	alert("<%=bisupdate%>");
 </script>
 <%
 	}
@@ -44,49 +58,69 @@
 </div>
 
 <%
-	genUserDTO dto = (genUserDTO) request.getAttribute("mypage");
-	String userid = dto.getUserid();
-	String passwd = dto.getPasswd();
-	String nickname = dto.getNickname();
-	String phone = dto.getPhone();
+	bisUserDTO bisdto = (bisUserDTO) request.getAttribute("bisMypage");
+	String bisid = bisdto.getBisid();
+	String passwd = bisdto.getPasswd();
+	String bisname = bisdto.getBisname();
+	String post1 = bisdto.getPost1();
+	String post2 = bisdto.getPost2();
+	String addr1 = bisdto.getAddr1();
+	String addr2 = bisdto.getAddr2();
+	String phone1 = bisdto.getPhone1();
+	String phone2 = bisdto.getPhone2();
+	String phone3 = bisdto.getPhone3();
 %>
 
 
 <form name="myform">
 	<table align="center" id="mytable">
 		<tr>
-			<th>아이디</th>
-		<td><input type="text" name="userid" id="userid"
-				value="<%=userid%>" readonly>
-			</td>
+			<th>아이디<br>(사업자번호)</th>
+			<td><input type="text" name="userid" id="userid"
+				value="<%=bisid%>" readonly></td>
 		</tr>
 
 		<tr>
 			<th>비밀번호</th>
-		<td><input type="text" name="passwd" id="passwd" value="<%=passwd%>"></td>
+			<td><input type="text" name="passwd" id="passwd"
+				value="<%=passwd%>"></td>
 		</tr>
 		<tr>
 			<th>비밀번호확인</th>
-		<td><input type="text" name="passwd" id="passwd" value="<%=passwd%>"></td>
+			<td><input type="text" name="passwd" id="passwd"
+				value="<%=passwd%>"></td>
 		</tr>
-		
-		 <tr>
-			<th>닉네임</th>
-		<td><input type="text" name="nickname" id="nickname" value="<%=nickname%>"></th>
-		</tr>
-			
+
 		<tr>
-			<th>휴대폰</th>
-		<td>
-		<input type="text" name="phone" id="phone" value="<%=phone%>" maxlength="11"></td>
+			<th>업체명</th>
+			<td><input type="text" name="nickname" id="nickname"
+				value="<%=bisname%>">
+			</th>
 		</tr>
-		
+		<tr>
+		<th>주소</th>
+			<td>
+				<!-- 다음주소 시작--> <input name="post1" id="post1" size="5" readonly=""value="<%=post1%>">
+				- <input name="post2" id="post2" size="5" readonly="" value="<%=post2%>"> <input
+				onclick="openDaumPostcode()" type="button" value="우편번호찾기"> <br>
+				<input name="addr1" id="addr1" size="40" value="<%=addr1%>"> <br> <span
+				style="line-height: 10%;"><br></span> <input name="addr2"
+				id="addr2" size="40" value="<%=addr2%>" > <!-- 다음주소 끝 -->
+			</td>
+		</tr>
+		<tr>
+			<th>전화번호</th>
+			<td><input type="text" name="phone1" id="phone1" size="4" maxlength="3" value="<%=phone1%>">- <input type="text" name="phone2" id="phone2" size="4" maxlength="4" value="<%=phone2%>">- <input
+				type="text" name="phone3" id="phone3" size="4"maxlength="4" value="<%=phone3%>"><br></td>
+		</tr>
+
 		<tr>
 			<td colspan="2">
-		<button onclick="memberUpdate(myform)" class="mypageBtn">수정</button>
-		<button onclick="memberDelete(myform)"  class="mypageBtn">탈퇴</button></td>
+				<button onclick="memberUpdate(myform)" class="mypageBtn">수정</button>
+				<button onclick="memberDelete(myform)" class="mypageBtn">탈퇴</button>
+			</td>
 		</tr>
-		
+
 	</table>
 </form>
 

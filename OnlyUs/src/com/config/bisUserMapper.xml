@@ -7,15 +7,28 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	 <select id="idCheck" parameterType="string"
     resultType="string">
       select bisid
-      from genUser
+      from bisUser
       where bisid = #{userid}
     </select>
     <insert id="addbisUser" parameterType="bisUserDTO">
-		insert into genUser( bisid, passwd,
+		insert into bisUser( bisid, passwd,
 		bisname, post1, post2, addr1, addr2, phone1, phone2, phone3)
 		values(#{bisid},#{passwd},#{bisname},#{post1},#{post2},#{addr1},#{addr2},#{phone1},#{phone2},#{phone3});
 	</insert>
-	
+	<select id="bislogin" parameterType="hashmap" resultType="bisUserDTO">
+		select
+		bisid, passwd,
+		bisname, post1, post2, addr1, addr2, phone1, phone2, phone3
+		from bisUser
+		where bisid = #{bisid} and passwd=#{passwd}
+	</select>
+	<select id="bisMypage" parameterType="String" resultType="bisUserDTO">
+		select
+		bisid, passwd,
+		bisname, post1, post2, addr1, addr2, phone1, phone2, phone3
+		from bisUser
+		where bisid = #{bisid}
+	</select>
 </mapper>
 
 

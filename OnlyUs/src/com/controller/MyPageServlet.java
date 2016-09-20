@@ -10,8 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.dto.bisUserDTO;
 import com.dto.genUserDTO;
 import com.exception.CommonException;
+import com.service.bisUserService;
 import com.service.genUserService;
 
 /**
@@ -27,7 +29,7 @@ public class MyPageServlet extends HttpServlet {
 				(genUserDTO)session.getAttribute("login");
 		String target="";
 		String title="";
-		if(dto!=null){
+		if(dto!=null ){
 			target="mypage_.jsp";
 			
 			String userid = dto.getUserid();
