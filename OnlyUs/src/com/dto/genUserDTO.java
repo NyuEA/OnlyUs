@@ -4,24 +4,17 @@ public class genUserDTO {
 	private String userid;
 	private String passwd;
 	private String nickname;
-	private String birthday;
-	private String preferbis;
+	private String phone;
 	public genUserDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public genUserDTO(String userid, String passwd, String nickname, String birthday, String preferbis) {
+	public genUserDTO(String userid, String passwd, String nickname, String phone) {
 		super();
 		this.userid = userid;
 		this.passwd = passwd;
 		this.nickname = nickname;
-		this.birthday = birthday;
-		this.preferbis = preferbis;
-	}
-	@Override
-	public String toString() {
-		return "bisUserDTO [userid=" + userid + ", passwd=" + passwd + ", nickname=" + nickname + ", birthday="
-				+ birthday + ", preferbis=" + preferbis + "]";
+		this.phone = phone;
 	}
 	public String getUserid() {
 		return userid;
@@ -41,17 +34,16 @@ public class genUserDTO {
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
 	}
-	public String getBirthday() {
-		return birthday;
+	public String getPhone() {
+		return phone;
 	}
-	public void setBirthday(String birthday) {
-		this.birthday = birthday;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
-	public String getPreferbis() {
-		return preferbis;
-	}
-	public void setPreferbis(String preferbis) {
-		this.preferbis = preferbis;
+	@Override
+	public String toString() {
+		return "genUserDTO [userid=" + userid + ", passwd=" + passwd + ", nickname=" + nickname + ", phone=" + phone
+				+ "]";
 	}
 	
 	

@@ -26,16 +26,15 @@ public class genMemberUpdateServlet extends HttpServlet {
 		String userid = request.getParameter("userid");
 		String passwd = request.getParameter("passwd");
 		String nickname = request.getParameter("nickname");
-		String birthday = request.getParameter("birthday");
-		String preferbis = request.getParameter("preferbis");
-		
-		genUserDTO dto = new genUserDTO(userid, passwd, nickname, birthday, preferbis);
+		String phone = request.getParameter("phone");
+		System.out.println(userid+"|"+passwd+"|"+nickname+"|"+phone);
+		genUserDTO dto = new genUserDTO(userid, passwd, nickname, phone);
 		genUserService service = new genUserService();
 	    String title="";
 	    String target="";
 	    try {
 			service.updateGenUser(dto);
-			target = "home.jsp";
+			target = "MyPageServlet";
 			request.setAttribute("update", "정상적으로 수정되었습니다.");
 		} catch (CommonException e) {
 			title= e.getMessage();

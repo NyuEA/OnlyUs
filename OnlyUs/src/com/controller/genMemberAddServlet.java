@@ -24,10 +24,9 @@ public class genMemberAddServlet extends HttpServlet {
 		String userid = request.getParameter("userid");
 		String passwd = request.getParameter("passwd");
 		String nickname = request.getParameter("nickname");
-		String birthday = request.getParameter("birthday");
-		String preferbis = request.getParameter("preferbis");
+		String phone = request.getParameter("phone");
 		
-		genUserDTO dto = new genUserDTO(userid, passwd, nickname, birthday, preferbis);
+		genUserDTO dto = new genUserDTO(userid, passwd, nickname, phone);
 		genUserService service = new genUserService();
 		String title="";
 		    String target="";

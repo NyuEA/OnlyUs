@@ -12,22 +12,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="login" parameterType="hashmap" resultType="genUserDTO">
 		select
 		userid, passwd,
-		nickname, birthday, preferbis
+		nickname, phone
 		from genUser
 		where userid = #{userid} and passwd=#{passwd}
 	</select>
 	<select id="mypage" parameterType="String" resultType="genUserDTO">
 		select
 		userid, passwd,
-		nickname, birthday, preferbis
+		nickname, phone
 		from genUser
 		where userid = #{userid}
 	</select>
 	<update id="updateGenUser" parameterType="genUserDTO">
-		update member
+		update genUser
 		set passwd = #{passwd},
 		nickname = #{nickname},
-		preferbis = #{preferbis}
+		phone = #{phone}
 	   where userid = #{userid}	
 	</update>
 </mapper>

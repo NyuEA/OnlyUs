@@ -18,6 +18,17 @@
 <%
 	}
 %>
+<%
+	String update = (String) request.getAttribute("update");
+	if (logout != null) {
+%>
+<script type="text/javascript">
+      var str = "<%=update%>";
+      alert("<%=update%>");
+</script>
+<%
+	}
+%>
 <div class="nav">
 	<h2 class="blind">로컬네이게이션</h2>
 	<ul class="nav_ul fix">
@@ -37,8 +48,7 @@
 	String userid = dto.getUserid();
 	String passwd = dto.getPasswd();
 	String nickname = dto.getNickname();
-	String birthday = dto.getBirthday();
-	String preferbis = dto.getPreferbis();
+	String phone = dto.getPhone();
 %>
 
 
@@ -62,20 +72,13 @@
 		
 		 <tr>
 			<th>닉네임</th>
-		<td><input type="text" name="username" id="username" value="<%=nickname%>" readonly></th>
+		<td><input type="text" name="nickname" id="nickname" value="<%=nickname%>"></th>
 		</tr>
 			
 		<tr>
-			<th> 생일</th>
+			<th>핸드폰</th>
 		<td>
-		<input type="text" name="username" id="username" value="<%=birthday%>"
-			readonly></td>
-		</tr>
-			
-		 <tr>
-			<th>선호업종</th>
-		<td>
-		<input type="text" name="username" id="username" value="<%=birthday%>"></td>
+		<input type="text" name="phone" id="phone" value="<%=phone%>" maxlength="11"></td>
 		</tr>
 		
 		<tr>
@@ -89,11 +92,11 @@
 
 <script type="text/javascript">
 	function memberUpdate(f) {
-		f.action = "MemberUpdateServlet";
+		f.action = "genMemberUpdateServlet";
 	}
 
 	function memberDelete(f) {
-		f.action = "MemberDeleteServlet";
+		f.action = "genMemberDeleteServlet";
 	}
 
 	$(document).ready(function() {

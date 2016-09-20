@@ -20,8 +20,8 @@
   if(dto==null){
 %>
 		<li><a class="on" href="LoginFormServlet">로그인</a></li>
-		<li><a href="bisJoin_.jsp">회원가입</a></li>
-		<li><a href="genJoin_.jsp"><img
+		<li><a href="genJoin_.jsp">회원가입</a></li>
+		<li><a href=""><img
 				src="images/header_top_contact.png" id="header_top_contact"></a></li>
 		<%
   }else{
