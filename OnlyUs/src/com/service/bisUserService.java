@@ -51,5 +51,18 @@ public class bisUserService {
 		}
 		return dto;	
 	}
+	public void updatebisUser(bisUserDTO bisdto) throws CommonException {
+		System.out.println(bisdto.getAddr1());
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			int n = session.update("updatebisUser", bisdto);
+			session.commit();
 
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("회원수정 실패");
+		} finally {
+			session.close();
+		}
+	}
 }
