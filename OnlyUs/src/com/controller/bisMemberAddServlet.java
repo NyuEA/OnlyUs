@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dto.bisUserDTO;
 import com.exception.CommonException;
-import com.service.bizUserService;
+import com.service.bisUserService;
 
 /**
  * Servlet implementation class genMemberAddServlet
@@ -30,8 +30,8 @@ public class bisMemberAddServlet extends HttpServlet {
 		String phone2 = request.getParameter("phone2");
 		String phone3 = request.getParameter("phone3");
 		
-		bisUserDTO dto = new bisUserDTO(bisid, passwd, bisname, Integer.parseInt(post1), Integer.parseInt(post2), addr1, addr2, Integer.parseInt(phone1), Integer.parseInt(phone2), Integer.parseInt(phone3));
-		bizUserService service = new bizUserService();
+		bisUserDTO dto = new bisUserDTO(bisid, passwd, bisname, post1, post2, addr1, addr2, phone1, phone2, phone3);
+		bisUserService service = new bisUserService();
 		 String title="";
 		    String target="";
 		    try {

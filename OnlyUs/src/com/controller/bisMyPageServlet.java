@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.dto.bisUserDTO;
 import com.dto.genUserDTO;
@@ -18,32 +19,34 @@ import com.service.genUserService;
 /**
  * Servlet implementation class LognFormServlet
  */
-@WebServlet("/genMemberUpdateServlet")
-public class genMemberUpdateServlet extends HttpServlet {
+@WebServlet("/bisMyPageServlet")
+public class bisMyPageServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String userid = request.getParameter("userid");
-		String passwd = request.getParameter("passwd");
-		String nickname = request.getParameter("nickname");
-		String phone = request.getParameter("phone");
-		System.out.println(userid+"|"+passwd+"|"+nickname+"|"+phone);
-		genUserDTO dto = new genUserDTO(userid, passwd, nickname, phone);
-		genUserService service = new genUserService();
-	    String title="";
-	    String target="";
-	    try {
-			service.updateGenUser(dto);
-			target = "MyPageServlet";
-			request.setAttribute("update", "정상적으로 수정되었습니다.");
-		} catch (CommonException e) {
-			title= e.getMessage();
-			String link="MyPageServlet";
-			target="error.jsp";
-			request.setAttribute("title", title);
-			request.setAttribute("link", link);
+		HttpSession session = request.getSession();
+		bisUserDTO bisdto = (bisUserDTO)session.getAttribute("bislogin");
+		String target="";
+		String title="";
+		if(bisdto!=null){
+			target="bisMypage_.jsp";
+			
+			String bisid = bisdto.getBisid();
+			bisUserService service = new bisUserService();
+			try {
+				bisUserDTO my = service.bisMypage(bisid);
+				request.setAttribute("bisMypage", my);
+			} catch (CommonException e) {
+				title= e.getMessage();
+				String link="LoginFormServlet";
+				target="error.jsp";
+				request.setAttribute("title", title);
+				request.setAttribute("link", link);
+			}
+		}else{
+			target="LoginFormServlet";
 		}
-		
+
 		RequestDispatcher dis =
 				request.getRequestDispatcher(target);
 		dis.forward(request, response);

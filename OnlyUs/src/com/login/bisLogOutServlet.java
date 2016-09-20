@@ -1,4 +1,4 @@
-package com.controller;
+package com.login;
 
 import java.io.IOException;
 
@@ -8,35 +8,30 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.dto.bisUserDTO;
-import com.dto.genUserDTO;
-import com.exception.CommonException;
-import com.service.bisUserService;
-import com.service.genUserService;
 
-/**
- * Servlet implementation class LognFormServlet
- */
-@WebServlet("/genMemberDeleteServlet")
-public class genMemberDeleteServlet extends HttpServlet {
+@WebServlet("/bisLogOutServlet")
+public class bisLogOutServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String userid = request.getParameter("userid");
-		genUserService service = new genUserService();
-	    String title="";
-	    String target="";
-	    try {
-			service.deleteGenUser(userid);
-			target = "home_.jsp";
-			request.setAttribute("delete", "Á¤»óÀûÀ¸·Î »èÁ¦µÇ¾ú½À´Ï´Ù.");
-		} catch (CommonException e) {
-			title= e.getMessage();
-			String link="MyPageServlet";
+		HttpSession session = request.getSession();
+		bisUserDTO dto =
+				(bisUserDTO)session.getAttribute("bislogin");
+		 String title="";
+		 String target="";
+		if(dto==null){
+			title= "ë¡œê·¸ì¸ í•˜ì„¸ìš”";
+			String link="LoginFormServlet";
 			target="error.jsp";
 			request.setAttribute("title", title);
 			request.setAttribute("link", link);
+		}else{
+			target="home_.jsp";
+	request.setAttribute("logout", "ë¡œê·¸ì•„ì›ƒì´ ì •ìƒì ìœ¼ë¡œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
+		    session.invalidate();	
 		}
 		
 		RequestDispatcher dis =
