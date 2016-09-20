@@ -61,6 +61,13 @@ values('s1','s1','맘스터치' ,'310','83','충남 천안 서북구','신당동
     constraint coupon_bisuser_fk foreign key(bisid) references bisUser(bisid)
   );
    insert into coupon values('c1','10','2016-10-01','2016-11-01','N',0,'s1'); 
+    alter table coupon add content varchar(500);
+    commit;
+    update coupon  set content = '싸이버거 10% 할인권' where couid = 'c1'; 
+    select * from coupon;
+  alter table coupon add content varchar(500);
+  
+   insert into coupon values('c1','10','2016-10-01','2016-11-01','N',0,'s1'); 
   --회원 쿠폰
   create table downCoupon
   ( dcouid varchar2(10) primary key, --다운받은 쿠폰아이디
