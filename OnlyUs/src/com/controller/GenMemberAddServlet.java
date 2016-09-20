@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.dto.BisUserDTO;
-import com.dto.genUserDTO;
+import com.dto.GenUserDTO;
 import com.exception.CommonException;
 import com.service.BisUserService;
 import com.service.GenUserService;
@@ -26,14 +26,14 @@ public class GenMemberAddServlet extends HttpServlet {
 		String nickname = request.getParameter("nickname");
 		String phone = request.getParameter("phone");
 		
-		genUserDTO dto = new genUserDTO(userid, passwd, nickname, phone);
+		GenUserDTO dto = new GenUserDTO(userid, passwd, nickname, phone);
 		GenUserService service = new GenUserService();
 		String title="";
 		    String target="";
 		    try {
 				service.addGenUser(dto);
 				target = "home_.jsp";
-				request.setAttribute("add", "Á¤»óÀûÀ¸·Î È¸¿ø°¡ÀÔµÇ¼Ì½À´Ï´Ù.");
+				request.setAttribute("add", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ÔµÇ¼Ì½ï¿½ï¿½Ï´ï¿½.");
 			} catch (CommonException e) {
 				title= e.getMessage();
 				String link="join.jsp";

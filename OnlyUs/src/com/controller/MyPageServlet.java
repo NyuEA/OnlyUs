@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.dto.BisUserDTO;
-import com.dto.genUserDTO;
+import com.dto.GenUserDTO;
 import com.exception.CommonException;
 import com.service.BisUserService;
 import com.service.GenUserService;
@@ -25,8 +25,8 @@ public class MyPageServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession session = request.getSession();
-		genUserDTO dto = 
-				(genUserDTO)session.getAttribute("login");
+		GenUserDTO dto = 
+				(GenUserDTO)session.getAttribute("login");
 		String target="";
 		String title="";
 		if(dto!=null ){
@@ -35,7 +35,7 @@ public class MyPageServlet extends HttpServlet {
 			String userid = dto.getUserid();
 			GenUserService service = new GenUserService();
 			try {
-				genUserDTO my = service.mypage(userid);
+				GenUserDTO my = service.mypage(userid);
 				request.setAttribute("mypage", my);
 			} catch (CommonException e) {
 				title= e.getMessage();

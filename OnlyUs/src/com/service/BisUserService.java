@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.config.MySqlSessionFactory;
 import com.dto.BisUserDTO;
-import com.dto.genUserDTO;
+import com.dto.GenUserDTO;
 import com.exception.CommonException;
 
 public class BisUserService {
@@ -18,7 +18,7 @@ public class BisUserService {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("»ç¾÷ÀÚÈ¸¿øµî·Ï ½ÇÆÐ");
+			throw new CommonException("ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		} finally {
 			session.close();
 		}
@@ -32,7 +32,7 @@ public class BisUserService {
 			System.out.println("login");
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("·Î±×ÀÎ½ÇÆÐ");
+			throw new CommonException("ï¿½Î±ï¿½ï¿½Î½ï¿½ï¿½ï¿½");
 		} finally {
 			session.close();
 		}
@@ -45,7 +45,7 @@ public class BisUserService {
 			dto = session.selectOne("bisMypage", userid);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("¸¶ÀÌÆäÀÌÁö ºÒ·¯¿À±â ½ÇÆÐ");
+			throw new CommonException("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		} finally {
 			session.close();
 		}
@@ -60,7 +60,7 @@ public class BisUserService {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("È¸¿ø¼öÁ¤ ½ÇÆÐ");
+			throw new CommonException("È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		} finally {
 			session.close();
 		}

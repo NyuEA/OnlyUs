@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dto.genUserDTO;
+import com.dto.GenUserDTO;
 import com.exception.CommonException;
 
 import com.service.GenUserService;
@@ -34,9 +34,9 @@ public class LoginServlet extends HttpServlet {
 		String title = "";
 		String target = "";
 		try {
-			genUserDTO dto = service.login(map);
+			GenUserDTO dto = service.login(map);
 			if (dto == null) {
-				title = "¾ÆÀÌµð ºñ¹Ð¹øÈ£ ºÒÀÏÄ¡";
+				title = "ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½Ä¡";
 				String link = "LoginFormServlet";
 				target = "error.jsp";
 				request.setAttribute("title", title);

@@ -5,16 +5,16 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.config.MySqlSessionFactory;
-import com.dto.couponDTO;
-import com.dto.downCouponDTO;
-import com.dto.genUserDTO;
-import com.dto.mycouponDTO;
+import com.dto.CouponDTO;
+import com.dto.DownCouponDTO;
+import com.dto.GenUserDTO;
+import com.dto.MycouponDTO;
 import com.exception.CommonException;
 
 public class CouponService {
 
-	public List<mycouponDTO> MyCoupon(String userid) throws CommonException {
-		List<mycouponDTO> list = null;
+	public List<MycouponDTO> MyCoupon(String userid) throws CommonException {
+		List<MycouponDTO> list = null;
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
 			list = session.selectList("myCoupon", userid);

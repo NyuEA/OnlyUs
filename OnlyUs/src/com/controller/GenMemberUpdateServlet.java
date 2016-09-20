@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.dto.BisUserDTO;
-import com.dto.genUserDTO;
+import com.dto.GenUserDTO;
 import com.exception.CommonException;
 import com.service.BisUserService;
 import com.service.GenUserService;
@@ -28,14 +28,14 @@ public class GenMemberUpdateServlet extends HttpServlet {
 		String nickname = request.getParameter("nickname");
 		String phone = request.getParameter("phone");
 		System.out.println(userid+"|"+passwd+"|"+nickname+"|"+phone);
-		genUserDTO dto = new genUserDTO(userid, passwd, nickname, phone);
+		GenUserDTO dto = new GenUserDTO(userid, passwd, nickname, phone);
 		GenUserService service = new GenUserService();
 	    String title="";
 	    String target="";
 	    try {
 			service.updateGenUser(dto);
 			target = "MyPageServlet";
-			request.setAttribute("update", "Á¤»óÀûÀ¸·Î ¼öÁ¤µÇ¾ú½À´Ï´Ù.");
+			request.setAttribute("update", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 		} catch (CommonException e) {
 			title= e.getMessage();
 			String link="MyPageServlet";

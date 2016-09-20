@@ -6,11 +6,11 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.config.MySqlSessionFactory;
 import com.dto.BisUserDTO;
-import com.dto.genUserDTO;
+import com.dto.GenUserDTO;
 import com.exception.CommonException;
 
 public class GenUserService {
-	public void addGenUser(genUserDTO dto) throws CommonException {
+	public void addGenUser(GenUserDTO dto) throws CommonException {
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
 			int n = session.insert("addGenUser", dto);
@@ -27,8 +27,8 @@ public class GenUserService {
 
 
 		//占싸깍옙占쏙옙
-	public genUserDTO login(HashMap<String, String> map) throws CommonException {
-		genUserDTO dto = null;
+	public GenUserDTO login(HashMap<String, String> map) throws CommonException {
+		GenUserDTO dto = null;
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
 			dto = session.selectOne("login", map);
@@ -42,8 +42,8 @@ public class GenUserService {
 		}// 占싸깍옙占쏙옙 占쏙옙
 
 
-	public genUserDTO mypage(String userid) throws CommonException {
-		genUserDTO dto = null;
+	public GenUserDTO mypage(String userid) throws CommonException {
+		GenUserDTO dto = null;
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
 			dto = session.selectOne("mypage", userid);
@@ -55,7 +55,7 @@ public class GenUserService {
 		}
 		return dto;	
 	}
-	public void updateGenUser(genUserDTO dto) throws CommonException {
+	public void updateGenUser(GenUserDTO dto) throws CommonException {
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
 			int n = session.update("updateGenUser", dto);

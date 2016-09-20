@@ -1,15 +1,15 @@
 package com.dto;
 
-public class downCouponDTO {
+public class DownCouponDTO {
 	private String dcouid;
 	private String couid;
 	private String use_yn;
 	private String userid;
-	public downCouponDTO() {
+	public DownCouponDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public downCouponDTO(String dcouid, String couid, String use_yn, String userid) {
+	public DownCouponDTO(String dcouid, String couid, String use_yn, String userid) {
 		super();
 		this.dcouid = dcouid;
 		this.couid = couid;

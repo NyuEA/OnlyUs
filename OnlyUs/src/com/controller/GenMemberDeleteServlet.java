@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.dto.BisUserDTO;
-import com.dto.genUserDTO;
+import com.dto.GenUserDTO;
 import com.exception.CommonException;
 import com.service.BisUserService;
 import com.service.GenUserService;
@@ -30,7 +30,7 @@ public class GenMemberDeleteServlet extends HttpServlet {
 	    try {
 			service.deleteGenUser(userid);
 			target = "home_.jsp";
-			request.setAttribute("delete", "Á¤»óÀûÀ¸·Î »èÁ¦µÇ¾ú½À´Ï´Ù.");
+			request.setAttribute("delete", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 		} catch (CommonException e) {
 			title= e.getMessage();
 			String link="MyPageServlet";
