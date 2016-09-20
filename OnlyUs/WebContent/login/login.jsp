@@ -51,7 +51,7 @@
 	</div>
 
 
-
+<img src ="images/sun.png" style="margin-top: 80px"/>
 
 	<div class="loginForm1">
 
