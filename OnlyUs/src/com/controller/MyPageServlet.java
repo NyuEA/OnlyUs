@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dto.bisUserDTO;
+import com.dto.BisUserDTO;
 import com.dto.genUserDTO;
 import com.exception.CommonException;
-import com.service.bisUserService;
-import com.service.genUserService;
+import com.service.BisUserService;
+import com.service.GenUserService;
 
 /**
  * Servlet implementation class LognFormServlet
@@ -33,7 +33,7 @@ public class MyPageServlet extends HttpServlet {
 			target="mypage_.jsp";
 			
 			String userid = dto.getUserid();
-			genUserService service = new genUserService();
+			GenUserService service = new GenUserService();
 			try {
 				genUserDTO my = service.mypage(userid);
 				request.setAttribute("mypage", my);

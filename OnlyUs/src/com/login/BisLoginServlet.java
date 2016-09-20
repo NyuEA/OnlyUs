@@ -11,13 +11,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dto.bisUserDTO;
-import com.dto.genUserDTO;
+import com.dto.BisUserDTO;
 import com.exception.CommonException;
-import com.service.bisUserService;
+import com.service.BisUserService;
 
-@WebServlet("/bisLoginServlet")
-public class bisLoginServlet extends HttpServlet {
+@WebServlet("/BisLoginServlet")
+public class BisLoginServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -30,11 +29,11 @@ public class bisLoginServlet extends HttpServlet {
 		map.put("bisid", bisid);
 		map.put("passwd", passwd);
 
-		bisUserService service = new bisUserService();
+		BisUserService service = new BisUserService();
 		String title = "";
 		String target = "";
 		try {
-			bisUserDTO dto = service.bislogin(map);
+			BisUserDTO dto = service.bislogin(map);
 			if (dto == null) {
 				title = "아이디 비밀번호 불일치";
 				String link = "LoginFormServlet";

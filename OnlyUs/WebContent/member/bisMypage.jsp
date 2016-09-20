@@ -1,4 +1,4 @@
-<%@page import="com.dto.bisUserDTO"%>
+<%@page import="com.dto.BisUserDTO"%>
 <%@page import="com.dto.genUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -58,7 +58,7 @@
 </div>
 
 <%
-	bisUserDTO bisdto = (bisUserDTO) request.getAttribute("bisMypage");
+	BisUserDTO bisdto = (BisUserDTO) request.getAttribute("bisMypage");
 	String bisid = bisdto.getBisid();
 	String passwd = bisdto.getPasswd();
 	String bisname = bisdto.getBisname();
@@ -126,11 +126,11 @@
 
 <script type="text/javascript">
 	function bisMemberUpdate(f) {
-		f.action = "bisMemberUpdateServlet";
+		f.action = "BisMemberUpdateServlet";
 	}
 
 	function bisMemberDelete(f) {
-		f.action = "bisMemberDeleteServlet";
+		f.action = "BisMemberDeleteServlet";
 	}
 
 	$(document).ready(function() {

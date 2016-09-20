@@ -5,11 +5,11 @@ import java.util.HashMap;
 import org.apache.ibatis.session.SqlSession;
 
 import com.config.MySqlSessionFactory;
-import com.dto.bisUserDTO;
+import com.dto.BisUserDTO;
 import com.dto.genUserDTO;
 import com.exception.CommonException;
 
-public class genUserService {
+public class GenUserService {
 	public void addGenUser(genUserDTO dto) throws CommonException {
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {

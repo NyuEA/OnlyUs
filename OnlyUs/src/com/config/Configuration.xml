@@ -12,7 +12,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	</settings>
 	<typeAliases>
 		<typeAlias type="com.dto.genUserDTO" alias="genUserDTO" />
-		<typeAlias type="com.dto.bisUserDTO" alias="bisUserDTO" />
+		<typeAlias type="com.dto.BisUserDTO" alias="BisUserDTO" />
 		<typeAlias type="com.dto.mycouponDTO" alias="mycouponDTO" />
 	</typeAliases>
 

@@ -9,35 +9,31 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dto.bisUserDTO;
+import com.dto.BisUserDTO;
+import com.dto.genUserDTO;
 import com.exception.CommonException;
-import com.service.bisUserService;
+import com.service.BisUserService;
+import com.service.GenUserService;
 
 /**
  * Servlet implementation class genMemberAddServlet
  */
-@WebServlet("/bisMemberAddServlet")
-public class bisMemberAddServlet extends HttpServlet {
+@WebServlet("/GenMemberAddServlet")
+public class GenMemberAddServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String bisid = request.getParameter("bisid");
+		String userid = request.getParameter("userid");
 		String passwd = request.getParameter("passwd");
-		String bisname = request.getParameter("bisname");
-		String post1 = request.getParameter("post1");
-		String post2 = request.getParameter("post2");
-		String addr1 = request.getParameter("addr1");
-		String addr2 = request.getParameter("addr2");
-		String phone1 = request.getParameter("phone1");
-		String phone2 = request.getParameter("phone2");
-		String phone3 = request.getParameter("phone3");
+		String nickname = request.getParameter("nickname");
+		String phone = request.getParameter("phone");
 		
-		bisUserDTO dto = new bisUserDTO(bisid, passwd, bisname, post1, post2, addr1, addr2, phone1, phone2, phone3);
-		bisUserService service = new bisUserService();
-		 String title="";
+		genUserDTO dto = new genUserDTO(userid, passwd, nickname, phone);
+		GenUserService service = new GenUserService();
+		String title="";
 		    String target="";
 		    try {
-				service.addBisUser(dto);
-				target = "login.jsp";
-				request.setAttribute("result", "success");
+				service.addGenUser(dto);
+				target = "home_.jsp";
+				request.setAttribute("add", "정상적으로 회원가입되셨습니다.");
 			} catch (CommonException e) {
 				title= e.getMessage();
 				String link="join.jsp";

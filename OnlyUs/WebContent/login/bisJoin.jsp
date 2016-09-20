@@ -1,4 +1,4 @@
-<%@page import="com.dto.bisUserDTO"%>
+<%@page import="com.dto.BisUserDTO"%>
 <%@page import="com.dto.genUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -105,7 +105,7 @@
 
 <script type="text/javascript">
 	function bismemberAdd(f) {
-		f.action = "genMemberUpdateServlet";
+		f.action = "GenMemberUpdateServlet";
 	}
 
 	$(document).ready(function() {

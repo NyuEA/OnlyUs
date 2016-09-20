@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import com.dto.genUserDTO;
 import com.exception.CommonException;
 
-import com.service.genUserService;
+import com.service.GenUserService;
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
 		map.put("userid", userid);
 		map.put("passwd", passwd);
 
-		genUserService service = new genUserService();
+		GenUserService service = new GenUserService();
 		String title = "";
 		String target = "";
 		try {

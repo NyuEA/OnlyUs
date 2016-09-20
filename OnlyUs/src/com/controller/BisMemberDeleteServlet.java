@@ -9,41 +9,30 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dto.bisUserDTO;
-import com.dto.genUserDTO;
+import com.dto.BisUserDTO;
 import com.exception.CommonException;
-import com.service.bisUserService;
-import com.service.genUserService;
+import com.service.BisUserService;
+import com.service.GenUserService;
 
 /**
  * Servlet implementation class LognFormServlet
  */
-@WebServlet("/bisMemberUpdateServlet")
-public class bisMemberUpdateServlet extends HttpServlet {
+@WebServlet("/BisMemberDeleteServlet")
+public class BisMemberDeleteServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String bisid = request.getParameter("bisid");
-		String passwd = request.getParameter("passwd");
-		String bisname = request.getParameter("bisname");
-		String post1 = request.getParameter("post1");
-		String post2 = request.getParameter("post2");
-		String addr1 = request.getParameter("addr1");
-		String addr2 = request.getParameter("addr2");
-		String phone1 = request.getParameter("phone1");
-		String phone2 = request.getParameter("phone2");
-		String phone3 = request.getParameter("phone3");
-		bisUserDTO bisdto = new bisUserDTO(bisid, passwd, bisname, post1, post2, addr1, addr2, phone1, phone2, phone3);
-		bisUserService service = new bisUserService();
+		String userid = request.getParameter("userid");
+		GenUserService service = new GenUserService();
 	    String title="";
 	    String target="";
 	    try {
-			service.updatebisUser(bisdto);
-			target = "bisMyPageServlet";
-			request.setAttribute("bisupdate", "정상적으로 수정되었습니다.");
+			service.deleteGenUser(userid);
+			target = "home_.jsp";
+			request.setAttribute("delete", "정상적으로 삭제되었습니다.");
 		} catch (CommonException e) {
 			title= e.getMessage();
-			String link="bisMyPageServlet";
+			String link="MyPageServlet";
 			target="error.jsp";
 			request.setAttribute("title", title);
 			request.setAttribute("link", link);

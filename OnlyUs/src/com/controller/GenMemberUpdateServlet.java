@@ -9,43 +9,45 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dto.bisUserDTO;
+import com.dto.BisUserDTO;
 import com.dto.genUserDTO;
 import com.exception.CommonException;
-import com.service.bisUserService;
-import com.service.genUserService;
+import com.service.BisUserService;
+import com.service.GenUserService;
 
 /**
- * Servlet implementation class genMemberAddServlet
+ * Servlet implementation class LognFormServlet
  */
-@WebServlet("/genMemberAddServlet")
-public class genMemberAddServlet extends HttpServlet {
+@WebServlet("/GenMemberUpdateServlet")
+public class GenMemberUpdateServlet extends HttpServlet {
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		String userid = request.getParameter("userid");
 		String passwd = request.getParameter("passwd");
 		String nickname = request.getParameter("nickname");
 		String phone = request.getParameter("phone");
-		
+		System.out.println(userid+"|"+passwd+"|"+nickname+"|"+phone);
 		genUserDTO dto = new genUserDTO(userid, passwd, nickname, phone);
-		genUserService service = new genUserService();
-		String title="";
-		    String target="";
-		    try {
-				service.addGenUser(dto);
-				target = "home_.jsp";
-				request.setAttribute("add", "정상적으로 회원가입되셨습니다.");
-			} catch (CommonException e) {
-				title= e.getMessage();
-				String link="join.jsp";
-				target="error.jsp";
-				request.setAttribute("title", title);
-				request.setAttribute("link", link);
-			}
-			
-			RequestDispatcher dis =
-					request.getRequestDispatcher(target);
-			dis.forward(request, response);
+		GenUserService service = new GenUserService();
+	    String title="";
+	    String target="";
+	    try {
+			service.updateGenUser(dto);
+			target = "MyPageServlet";
+			request.setAttribute("update", "정상적으로 수정되었습니다.");
+		} catch (CommonException e) {
+			title= e.getMessage();
+			String link="MyPageServlet";
+			target="error.jsp";
+			request.setAttribute("title", title);
+			request.setAttribute("link", link);
 		}
+		
+		RequestDispatcher dis =
+				request.getRequestDispatcher(target);
+		dis.forward(request, response);
+	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub

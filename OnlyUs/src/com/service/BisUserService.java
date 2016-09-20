@@ -5,12 +5,12 @@ import java.util.HashMap;
 import org.apache.ibatis.session.SqlSession;
 
 import com.config.MySqlSessionFactory;
-import com.dto.bisUserDTO;
+import com.dto.BisUserDTO;
 import com.dto.genUserDTO;
 import com.exception.CommonException;
 
-public class bisUserService {
-	public void addBisUser(bisUserDTO dto) throws CommonException {
+public class BisUserService {
+	public void addBisUser(BisUserDTO dto) throws CommonException {
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
 			int n = session.insert("addBisUser", dto);
@@ -24,8 +24,8 @@ public class bisUserService {
 		}
 
 	}// end addMember
-	public bisUserDTO bislogin(HashMap<String, String> map) throws CommonException {
-		bisUserDTO dto = null;
+	public BisUserDTO bislogin(HashMap<String, String> map) throws CommonException {
+		BisUserDTO dto = null;
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
 			dto = session.selectOne("bislogin", map);
@@ -38,8 +38,8 @@ public class bisUserService {
 		}
 		return dto;	
 		}
-	public bisUserDTO bisMypage(String userid) throws CommonException {
-		bisUserDTO dto = null;
+	public BisUserDTO bisMypage(String userid) throws CommonException {
+		BisUserDTO dto = null;
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
 			dto = session.selectOne("bisMypage", userid);
@@ -51,7 +51,7 @@ public class bisUserService {
 		}
 		return dto;	
 	}
-	public void updatebisUser(bisUserDTO bisdto) throws CommonException {
+	public void updatebisUser(BisUserDTO bisdto) throws CommonException {
 		System.out.println(bisdto.getAddr1());
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {

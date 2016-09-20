@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dto.bisUserDTO;
+import com.dto.BisUserDTO;
 
-@WebServlet("/bisLogOutServlet")
-public class bisLogOutServlet extends HttpServlet {
+@WebServlet("/BisLogOutServlet")
+public class BisLogOutServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession session = request.getSession();
-		bisUserDTO dto =
-				(bisUserDTO)session.getAttribute("bislogin");
+		BisUserDTO dto =
+				(BisUserDTO)session.getAttribute("bislogin");
 		 String title="";
 		 String target="";
 		if(dto==null){

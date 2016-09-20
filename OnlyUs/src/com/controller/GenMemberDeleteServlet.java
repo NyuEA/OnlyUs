@@ -9,33 +9,28 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dto.bisUserDTO;
+import com.dto.BisUserDTO;
 import com.dto.genUserDTO;
 import com.exception.CommonException;
-import com.service.bisUserService;
-import com.service.genUserService;
+import com.service.BisUserService;
+import com.service.GenUserService;
 
 /**
  * Servlet implementation class LognFormServlet
  */
-@WebServlet("/genMemberUpdateServlet")
-public class genMemberUpdateServlet extends HttpServlet {
+@WebServlet("/GenMemberDeleteServlet")
+public class GenMemberDeleteServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String userid = request.getParameter("userid");
-		String passwd = request.getParameter("passwd");
-		String nickname = request.getParameter("nickname");
-		String phone = request.getParameter("phone");
-		System.out.println(userid+"|"+passwd+"|"+nickname+"|"+phone);
-		genUserDTO dto = new genUserDTO(userid, passwd, nickname, phone);
-		genUserService service = new genUserService();
+		GenUserService service = new GenUserService();
 	    String title="";
 	    String target="";
 	    try {
-			service.updateGenUser(dto);
-			target = "MyPageServlet";
-			request.setAttribute("update", "정상적으로 수정되었습니다.");
+			service.deleteGenUser(userid);
+			target = "home_.jsp";
+			request.setAttribute("delete", "정상적으로 삭제되었습니다.");
 		} catch (CommonException e) {
 			title= e.getMessage();
 			String link="MyPageServlet";

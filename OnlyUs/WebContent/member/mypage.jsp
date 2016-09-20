@@ -92,11 +92,11 @@
 
 <script type="text/javascript">
 	function memberUpdate(f) {
-		f.action = "genMemberUpdateServlet";
+		f.action = "GenMemberUpdateServlet";
 	}
 
 	function memberDelete(f) {
-		f.action = "genMemberDeleteServlet";
+		f.action = "GenMemberDeleteServlet";
 	}
 
 	$(document).ready(function() {
