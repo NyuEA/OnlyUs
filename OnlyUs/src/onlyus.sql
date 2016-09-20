@@ -14,6 +14,10 @@ create table bisUser
     drop table bisUser;
     drop table ad;
     drop table coupon;
+    
+     select * from bisUser;
+insert into bisUser(bisid, passwd, bisname, post1, post2, addr1, addr2, phone1, phone2, phone3) 
+values('s1','s1','맘스터치' ,'310','83','충남 천안 서북구','신당동 271-9 ','041','554','3392');
   --일반 회원 테이블/ 관리자는 아이디를 admin으로 일반 회원 테이블에 등록
  create table genUser
   ( userid varchar2(10) primary key,
@@ -56,7 +60,7 @@ create table bisUser
     bisid varchar2(10),
     constraint coupon_bisuser_fk foreign key(bisid) references bisUser(bisid)
   );
-  
+   insert into coupon values('c1','10','2016-10-01','2016-11-01','N',0,'s1'); 
   --회원 쿠폰
   create table downCoupon
   ( dcouid varchar2(10) primary key, --다운받은 쿠폰아이디
@@ -66,7 +70,7 @@ create table bisUser
     constraint downcoupon_genuser_fk foreign key(userid) references genuser(userid),
     constraint downcoupon_coupon_fk foreign key(couid) references coupon(couid)
   );
-  
+   insert into downCoupon values('dc1','c1','n','ydw');
   drop table downCoupon;
   
   commit;
