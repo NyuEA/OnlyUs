@@ -20,7 +20,7 @@
 %>
 <%
 	String update = (String) request.getAttribute("update");
-	if (logout != null) {
+	if (update != null) {
 %>
 <script type="text/javascript">
       var str = "<%=update%>";
