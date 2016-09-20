@@ -24,11 +24,11 @@
 	<div class="box">
 		<table>			
 			<tr>
-				<td><input type="text" class="iText" placeholder="아이디 or 이메일" name="userid" id="userid"/>
+				<td><input type="text" class="iText" placeholder="id" name="userid" id="userid"/>
 					</td>
 			</tr>
 			<tr>
-				<td><input type="password" name="passwd" id="passwd" class="iText" placeholder="비밀번호">
+				<td><input type="password" name="passwd" id="passwd" class="iText" placeholder="passward">
 					<br></td>
 			</tr>
 			<tr>
