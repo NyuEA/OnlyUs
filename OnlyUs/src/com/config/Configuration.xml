@@ -13,6 +13,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<typeAliases>
 		<typeAlias type="com.dto.genUserDTO" alias="genUserDTO" />
 		<typeAlias type="com.dto.bisUserDTO" alias="bisUserDTO" />
+		<typeAlias type="com.dto.mycouponDTO" alias="mycouponDTO" />
 	</typeAliases>
 
 	<environments default="development">
@@ -30,6 +31,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<mappers>
 		<mapper resource="com/config/genUserMapper.xml" />
 		<mapper resource="com/config/bisUserMapper.xml" />
+		<mapper resource="com/config/mycouponMapper.xml" />
 	</mappers>
 </configuration>
 
