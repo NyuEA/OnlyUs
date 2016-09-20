@@ -1,149 +1,114 @@
+<%@page import="com.dto.bisUserDTO"%>
+<%@page import="com.dto.genUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<link href="css/login.css" rel="stylesheet" type="text/css">
+<!-- DAUM 주소 라이브러리 시작 -->
 <style type="text/css">
-.blue {
-	color: blue;
-}
 
-.red {
-	color: red;
-}
+   .blue{
+     color:blue;
+   }
+   .red{
+     color:red;
+   }
 </style>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-<script src="../js/daum.js"></script>
-<script type="text/javascript" src="../js/jquery-3.1.0.js"></script>
-
-	<div class="nav">
-		<h2 class="blind">로컬네이게이션</h2>
-		<ul class="nav_ul fix">
-			<!-- 	☆ 현재페이지 표시 class="on" -->
-			<li id="submli1"><a href="home_.jsp?" id="subm1">서비스소개</a></li>
-			<li id="submli2"><a href="board_.jsp" id="subm2">문의하기</a></li>
-		</ul>
-	</div>
+<script src="js/daum.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+<!-- DAUM 주소 라이브러리 끝 -->  
+<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+<link href="css/mypage.css" rel="stylesheet" type="text/css">
+<link href="css/login.css" rel="stylesheet" type="text/css">
 
 
-<center>
-<form id="joinF" action="genMemberAddServlet" >
+<%
+	String bislogout = (String) request.getAttribute("logout");
+	if (bislogout != null) {
+%>
+<script type="text/javascript">
+	var str = "<%=bislogout%>";
+	alert("<%=bislogout%>");
+</script>
+<%
+	}
+%>
+<%
+	String bisupdate = (String) request.getAttribute("bisupdate");
+	if (bisupdate != null) {
+%>
+<script type="text/javascript">
+	var str = "<%=bisupdate%>";
+	alert("<%=bisupdate%>");
+</script>
+<%
+	}
+%>
+<div class="nav">
+	<h2 class="blind">로컬네이게이션</h2>
+	<ul class="nav_ul fix">
+		<!-- 	☆ 현재페이지 표시 class="on" -->
 
-   <table id="joinT">
-    <tr>
-			<th colspan="6" ><font size="6"><br></font><br><br><br><br></th>
+		<li><a href="home_.jsp?" id="subm1">서비스소개</a></li>
+		<li><a href="board_.jsp" id="subm2">문의하기</a></li>
+
+
+	</ul>
+</div>
+
+<form name="myform">
+	<table align="center" id="mytable">
+		<tr>
+			<th>아이디<br>(사업자번호)</th>
+			<td><input type="text" name="userid" id="userid"></td>
+		</tr>
+
+		<tr>
+			<th>비밀번호</th>
+			<td><input type="text" name="passwd" id="passwd"></td>
 		</tr>
 		<tr>
-			<td colspan="2">
-				<hr size="1" color="CCCCCC">
+			<th>비밀번호확인</th>
+			<td><input type="text" name="passwd" id="passwd"></td>
+		</tr>
+
+		<tr>
+			<th>업체명</th>
+			<td><input type="text" name="nickname" id="nickname">
+			</th>
+		</tr>
+		<tr>
+		<th>주소</th>
+			<td>
+				<!-- 다음주소 시작--> <input name="post1" id="post1" size="5" readonly="">
+				- <input name="post2" id="post2" size="5" readonly="" > <input
+				onclick="openDaumPostcode()" type="button" value="우편번호찾기"> <br>
+				<input name="addr1" id="addr1" size="40"> <br> <span
+				style="line-height: 10%;"><br></span> <input name="addr2"
+				id="addr2" size="40" > <!-- 다음주소 끝 -->
 			</td>
 		</tr>
 		<tr>
-			<th>아이디</th>
-			<td><input type="text" name="bisid" id="bisid" value=""><span
-				id="result"></span></td>
+			<th>전화번호</th>
+			<td><input type="text" name="phone1" id="phone1" size="4" maxlength="3" >- <input type="text" name="phone2" id="phone2" size="4" maxlength="4" >- <input
+				type="text" name="phone3" id="phone3" size="4"maxlength="4" ><br></td>
 		</tr>
+
 		<tr>
-			<td height="7" colspan="2">
+			<td colspan="2">
+				<button onclick="bismemberAdd(myform)" class="mypageBtn">가입</button>
+				<button onclick="home_.jsp" class="mypageBtn">취소</button>
+			</td>
 		</tr>
-		<tr>
-			<th>비밀번호</th>
-			<td><input type="password" name="passwd" id="passwd" ><span
-				id="result2"></span></td>
-		</tr>
-		<tr>
-			<td height="7" colspan="2">
-		</tr>
-		<tr>
-			<th>비밀번호 확인</th>
-			<td><input type="password" name="passwd2" id="passwd2"></td>
-		</tr>
-		<tr>
-			<td height="7" colspan="2">
-		</tr>
-		<tr>
-			<th>생일</th>
-			<td><input type="text" name="bisname" id="bisname" value=""></td>
-		</tr>
-		<tr>
-			<td height="7" colspan="2">
-		</tr>
-		<tr>
-			<th>닉네임</th>
-			<td><input type="text" name="bisname" id="bisname" value=""></td>
-		</tr>
-		<tr>
-			<td height="7" colspan="2">
-		</tr>
-		<tr>
-			<th>선호업종</th>
-			<td><input type="text" name="bisname" id="bisname" value=""></td>
-		</tr>
-		<tr>
-			<td height="7" colspan="7">
-		</tr>
-		<tr>
-		
-			<td colspan="6" ><input type="submit" value="가입" class="joinBtn">
-				<input type="reset" value="취소" class="joinBtn"><br><br></td>
-		</tr>
-		
+
 	</table>
-
-
 </form>
-</center>
-
 
 <script type="text/javascript">
+	function bismemberAdd(f) {
+		f.action = "genMemberUpdateServlet";
+	}
 
 	$(document).ready(function() {
-
-		$("#passwd2").on("keyup", function(event) {
-			$("#result2").removeClass();
-			var p = $("#passwd").val();
-			var p2 = $("#passwd2").val();
-			if (p == p2) {
-				$("#result2").text("일치합니다").addClass("blue");
-			} else {
-				$("#result2").text("일치하지않습니다").addClass("red");
-				;
-			}
-		});
-
-
-
-
-
-
-
-		// 아이디 중복체크 Ajax 연동
-		$("#bisid").on("keyup", function(event) {
-
-			//Ajax 연동 
-			//ajax통신
-			jQuery.ajax({
-				type : "GET",
-				url : "idCheck.jsp",
-				dataType : "text",
-				data : {
-					userid : $("#bisid").val()
-				},
-				success : function(responseData, status, xhr) {
-					console.log(responseData);
-					$("#result").text(responseData);
-				},
-				error : function(xhr, status, error) {
-					console.log("error");
-				}
-			});
-		});
-
-
-
-
-
-
 
 		$("form").on("submit", function(event) {
 

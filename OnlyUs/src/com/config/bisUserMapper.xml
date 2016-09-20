@@ -29,6 +29,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		from bisUser
 		where bisid = #{bisid}
 	</select>
+	<update id="updatebisUser" parameterType="bisUserDTO">
+		update bisUser
+		set passwd = #{passwd},
+		post1 = #{post1},
+		post2 = #{post2},
+		addr1 = #{addr1},
+		addr2 = #{addr2},
+		phone1 = #{phone1},
+		phone2 = #{phone2},
+		phone3 = #{phone3}
+	   where bisid = #{bisid}	
+	</update>
 </mapper>
 
 

@@ -116,8 +116,8 @@
 
 		<tr>
 			<td colspan="2">
-				<button onclick="memberUpdate(myform)" class="mypageBtn">수정</button>
-				<button onclick="memberDelete(myform)" class="mypageBtn">탈퇴</button>
+				<button onclick="bisMemberUpdate(myform)" class="mypageBtn">수정</button>
+				<button onclick="bisMemberDelete(myform)" class="mypageBtn">탈퇴</button>
 			</td>
 		</tr>
 
@@ -125,12 +125,12 @@
 </form>
 
 <script type="text/javascript">
-	function memberUpdate(f) {
-		f.action = "genMemberUpdateServlet";
+	function bisMemberUpdate(f) {
+		f.action = "bisMemberUpdateServlet";
 	}
 
-	function memberDelete(f) {
-		f.action = "genMemberDeleteServlet";
+	function bisMemberDelete(f) {
+		f.action = "bisMemberDeleteServlet";
 	}
 
 	$(document).ready(function() {
