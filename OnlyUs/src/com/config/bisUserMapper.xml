@@ -10,26 +10,26 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
       from bisUser
       where bisid = #{userid}
     </select>
-    <insert id="addbisUser" parameterType="bisUserDTO">
+    <insert id="addbisUser" parameterType="BisUserDTO">
 		insert into bisUser( bisid, passwd,
 		bisname, post1, post2, addr1, addr2, phone1, phone2, phone3)
 		values(#{bisid},#{passwd},#{bisname},#{post1},#{post2},#{addr1},#{addr2},#{phone1},#{phone2},#{phone3});
 	</insert>
-	<select id="bislogin" parameterType="hashmap" resultType="bisUserDTO">
+	<select id="bislogin" parameterType="hashmap" resultType="BisUserDTO">
 		select
 		bisid, passwd,
 		bisname, post1, post2, addr1, addr2, phone1, phone2, phone3
 		from bisUser
 		where bisid = #{bisid} and passwd=#{passwd}
 	</select>
-	<select id="bisMypage" parameterType="String" resultType="bisUserDTO">
+	<select id="bisMypage" parameterType="String" resultType="BisUserDTO">
 		select
 		bisid, passwd,
 		bisname, post1, post2, addr1, addr2, phone1, phone2, phone3
 		from bisUser
 		where bisid = #{bisid}
 	</select>
-	<update id="updatebisUser" parameterType="bisUserDTO">
+	<update id="updatebisUser" parameterType="BisUserDTO">
 		update bisUser
 		set passwd = #{passwd},
 		post1 = #{post1},

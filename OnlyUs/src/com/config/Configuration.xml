@@ -11,9 +11,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<setting name="jdbcTypeForNull" value="NULL" />
 	</settings>
 	<typeAliases>
-		<typeAlias type="com.dto.genUserDTO" alias="genUserDTO" />
+		<typeAlias type="com.dto.genUserDTO" alias="GenUserDTO" />
 		<typeAlias type="com.dto.BisUserDTO" alias="BisUserDTO" />
-		<typeAlias type="com.dto.mycouponDTO" alias="mycouponDTO" />
+		<typeAlias type="com.dto.mycouponDTO" alias="MycouponDTO" />
 	</typeAliases>
 
 	<environments default="development">

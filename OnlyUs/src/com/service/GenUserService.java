@@ -5,7 +5,6 @@ import java.util.HashMap;
 import org.apache.ibatis.session.SqlSession;
 
 import com.config.MySqlSessionFactory;
-import com.dto.BisUserDTO;
 import com.dto.GenUserDTO;
 import com.exception.CommonException;
 
