@@ -1,5 +1,5 @@
 <%@page import="com.dto.BisUserDTO"%>
-<%@page import="com.dto.genUserDTO"%>
+<%@page import="com.dto.GenUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <link href="css/common.css" rel="stylesheet" type="text/css">
@@ -15,7 +15,7 @@
 	<ul class="nav_ul1 fix">
 		<!-- 	☆ 현재페이지 표시 class="on" -->
 		<%
-		genUserDTO dto = (genUserDTO)session.getAttribute("login");
+		GenUserDTO dto = (GenUserDTO)session.getAttribute("login");
 		BisUserDTO bisdto = (BisUserDTO)session.getAttribute("bislogin");
 %>
 		<%

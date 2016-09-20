@@ -1,4 +1,4 @@
-<%@page import="com.dto.genUserDTO"%>
+<%@page import="com.dto.GenUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -44,7 +44,7 @@
 </div>
 
 <%
-	genUserDTO dto = (genUserDTO) request.getAttribute("mypage");
+	GenUserDTO dto = (GenUserDTO) request.getAttribute("mypage");
 	String userid = dto.getUserid();
 	String passwd = dto.getPasswd();
 	String nickname = dto.getNickname();
