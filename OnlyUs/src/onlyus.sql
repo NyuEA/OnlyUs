@@ -15,16 +15,23 @@ create table bisUser
     drop table ad;
     drop table coupon;
   --일반 회원 테이블/ 관리자는 아이디를 admin으로 일반 회원 테이블에 등록
-  create table genUser
+ create table genUser
   ( userid varchar2(10) primary key,
    passwd varchar2(20) not null,
    nickname varchar2(10) not null,
-  birthday Date default null,
-   preferbis varchar2(10));
+  phone varchar2(11) not null);
    
+  alter table genUser add phone varchar2(11);
+  alter table genUser modify (phone varchar(11) not null);
+  alter table genUser drop (preferbis);
+  alter table genUser add phone2 varchar2(4) not null;
+  alter table genUser add phone3 varchar2(4) not null;
    drop table genUser;
-   insert into genUser values('admin','admin','������',null);
+   delete from genUser where userid='admin';
+   insert into genUser values('admin','admin','관리자' ,'01011111111');
    commit;
+   
+   select * from genUser;
   
   -- 광고 테이블
   create table ad
