@@ -36,7 +36,7 @@
 <%
   }else{
   %>
-  <li><a class="on" href="LogOutServlet">로그아웃</a></li>
+  <li><a class="on" href="bisLogOutServlet">로그아웃</a></li>
   		<li><a href="bisMyPageServlet">마이페이지</a></li>
   		<li><a href="genJoin_.jsp"><img
   				src="images/header_top_contact.png" id="header_top_contact"></a></li>
