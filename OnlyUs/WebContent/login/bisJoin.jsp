@@ -27,7 +27,7 @@
 
 
 <center>
-<form id="joinF" action="bisMemberAddServlet" >
+<form id="joinF" action="genMemberAddServlet" >
 
    <table id="joinT">
     <tr>

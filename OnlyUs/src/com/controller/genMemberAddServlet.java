@@ -32,8 +32,8 @@ public class genMemberAddServlet extends HttpServlet {
 		    String target="";
 		    try {
 				service.addGenUser(dto);
-				target = "login.jsp";
-				request.setAttribute("result", "success");
+				target = "home_.jsp";
+				request.setAttribute("add", "정상적으로 회원가입되셨습니다.");
 			} catch (CommonException e) {
 				title= e.getMessage();
 				String link="join.jsp";

@@ -6,8 +6,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="addGenUser" parameterType="genUserDTO">
 		insert into genUser(
 		userid, passwd,
-		nickname, birthday, preferbis)
-		values(#{userid},#{passwd},#{nickname},#{birthday},#{preferbis});
+		nickname, phone)
+		values(#{userid},#{passwd},#{nickname},#{phone})
 	</insert>
 	<select id="login" parameterType="hashmap" resultType="genUserDTO">
 		select
@@ -30,6 +30,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		phone = #{phone}
 	   where userid = #{userid}	
 	</update>
+	<delete id="deleteGenUser" parameterType="String">
+	delete from genUser where userid = #{userid}	
+	</delete>
 </mapper>
 
 

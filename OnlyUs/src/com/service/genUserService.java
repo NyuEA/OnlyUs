@@ -68,4 +68,19 @@ public class genUserService {
 			session.close();
 		}
 	}
+
+
+	public void deleteGenUser(String userid) throws CommonException{
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			int n = session.update("deleteGenUser", userid);
+			session.commit();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("회원탈퇴 실패");
+		} finally {
+			session.close();
+		}
+	}
 }

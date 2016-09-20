@@ -12,6 +12,17 @@
 
 
 <%
+	String add = (String) request.getAttribute("add");
+	if (add != null) {
+%>
+<script type="text/javascript">
+      var str = "<%=add%>";
+      alert("<%=add%>");
+</script>
+<%
+	}
+%>
+<%
 	String logout = (String) request.getAttribute("logout");
 	if (logout != null) {
 %>

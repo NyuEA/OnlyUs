@@ -71,7 +71,7 @@
 		</tr>
 		<tr>
 			<th>핸드폰<br><font color="gray" size="2">(-는 제외하고 입력하여 주세요)</font></th>
-			<td><input type="text" name="phone" id="phone" value=""></td>
+			<td><input type="text" name="phone" id="phone" value="" maxlength="11"></td>
 		</tr>
 		<tr>
 			<td height="7" colspan="7">
