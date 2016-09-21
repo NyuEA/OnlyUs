@@ -42,7 +42,48 @@
 
 	</ul>
 </div>
-<table border="1">
+
+<%  List<MycouponDTO> list = (List<MycouponDTO>) request.getAttribute("mycoupon");
+ %>
+<table  width="90%" cellspacing="0" cellpadding="0"   align="center">
+	
+			<tr>
+				<td height="30">
+			</tr>
+
+			<tr>
+				<td colspan="9" class="td_default">&nbsp;&nbsp;&nbsp; <font
+					size="6" ><b>내 쿠폰함</b> </font> &nbsp;
+				</td>
+				
+			</tr>
+
+			<tr>
+				<td height="15">
+			</tr>
+
+			<tr>
+				<td colspan="11">
+					<hr size="1" color="CCCCCC">
+				</td>
+			</tr>
+
+			<tr>
+				<td height="7">
+			</tr>
+			<tr>
+				<td colspan="11" align="left">
+					
+				<input type="checkbox" name="allCheck" id="allCheck"  >전체선택</td>
+				
+				
+			</tr>
+			<tr>
+				<td colspan="11"><br>
+					<hr size="1" color="CCCCCC">
+				<br><br><br></td>
+			</tr>
+	
 	<tr>
 		<th>쿠폰코드</th>
 		<th>업체명</th>
@@ -50,10 +91,42 @@
 		<th colspan="2">기간</th>
 		<th>사용여부</th>
 	</tr>
+<tr>
+				<td height="7">
+			</tr>
+			<%
+			  
+			   if(list.size()==0){
+			%>
+				<tr>
+					<td colspan="11">
+						<hr size="1" color="CCCCCC">
+					</td>
+				</tr>
+
+				<tr>
+					<td height="5">
+				</tr>
+				<tr>
+					<td class="td_default" align="center" colspan="10"><br>카트에 추가된 쿠폰이 없습니다.<br><br><br></td>
+				</tr>
+			<%
+			   }else{
+			%>
+			
+				<tr>
+					<td colspan="11">
+						<hr size="1" color="CCCCCC">
+					</td>
+				</tr>
 
 	<%
-		List<MycouponDTO> list = (List<MycouponDTO>) request.getAttribute("mycoupon");
-
+		} //end for
+	%>
+	
+<form name="myForm">
+		<% 
+		
 		for (MycouponDTO mdto : list) {
 			String dcouid = mdto.getDcouid();
 			String period_f = mdto.getPeriod_f();
@@ -70,7 +143,9 @@
 		<td><%=period_t%></td>
 		<td><%=use_yn%></td>
 	</tr>
+	
 	<%
 		} //end for
 	%>
+	</form>
 </table>
