@@ -1,10 +1,10 @@
 
 .formsize{
-	width:1000px; height: 500px;
+	width:1000px; height: 350px;
 }
 
 /* ·Î±×ÀÎ ÆûÀÓ */
- .loginForm{position:absolute;width:435px; height: 400px; right: 15%; top: 30%;}
+ .loginForm{position:absolute;width:435px; height: 400px; right: 15%; top: 24%;}
  .loginForm .box{width:326px;}
  .loginForm .box .iText{width:300px;margin:3px 0;padding:10px 12px;border:1px solid #e1e1e1}
  .loginForm .box p{margin-top:1em}
@@ -19,7 +19,7 @@
 
 
 
-.loginForm1{position:absolute;width:435px; height: 400px; right: 55%;  top: 30%;}
+.loginForm1{position:absolute;width:435px; height: 400px; right: 55%;  top: 24%;}
  .loginForm1 .box{width:326px;}
  .loginForm1 .box .iText{width:300px;margin:3px 0;padding:10px 12px;border:1px solid #e1e1e1}
  .loginForm1 .box p{margin-top:1em}
@@ -40,8 +40,21 @@
 
 
 #joinF{
-	height: 450px;
+	height: 250px;
+
 }
+#joinform{
+	height: 250px;
+	
+	padding-top: 100px;
+}
+
+#jointable td{
+
+padding: 20px;
+	
+}
+
 
 .mypageBtn{width:80px;height:40px;padding:0px;border-radius:5px;
  font-size:14px;color:#fff;line-height:40px;text-shadow:1px 1px 1px #004773;background:#333}
