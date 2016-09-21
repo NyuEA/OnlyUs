@@ -4,7 +4,7 @@
 <%@page import="com.dto.GenUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+
 
 <%
 	String logout = (String) request.getAttribute("logout");
@@ -48,29 +48,6 @@
 		<th>업체명</th>
 		<th>내용</th>
 		<th colspan="2">기간</th>
-		<th>사용여부</th>
+		<th>다운수</th>
 	</tr>
-
-	<%
-		List<MycouponDTO> list = (List<MycouponDTO>) request.getAttribute("mycoupon");
-
-		for (MycouponDTO mdto : list) {
-			String dcouid = mdto.getDcouid();
-			String period_f = mdto.getPeriod_f();
-			String period_t = mdto.getPeriod_t();
-			String bisname = mdto.getBisname();
-			String use_yn = mdto.getUse_yn();
-			String content = mdto.getContent();
-	%>
-	<tr>
-		<td><%=dcouid%></td>
-		<td><%=bisname%></td>
-		<td><%=content%></td>
-		<td><%=period_f%>~</td>
-		<td><%=period_t%></td>
-		<td><%=use_yn%></td>
-	</tr>
-	<%
-		} //end for
-	%>
 </table>

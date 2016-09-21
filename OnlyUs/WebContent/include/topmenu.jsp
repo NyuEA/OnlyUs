@@ -22,7 +22,7 @@
   if(dto==null && bisdto == null){
 %>
 		<li><a class="on" href="LoginFormServlet">로그인</a></li>
-		<li><a href="Join_.jsp">회원가입</a></li>
+		<li><a href="genJoin_.jsp">회원가입</a></li>
 		<li><a href=""><img
 				src="images/header_top_contact.png" id="header_top_contact"></a></li>
 		<%
@@ -30,7 +30,7 @@
 %>
 <li><a class="on" href="LogOutServlet">로그아웃</a></li>
 		<li><a href="MyPageServlet">마이페이지</a></li>
-		<li><a href="Join_.jsp"><img
+		<li><a href="genJoin_.jsp"><img
 				src="images/header_top_contact.png" id="header_top_contact"></a></li>
 
 <%

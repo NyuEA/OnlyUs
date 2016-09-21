@@ -11,30 +11,29 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dto.GenUserDTO;
+import com.dto.BisUserDTO;
 import com.exception.CommonException;
+import com.service.BisUserService;
 
-import com.service.GenUserService;
-
-@WebServlet("/LoginServlet")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/BisLoginServlet")
+public class BisLoginServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		request.setCharacterEncoding("UTF-8");
-		String userid = request.getParameter("userid");
+		String bisid = request.getParameter("bisid");
 		String passwd = request.getParameter("passwd");
 
 		HashMap<String, String> map = new HashMap<>();
-		map.put("userid", userid);
+		map.put("bisid", bisid);
 		map.put("passwd", passwd);
 
-		GenUserService service = new GenUserService();
+		BisUserService service = new BisUserService();
 		String title = "";
 		String target = "";
 		try {
-			GenUserDTO dto = service.login(map);
+			BisUserDTO dto = service.bislogin(map);
 			if (dto == null) {
 				title = "아이디 비밀번호를 확인하여주세요.";
 				String link = "LoginFormServlet";
@@ -43,7 +42,7 @@ public class LoginServlet extends HttpServlet {
 				request.setAttribute("link", link);
 			} else {
 				HttpSession session = request.getSession();
-				session.setAttribute("login", dto);
+				session.setAttribute("bislogin", dto);
 				target = "home_.jsp";
 			}
 

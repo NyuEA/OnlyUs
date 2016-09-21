@@ -8,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.dto.BisUserDTO;
 import com.dto.GenUserDTO;
@@ -19,36 +18,32 @@ import com.service.GenUserService;
 /**
  * Servlet implementation class LognFormServlet
  */
-@WebServlet("/MyPageServlet")
-public class MyPageServlet extends HttpServlet {
+@WebServlet("/GenMemberUpdateServlet")
+public class GenMemberUpdateServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		HttpSession session = request.getSession();
-		GenUserDTO dto = 
-				(GenUserDTO)session.getAttribute("login");
-		String target="";
-		String title="";
-		if(dto!=null ){
-			target="mypage_.jsp";
-			
-			String userid = dto.getUserid();
-			GenUserService service = new GenUserService();
-			try {
-				GenUserDTO my = service.mypage(userid);
-				request.setAttribute("mypage", my);
-			} catch (CommonException e) {
-				title= e.getMessage();
-				String link="LoginFormServlet";
-				target="error.jsp";
-				request.setAttribute("title", title);
-				request.setAttribute("link", link);
-			}
-			
-		}else{
-			target="LoginFormServlet";
+		String userid = request.getParameter("userid");
+		String passwd = request.getParameter("passwd");
+		String nickname = request.getParameter("nickname");
+		String phone = request.getParameter("phone");
+		System.out.println(userid+"|"+passwd+"|"+nickname+"|"+phone);
+		GenUserDTO dto = new GenUserDTO(userid, passwd, nickname, phone);
+		GenUserService service = new GenUserService();
+	    String title="";
+	    String target="";
+	    try {
+			service.updateGenUser(dto);
+			target = "MyPageServlet";
+			request.setAttribute("update", "정상적으로 수정되었습니다.");
+		} catch (CommonException e) {
+			title= e.getMessage();
+			String link="MyPageServlet";
+			target="error.jsp";
+			request.setAttribute("title", title);
+			request.setAttribute("link", link);
 		}
-
+		
 		RequestDispatcher dis =
 				request.getRequestDispatcher(target);
 		dis.forward(request, response);
