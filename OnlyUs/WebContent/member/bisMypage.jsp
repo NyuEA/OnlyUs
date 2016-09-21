@@ -76,7 +76,7 @@
 	<table align="center" id="mytable">
 		<tr>
 			<th>아이디<br>(사업자번호)</th>
-			<td><input type="text" name="userid" id="userid"
+			<td><input type="text" name=bisid id="bisid"
 				value="<%=bisid%>" readonly></td>
 		</tr>
 
