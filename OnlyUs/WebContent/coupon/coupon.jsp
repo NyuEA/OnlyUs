@@ -12,8 +12,7 @@
 %>
 <script type="text/javascript">
       var str = "<%=logout%>";
-      alert("<%=logout%>
-	");
+      alert("<%=logout%>");
 </script>
 <%
 	}
@@ -45,12 +44,10 @@
 </div>
 <table border="1">
 	<tr>
-		<th>쿠폰아이디</th>
-		<th>시작일</th>
-		<th>종료일</th>
-		<th>회사아이디</th>
-		<th>다운로드아이디</th>
+		<th>쿠폰코드</th>
+		<th>업체명</th>
 		<th>내용</th>
+		<th colspan="2">기간</th>
 		<th>사용여부</th>
 	</tr>
 
@@ -58,22 +55,19 @@
 		List<MycouponDTO> list = (List<MycouponDTO>) request.getAttribute("mycoupon");
 
 		for (MycouponDTO mdto : list) {
-			String couid = mdto.getCouid();
+			String dcouid = mdto.getDcouid();
 			String period_f = mdto.getPeriod_f();
 			String period_t = mdto.getPeriod_t();
-			String bisid = mdto.getBisid();
-			String dcouid = mdto.getDcouid();
+			String bisname = mdto.getBisname();
 			String use_yn = mdto.getUse_yn();
 			String content = mdto.getContent();
 	%>
 	<tr>
-		<td><%=couid%></td>
-
-		<td><%=period_f%></td>
-		<td><%=period_t%></td>
-		<td><%=bisid%></td>
 		<td><%=dcouid%></td>
+		<td><%=bisname%></td>
 		<td><%=content%></td>
+		<td><%=period_f%>~</td>
+		<td><%=period_t%></td>
 		<td><%=use_yn%></td>
 	</tr>
 	<%

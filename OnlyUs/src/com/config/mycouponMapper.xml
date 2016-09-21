@@ -5,9 +5,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="mycoupon">
 
 	<select id="myCoupon" parameterType="string" resultType="MycouponDTO">
-		select COUPON.couid ,COUPON.period_f, COUPON.period_t, COUPON.bisid, DOWNCOUPON.dcouid, DOWNCOUPON.use_yn, DOWNCOUPON.userid, COUPON.content
-		from DOWNCOUPON , COUPON
-		where DOWNCOUPON.COUID = COUPON.COUID and userid =  #{userid}
+		select DOWNCOUPON.dcouid,  to_char(COUPON.period_f,'YYYY/MM/dd') period_f, to_char(COUPON.period_t,'YYYY/MM/dd') period_t, BISUSER.BISNAME,  DOWNCOUPON.use_yn, DOWNCOUPON.userid, COUPON.content
+		from DOWNCOUPON , COUPON , BISUSER
+		where DOWNCOUPON.COUID = COUPON.COUID 
+    and COUPON.BISID = BISUSER.BISID and userid =  #{userid}
 	</select>
 
 
