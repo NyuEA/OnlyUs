@@ -1,3 +1,8 @@
 eclipse.preferences.version=1
 encoding//src/com/login/LogOutServlet.java=UTF-8
+<<<<<<< HEAD
+=======
+encoding//src/com/login/LoginServlet.java=UTF-8
+encoding//src/com/service/GenUserService.java=UTF-8
+>>>>>>> branch 'master' of https://github.com/NyuEA/OnlyUs
 encoding//src/onlyus.sql=UTF-8

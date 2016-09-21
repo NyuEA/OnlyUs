@@ -13,8 +13,8 @@ import javax.servlet.http.HttpSession;
 
 import com.dto.GenUserDTO;
 import com.exception.CommonException;
-
 import com.service.GenUserService;
+
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
@@ -36,7 +36,7 @@ public class LoginServlet extends HttpServlet {
 		try {
 			GenUserDTO dto = service.login(map);
 			if (dto == null) {
-				title = "아이디 비밀번호를 확인하여주세요.";
+				title = "�븘�씠�뵒 鍮꾨�踰덊샇瑜� �솗�씤�븯�뿬二쇱꽭�슂.";
 				String link = "LoginFormServlet";
 				target = "error.jsp";
 				request.setAttribute("title", title);
