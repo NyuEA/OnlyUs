@@ -46,12 +46,12 @@
 <table border="1">
 	<tr>
 		<th>쿠폰아이디</th>
-		<th>시작날짜</th>
-		<th>마지막날짜</th>
+		<th>시작일</th>
+		<th>종료일</th>
 		<th>회사아이디</th>
 		<th>다운로드아이디</th>
-		<th>사용여부</th>
 		<th>내용</th>
+		<th>사용여부</th>
 	</tr>
 
 	<%
@@ -73,8 +73,8 @@
 		<td><%=period_t%></td>
 		<td><%=bisid%></td>
 		<td><%=dcouid%></td>
-		<td><%=use_yn%></td>
 		<td><%=content%></td>
+		<td><%=use_yn%></td>
 	</tr>
 	<%
 		} //end for

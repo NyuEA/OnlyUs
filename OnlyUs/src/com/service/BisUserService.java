@@ -37,11 +37,11 @@ public class BisUserService {
 		}
 		return dto;	
 		}
-	public BisUserDTO bisMypage(String userid) throws CommonException {
+	public BisUserDTO bisMypage(String bisid) throws CommonException {
 		BisUserDTO dto = null;
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
-			dto = session.selectOne("bisMypage", userid);
+			dto = session.selectOne("bisMypage", bisid);
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new CommonException("마이페이지 불러오기 실패");

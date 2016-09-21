@@ -32,13 +32,14 @@ public class BisMemberUpdateServlet extends HttpServlet {
 		String phone1 = request.getParameter("phone1");
 		String phone2 = request.getParameter("phone2");
 		String phone3 = request.getParameter("phone3");
+		System.out.println(bisid+"|"+passwd+"|"+bisname+"|"+post1+"|"+post2+"|"+addr1+"|"+addr2+"|"+phone1+"|"+phone2+"|"+phone3);
 		BisUserDTO bisdto = new BisUserDTO(bisid, passwd, bisname, post1, post2, addr1, addr2, phone1, phone2, phone3);
 		BisUserService service = new BisUserService();
 	    String title="";
 	    String target="";
 	    try {
 			service.updatebisUser(bisdto);
-			target = "bisMyPageServlet";
+			target = "BisMyPageServlet";
 			request.setAttribute("bisupdate", "수정이 정상적으로 되었습니다.");
 		} catch (CommonException e) {
 			title= e.getMessage();
