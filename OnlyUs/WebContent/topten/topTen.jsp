@@ -45,7 +45,6 @@
 <table border="1">
 	<tr>
 		<th>등수</th>
-		<th>쿠폰코드</th>
 		<th>업체명</th>
 		<th>내용</th>
 		<th colspan="2">기간</th>
