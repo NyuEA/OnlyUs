@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.dto.BisUserDTO;
-import com.dto.GenUserDTO;
 import com.exception.CommonException;
 import com.service.BisUserService;
 import com.service.GenUserService;
@@ -19,24 +18,23 @@ import com.service.GenUserService;
 /**
  * Servlet implementation class LognFormServlet
  */
-@WebServlet("/MyPageServlet")
-public class MyPageServlet extends HttpServlet {
+@WebServlet("/BisMyPageServlet")
+public class BisMyPageServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession session = request.getSession();
-		GenUserDTO dto = 
-				(GenUserDTO)session.getAttribute("login");
+		BisUserDTO bisdto = (BisUserDTO)session.getAttribute("bislogin");
 		String target="";
 		String title="";
-		if(dto!=null ){
-			target="mypage_.jsp";
+		if(bisdto!=null){
+			target="bisMypage_.jsp";
 			
-			String userid = dto.getUserid();
-			GenUserService service = new GenUserService();
+			String bisid = bisdto.getBisid();
+			BisUserService service = new BisUserService();
 			try {
-				GenUserDTO my = service.mypage(userid);
-				request.setAttribute("mypage", my);
+				BisUserDTO my = service.bisMypage(bisid);
+				request.setAttribute("bisMypage", my);
 			} catch (CommonException e) {
 				title= e.getMessage();
 				String link="LoginFormServlet";
@@ -44,7 +42,6 @@ public class MyPageServlet extends HttpServlet {
 				request.setAttribute("title", title);
 				request.setAttribute("link", link);
 			}
-			
 		}else{
 			target="LoginFormServlet";
 		}
