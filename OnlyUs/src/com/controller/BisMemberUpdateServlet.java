@@ -39,7 +39,7 @@ public class BisMemberUpdateServlet extends HttpServlet {
 	    try {
 			service.updatebisUser(bisdto);
 			target = "bisMyPageServlet";
-			request.setAttribute("bisupdate", "Á¤»óÀûÀ¸·Î ¼öÁ¤µÇ¾ú½À´Ï´Ù.");
+			request.setAttribute("bisupdate", "ìˆ˜ì •ì´ ì •ìƒì ìœ¼ë¡œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		} catch (CommonException e) {
 			title= e.getMessage();
 			String link="bisMyPageServlet";

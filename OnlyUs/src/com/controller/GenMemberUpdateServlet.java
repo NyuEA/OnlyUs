@@ -35,7 +35,7 @@ public class GenMemberUpdateServlet extends HttpServlet {
 	    try {
 			service.updateGenUser(dto);
 			target = "MyPageServlet";
-			request.setAttribute("update", "���������� �����Ǿ����ϴ�.");
+			request.setAttribute("update", "정상적으로 수정되었습니다.");
 		} catch (CommonException e) {
 			title= e.getMessage();
 			String link="MyPageServlet";

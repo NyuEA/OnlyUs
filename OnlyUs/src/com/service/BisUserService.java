@@ -17,7 +17,7 @@ public class BisUserService {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("�����ȸ����� ����");
+			throw new CommonException("회원가입 실패.");
 		} finally {
 			session.close();
 		}
@@ -31,7 +31,7 @@ public class BisUserService {
 			System.out.println("login");
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("�α��ν���");
+			throw new CommonException("로그인실패.");
 		} finally {
 			session.close();
 		}
@@ -44,7 +44,7 @@ public class BisUserService {
 			dto = session.selectOne("bisMypage", userid);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("���������� �ҷ����� ����");
+			throw new CommonException("마이페이지 불러오기 실패");
 		} finally {
 			session.close();
 		}
@@ -59,7 +59,7 @@ public class BisUserService {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("ȸ������ ����");
+			throw new CommonException("회원 수정 실패");
 		} finally {
 			session.close();
 		}

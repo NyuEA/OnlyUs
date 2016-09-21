@@ -33,7 +33,7 @@ public class GenMemberAddServlet extends HttpServlet {
 		    try {
 				service.addGenUser(dto);
 				target = "home_.jsp";
-				request.setAttribute("add", "���������� ȸ�����ԵǼ̽��ϴ�.");
+				request.setAttribute("add", "회원가입이 정상적으로 되셨습니다.");
 			} catch (CommonException e) {
 				title= e.getMessage();
 				String link="join.jsp";

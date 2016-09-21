@@ -35,7 +35,7 @@ public class BisLoginServlet extends HttpServlet {
 		try {
 			BisUserDTO dto = service.bislogin(map);
 			if (dto == null) {
-				title = "¾ÆÀÌµğ ºñ¹Ğ¹øÈ£ ºÒÀÏÄ¡";
+				title = "ì•„ì´ë”” ë¹„ë°€ë²ˆí˜¸ë¥¼ í™•ì¸í•˜ì—¬ì£¼ì„¸ìš”.";
 				String link = "LoginFormServlet";
 				target = "error.jsp";
 				request.setAttribute("title", title);

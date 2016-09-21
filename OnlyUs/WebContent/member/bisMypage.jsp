@@ -117,7 +117,6 @@
 		<tr>
 			<td colspan="2">
 				<button onclick="bisMemberUpdate(myform)" class="mypageBtn">수정</button>
-				<button onclick="bisMemberDelete(myform)" class="mypageBtn">탈퇴</button>
 			</td>
 		</tr>
 
@@ -127,10 +126,6 @@
 <script type="text/javascript">
 	function bisMemberUpdate(f) {
 		f.action = "BisMemberUpdateServlet";
-	}
-
-	function bisMemberDelete(f) {
-		f.action = "BisMemberDeleteServlet";
 	}
 
 	$(document).ready(function() {

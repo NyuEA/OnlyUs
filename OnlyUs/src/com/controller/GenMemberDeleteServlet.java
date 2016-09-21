@@ -30,7 +30,7 @@ public class GenMemberDeleteServlet extends HttpServlet {
 	    try {
 			service.deleteGenUser(userid);
 			target = "home_.jsp";
-			request.setAttribute("delete", "���������� �����Ǿ����ϴ�.");
+			request.setAttribute("delete", "정상적으로 탈퇴되셨습니다.");
 		} catch (CommonException e) {
 			title= e.getMessage();
 			String link="MyPageServlet";
