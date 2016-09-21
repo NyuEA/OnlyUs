@@ -26,9 +26,8 @@ public class TopTenServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		CouponService service = new CouponService();
-		
-		
 		try {
 			List<Top10DTO> list = service.first10();
 			request.setAttribute("top10", list);
