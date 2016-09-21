@@ -1,6 +1,6 @@
 package com.dto;
 
-public class bisUserDTO {
+public class BisUserDTO {
 	private String bisid;
 	private String passwd;
 	private String bisname;
@@ -11,7 +11,7 @@ public class bisUserDTO {
 	private String phone1;
 	private String phone2;
 	private String phone3;
-	public bisUserDTO() {
+	public BisUserDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -21,7 +21,7 @@ public class bisUserDTO {
 				+ ", post2=" + post2 + ", addr1=" + addr1 + ", addr2=" + addr2 + ", phone1=" + phone1 + ", phone2="
 				+ phone2 + ", phone3=" + phone3 + "]";
 	}
-	public bisUserDTO(String bisid, String passwd, String bisname, String post1, String post2, String addr1,
+	public BisUserDTO(String bisid, String passwd, String bisname, String post1, String post2, String addr1,
 			String addr2, String phone1, String phone2, String phone3) {
 		super();
 		this.bisid = bisid;

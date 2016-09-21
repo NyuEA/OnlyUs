@@ -9,31 +9,31 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dto.bisUserDTO;
-import com.dto.genUserDTO;
+import com.dto.BisUserDTO;
+import com.dto.GenUserDTO;
 import com.exception.CommonException;
-import com.service.bisUserService;
-import com.service.genUserService;
+import com.service.BisUserService;
+import com.service.GenUserService;
 
 /**
  * Servlet implementation class genMemberAddServlet
  */
-@WebServlet("/genMemberAddServlet")
-public class genMemberAddServlet extends HttpServlet {
+@WebServlet("/GenMemberAddServlet")
+public class GenMemberAddServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String userid = request.getParameter("userid");
 		String passwd = request.getParameter("passwd");
 		String nickname = request.getParameter("nickname");
 		String phone = request.getParameter("phone");
 		
-		genUserDTO dto = new genUserDTO(userid, passwd, nickname, phone);
-		genUserService service = new genUserService();
+		GenUserDTO dto = new GenUserDTO(userid, passwd, nickname, phone);
+		GenUserService service = new GenUserService();
 		String title="";
 		    String target="";
 		    try {
 				service.addGenUser(dto);
 				target = "home_.jsp";
-				request.setAttribute("add", "Á¤»óÀûÀ¸·Î È¸¿ø°¡ÀÔµÇ¼Ì½À´Ï´Ù.");
+				request.setAttribute("add", "íšŒì›ê°€ì…ì´ ì •ìƒì ìœ¼ë¡œ ë˜ì…¨ìŠµë‹ˆë‹¤.");
 			} catch (CommonException e) {
 				title= e.getMessage();
 				String link="join.jsp";

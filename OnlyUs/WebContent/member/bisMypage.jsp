@@ -1,5 +1,5 @@
-<%@page import="com.dto.bisUserDTO"%>
-<%@page import="com.dto.genUserDTO"%>
+<%@page import="com.dto.BisUserDTO"%>
+<%@page import="com.dto.GenUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- DAUM 주소 라이브러리 시작 -->
@@ -48,7 +48,7 @@
 	<ul class="nav_ul fix">
 		<!-- 	☆ 현재페이지 표시 class="on" -->
 
-		<li><a href="board_.jsp" id="subm2">내 쿠폰함</a></li>
+		<li><a href="CouponListServlet" id="subm2">내 쿠폰함</a></li>
 		<li><a href="board_.jsp" id="subm2">TOP10</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<li><a href="home_.jsp?" id="subm1">서비스소개</a></li>
 		<li><a href="board_.jsp" id="subm2">문의하기</a></li>
@@ -58,7 +58,7 @@
 </div>
 
 <%
-	bisUserDTO bisdto = (bisUserDTO) request.getAttribute("bisMypage");
+	BisUserDTO bisdto = (BisUserDTO) request.getAttribute("bisMypage");
 	String bisid = bisdto.getBisid();
 	String passwd = bisdto.getPasswd();
 	String bisname = bisdto.getBisname();
@@ -76,7 +76,7 @@
 	<table align="center" id="mytable">
 		<tr>
 			<th>아이디<br>(사업자번호)</th>
-			<td><input type="text" name="userid" id="userid"
+			<td><input type="text" name=bisid id="bisid"
 				value="<%=bisid%>" readonly></td>
 		</tr>
 
@@ -117,7 +117,6 @@
 		<tr>
 			<td colspan="2">
 				<button onclick="bisMemberUpdate(myform)" class="mypageBtn">수정</button>
-				<button onclick="bisMemberDelete(myform)" class="mypageBtn">탈퇴</button>
 			</td>
 		</tr>
 
@@ -126,11 +125,7 @@
 
 <script type="text/javascript">
 	function bisMemberUpdate(f) {
-		f.action = "bisMemberUpdateServlet";
-	}
-
-	function bisMemberDelete(f) {
-		f.action = "bisMemberDeleteServlet";
+		f.action = "BisMemberUpdateServlet";
 	}
 
 	$(document).ready(function() {

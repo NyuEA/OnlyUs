@@ -1,6 +1,6 @@
 package com.dto;
 
-public class couponDTO {
+public class CouponDTO {
 	private String couid;
 	private String amount;
 	private String period_f;
@@ -8,11 +8,11 @@ public class couponDTO {
 	private char show_yn;
 	private int clickcount;
 	private String bisid;
-	public couponDTO() {
+	public CouponDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public couponDTO(String couid, String amount, String period_f, String period_t, char show_yn, int clickcount,
+	public CouponDTO(String couid, String amount, String period_f, String period_t, char show_yn, int clickcount,
 			String bisid) {
 		super();
 		this.couid = couid;

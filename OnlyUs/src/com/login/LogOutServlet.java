@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dto.genUserDTO;
+import com.dto.GenUserDTO;
 
 @WebServlet("/LogOutServlet")
 public class LogOutServlet extends HttpServlet {
@@ -18,8 +18,8 @@ public class LogOutServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession session = request.getSession();
-		genUserDTO dto =
-				(genUserDTO)session.getAttribute("login");
+		GenUserDTO dto =
+				(GenUserDTO)session.getAttribute("login");
 		 String title="";
 		 String target="";
 		if(dto==null){

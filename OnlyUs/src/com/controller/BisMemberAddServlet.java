@@ -9,15 +9,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dto.bisUserDTO;
+import com.dto.BisUserDTO;
 import com.exception.CommonException;
-import com.service.bisUserService;
+import com.service.BisUserService;
 
 /**
  * Servlet implementation class genMemberAddServlet
  */
 @WebServlet("/bisMemberAddServlet")
-public class bisMemberAddServlet extends HttpServlet {
+public class BisMemberAddServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String bisid = request.getParameter("bisid");
 		String passwd = request.getParameter("passwd");
@@ -30,8 +30,8 @@ public class bisMemberAddServlet extends HttpServlet {
 		String phone2 = request.getParameter("phone2");
 		String phone3 = request.getParameter("phone3");
 		
-		bisUserDTO dto = new bisUserDTO(bisid, passwd, bisname, post1, post2, addr1, addr2, phone1, phone2, phone3);
-		bisUserService service = new bisUserService();
+		BisUserDTO dto = new BisUserDTO(bisid, passwd, bisname, post1, post2, addr1, addr2, phone1, phone2, phone3);
+		BisUserService service = new BisUserService();
 		 String title="";
 		    String target="";
 		    try {

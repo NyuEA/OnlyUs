@@ -9,17 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dto.bisUserDTO;
-import com.dto.genUserDTO;
+import com.dto.BisUserDTO;
+import com.dto.GenUserDTO;
 import com.exception.CommonException;
-import com.service.bisUserService;
-import com.service.genUserService;
+import com.service.BisUserService;
+import com.service.GenUserService;
 
 /**
  * Servlet implementation class LognFormServlet
  */
-@WebServlet("/genMemberUpdateServlet")
-public class genMemberUpdateServlet extends HttpServlet {
+@WebServlet("/GenMemberUpdateServlet")
+public class GenMemberUpdateServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -28,14 +28,14 @@ public class genMemberUpdateServlet extends HttpServlet {
 		String nickname = request.getParameter("nickname");
 		String phone = request.getParameter("phone");
 		System.out.println(userid+"|"+passwd+"|"+nickname+"|"+phone);
-		genUserDTO dto = new genUserDTO(userid, passwd, nickname, phone);
-		genUserService service = new genUserService();
+		GenUserDTO dto = new GenUserDTO(userid, passwd, nickname, phone);
+		GenUserService service = new GenUserService();
 	    String title="";
 	    String target="";
 	    try {
 			service.updateGenUser(dto);
 			target = "MyPageServlet";
-			request.setAttribute("update", "Á¤»óÀûÀ¸·Î ¼öÁ¤µÇ¾ú½À´Ï´Ù.");
+			request.setAttribute("update", "ì •ìƒì ìœ¼ë¡œ ìˆ˜ì •ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		} catch (CommonException e) {
 			title= e.getMessage();
 			String link="MyPageServlet";

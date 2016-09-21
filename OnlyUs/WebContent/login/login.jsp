@@ -20,7 +20,7 @@
 
 	<div class="loginForm">
 
-		<form name="" action="bisLoginServlet">
+		<form name="" action="BisLoginServlet">
 			<div class="box">
 				<table>
 					<tr>

@@ -1,14 +1,38 @@
 package com.dto;
 
-public class mycouponDTO {
+public class MycouponDTO {
 	private String couid;
 	private String period_f;
 	private String period_t;
 	private String bisid;
+	private String bisname;
 	private String dcouid;
 	private String use_yn;
 	private String userid;
 	private String content;
+	public MycouponDTO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public MycouponDTO(String couid, String period_f, String period_t, String bisid, String bisname, String dcouid,
+			String use_yn, String userid, String content) {
+		super();
+		this.couid = couid;
+		this.period_f = period_f;
+		this.period_t = period_t;
+		this.bisid = bisid;
+		this.bisname = bisname;
+		this.dcouid = dcouid;
+		this.use_yn = use_yn;
+		this.userid = userid;
+		this.content = content;
+	}
+	@Override
+	public String toString() {
+		return "MycouponDTO [couid=" + couid + ", period_f=" + period_f + ", period_t=" + period_t + ", bisid=" + bisid
+				+ ", bisname=" + bisname + ", dcouid=" + dcouid + ", use_yn=" + use_yn + ", userid=" + userid
+				+ ", content=" + content + "]";
+	}
 	public String getCouid() {
 		return couid;
 	}
@@ -33,6 +57,12 @@ public class mycouponDTO {
 	public void setBisid(String bisid) {
 		this.bisid = bisid;
 	}
+	public String getBisname() {
+		return bisname;
+	}
+	public void setBisname(String bisname) {
+		this.bisname = bisname;
+	}
 	public String getDcouid() {
 		return dcouid;
 	}
@@ -56,27 +86,6 @@ public class mycouponDTO {
 	}
 	public void setContent(String content) {
 		this.content = content;
-	}
-	public mycouponDTO(String couid, String period_f, String period_t, String bisid, String dcouid, String use_yn,
-			String userid, String content) {
-		super();
-		this.couid = couid;
-		this.period_f = period_f;
-		this.period_t = period_t;
-		this.bisid = bisid;
-		this.dcouid = dcouid;
-		this.use_yn = use_yn;
-		this.userid = userid;
-		this.content = content;
-	}
-	public mycouponDTO() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	@Override
-	public String toString() {
-		return "mycouponDTO [couid=" + couid + ", period_f=" + period_f + ", period_t=" + period_t + ", bisid=" + bisid
-				+ ", dcouid=" + dcouid + ", use_yn=" + use_yn + ", userid=" + userid + ", content=" + content + "]";
 	}
 	
 	

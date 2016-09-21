@@ -1,7 +1,7 @@
-<%@page import="com.dto.mycouponDTO"%>
-<%@page import="com.dto.couponDTO"%>
+<%@page import="com.dto.MycouponDTO"%>
+<%@page import="com.dto.CouponDTO"%>
 <%@page import="java.util.List"%>
-<%@page import="com.dto.genUserDTO"%>
+<%@page import="com.dto.GenUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -12,8 +12,7 @@
 %>
 <script type="text/javascript">
       var str = "<%=logout%>";
-      alert("<%=logout%>
-	");
+      alert("<%=logout%>");
 </script>
 <%
 	}
@@ -23,7 +22,7 @@
 	<ul class="nav_ul fix">
 		<!-- 	☆ 현재페이지 표시 class="on" -->
 		<%
-			genUserDTO dto = (genUserDTO) session.getAttribute("login");
+			GenUserDTO dto = (GenUserDTO) session.getAttribute("login");
 		%>
 		<%
 			if (dto == null) {
@@ -45,36 +44,31 @@
 </div>
 <table border="1">
 	<tr>
-		<th>쿠폰아이디</th>
-		<th>시작날짜</th>
-		<th>마지막날짜</th>
-		<th>회사아이디</th>
-		<th>다운로드아이디</th>
-		<th>사용여부</th>
+		<th>쿠폰코드</th>
+		<th>업체명</th>
 		<th>내용</th>
+		<th colspan="2">기간</th>
+		<th>사용여부</th>
 	</tr>
 
 	<%
-		List<mycouponDTO> list = (List<mycouponDTO>) request.getAttribute("mycoupon");
+		List<MycouponDTO> list = (List<MycouponDTO>) request.getAttribute("mycoupon");
 
-		for (mycouponDTO mdto : list) {
-			String couid = mdto.getCouid();
+		for (MycouponDTO mdto : list) {
+			String dcouid = mdto.getDcouid();
 			String period_f = mdto.getPeriod_f();
 			String period_t = mdto.getPeriod_t();
-			String bisid = mdto.getBisid();
-			String dcouid = mdto.getDcouid();
+			String bisname = mdto.getBisname();
 			String use_yn = mdto.getUse_yn();
 			String content = mdto.getContent();
 	%>
 	<tr>
-		<td><%=couid%></td>
-
-		<td><%=period_f%></td>
-		<td><%=period_t%></td>
-		<td><%=bisid%></td>
 		<td><%=dcouid%></td>
-		<td><%=use_yn%></td>
+		<td><%=bisname%></td>
 		<td><%=content%></td>
+		<td><%=period_f%>~</td>
+		<td><%=period_t%></td>
+		<td><%=use_yn%></td>
 	</tr>
 	<%
 		} //end for

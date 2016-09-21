@@ -1,15 +1,15 @@
 package com.dto;
 
-public class genUserDTO {
+public class GenUserDTO {
 	private String userid;
 	private String passwd;
 	private String nickname;
 	private String phone;
-	public genUserDTO() {
+	public GenUserDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public genUserDTO(String userid, String passwd, String nickname, String phone) {
+	public GenUserDTO(String userid, String passwd, String nickname, String phone) {
 		super();
 		this.userid = userid;
 		this.passwd = passwd;

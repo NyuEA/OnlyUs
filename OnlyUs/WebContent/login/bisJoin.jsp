@@ -1,5 +1,5 @@
-<%@page import="com.dto.bisUserDTO"%>
-<%@page import="com.dto.genUserDTO"%>
+<%@page import="com.dto.BisUserDTO"%>
+<%@page import="com.dto.GenUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- DAUM 주소 라이브러리 시작 -->
@@ -105,7 +105,7 @@
 
 <script type="text/javascript">
 	function bismemberAdd(f) {
-		f.action = "genMemberUpdateServlet";
+		f.action = "GenMemberUpdateServlet";
 	}
 
 	$(document).ready(function() {

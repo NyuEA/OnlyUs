@@ -1,5 +1,5 @@
-<%@page import="com.dto.bisUserDTO"%>
-<%@page import="com.dto.genUserDTO"%>
+<%@page import="com.dto.BisUserDTO"%>
+<%@page import="com.dto.GenUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <link href="css/common.css" rel="stylesheet" type="text/css">
@@ -15,8 +15,8 @@
 	<ul class="nav_ul1 fix">
 		<!-- 	☆ 현재페이지 표시 class="on" -->
 		<%
-		genUserDTO dto = (genUserDTO)session.getAttribute("login");
-		bisUserDTO bisdto = (bisUserDTO)session.getAttribute("bislogin");
+		GenUserDTO dto = (GenUserDTO)session.getAttribute("login");
+		BisUserDTO bisdto = (BisUserDTO)session.getAttribute("bislogin");
 %>
 		<%
   if(dto==null && bisdto == null){
@@ -36,8 +36,8 @@
 <%
   }else{
   %>
-  <li><a class="on" href="bisLogOutServlet">로그아웃</a></li>
-  		<li><a href="bisMyPageServlet">마이페이지</a></li>
+  <li><a class="on" href="BisLogOutServlet">로그아웃</a></li>
+  		<li><a href="BisMyPageServlet">마이페이지</a></li>
   		<li><a href="genJoin_.jsp"><img
   				src="images/header_top_contact.png" id="header_top_contact"></a></li>
 

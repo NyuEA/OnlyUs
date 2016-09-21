@@ -11,10 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dto.genUserDTO;
+import com.dto.GenUserDTO;
 import com.exception.CommonException;
 
-import com.service.genUserService;
+import com.service.GenUserService;
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
@@ -30,13 +30,13 @@ public class LoginServlet extends HttpServlet {
 		map.put("userid", userid);
 		map.put("passwd", passwd);
 
-		genUserService service = new genUserService();
+		GenUserService service = new GenUserService();
 		String title = "";
 		String target = "";
 		try {
-			genUserDTO dto = service.login(map);
+			GenUserDTO dto = service.login(map);
 			if (dto == null) {
-				title = "¾ÆÀÌµğ ºñ¹Ğ¹øÈ£ ºÒÀÏÄ¡";
+				title = "ì•„ì´ë”” ë¹„ë°€ë²ˆí˜¸ë¥¼ í™•ì¸í•˜ì—¬ì£¼ì„¸ìš”.";
 				String link = "LoginFormServlet";
 				target = "error.jsp";
 				request.setAttribute("title", title);

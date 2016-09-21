@@ -5,12 +5,11 @@ import java.util.HashMap;
 import org.apache.ibatis.session.SqlSession;
 
 import com.config.MySqlSessionFactory;
-import com.dto.bisUserDTO;
-import com.dto.genUserDTO;
+import com.dto.BisUserDTO;
 import com.exception.CommonException;
 
-public class bisUserService {
-	public void addBisUser(bisUserDTO dto) throws CommonException {
+public class BisUserService {
+	public void addBisUser(BisUserDTO dto) throws CommonException {
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
 			int n = session.insert("addBisUser", dto);
@@ -18,40 +17,40 @@ public class bisUserService {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("»ç¾÷ÀÚÈ¸¿øµî·Ï ½ÇÆĞ");
+			throw new CommonException("íšŒì›ê°€ì… ì‹¤íŒ¨.");
 		} finally {
 			session.close();
 		}
 
 	}// end addMember
-	public bisUserDTO bislogin(HashMap<String, String> map) throws CommonException {
-		bisUserDTO dto = null;
+	public BisUserDTO bislogin(HashMap<String, String> map) throws CommonException {
+		BisUserDTO dto = null;
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
 			dto = session.selectOne("bislogin", map);
 			System.out.println("login");
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("·Î±×ÀÎ½ÇÆĞ");
+			throw new CommonException("ë¡œê·¸ì¸ì‹¤íŒ¨.");
 		} finally {
 			session.close();
 		}
 		return dto;	
 		}
-	public bisUserDTO bisMypage(String userid) throws CommonException {
-		bisUserDTO dto = null;
+	public BisUserDTO bisMypage(String bisid) throws CommonException {
+		BisUserDTO dto = null;
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
-			dto = session.selectOne("bisMypage", userid);
+			dto = session.selectOne("bisMypage", bisid);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("¸¶ÀÌÆäÀÌÁö ºÒ·¯¿À±â ½ÇÆĞ");
+			throw new CommonException("ë§ˆì´í˜ì´ì§€ ë¶ˆëŸ¬ì˜¤ê¸° ì‹¤íŒ¨");
 		} finally {
 			session.close();
 		}
 		return dto;	
 	}
-	public void updatebisUser(bisUserDTO bisdto) throws CommonException {
+	public void updatebisUser(BisUserDTO bisdto) throws CommonException {
 		System.out.println(bisdto.getAddr1());
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
@@ -60,7 +59,7 @@ public class bisUserService {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("È¸¿ø¼öÁ¤ ½ÇÆĞ");
+			throw new CommonException("íšŒì› ìˆ˜ì • ì‹¤íŒ¨");
 		} finally {
 			session.close();
 		}

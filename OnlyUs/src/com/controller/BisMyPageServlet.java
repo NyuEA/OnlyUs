@@ -10,31 +10,30 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dto.bisUserDTO;
-import com.dto.genUserDTO;
+import com.dto.BisUserDTO;
 import com.exception.CommonException;
-import com.service.bisUserService;
-import com.service.genUserService;
+import com.service.BisUserService;
+import com.service.GenUserService;
 
 /**
  * Servlet implementation class LognFormServlet
  */
-@WebServlet("/bisMyPageServlet")
-public class bisMyPageServlet extends HttpServlet {
+@WebServlet("/BisMyPageServlet")
+public class BisMyPageServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession session = request.getSession();
-		bisUserDTO bisdto = (bisUserDTO)session.getAttribute("bislogin");
+		BisUserDTO bisdto = (BisUserDTO)session.getAttribute("bislogin");
 		String target="";
 		String title="";
 		if(bisdto!=null){
 			target="bisMypage_.jsp";
 			
 			String bisid = bisdto.getBisid();
-			bisUserService service = new bisUserService();
+			BisUserService service = new BisUserService();
 			try {
-				bisUserDTO my = service.bisMypage(bisid);
+				BisUserDTO my = service.bisMypage(bisid);
 				request.setAttribute("bisMypage", my);
 			} catch (CommonException e) {
 				title= e.getMessage();
