@@ -1,4 +1,5 @@
-<%@page import="com.dto.genUserDTO"%>
+<%@page import="com.dto.GenUserDTO"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -24,7 +25,7 @@ alert("<%=logout%>");
 	<ul class="nav_ul fix">
 		<!-- 	☆ 현재페이지 표시 class="on" -->
 		<%
-			genUserDTO dto = (genUserDTO) session.getAttribute("login");
+			GenUserDTO dto = (GenUserDTO)session.getAttribute("login");
 		%>
 		<%
 			if (dto == null) {

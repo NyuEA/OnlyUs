@@ -10,15 +10,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dto.BisUserDTO;
+
 import com.dto.GenUserDTO;
 import com.exception.CommonException;
-import com.service.BisUserService;
+
 import com.service.GenUserService;
 
-/**
- * Servlet implementation class LognFormServlet
- */
+
 @WebServlet("/MyPageServlet")
 public class MyPageServlet extends HttpServlet {
 

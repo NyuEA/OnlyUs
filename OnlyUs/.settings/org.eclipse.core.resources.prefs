@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/com/login/BisLogOutServlet.java=UTF-8
 encoding//src/com/login/LogOutServlet.java=UTF-8
+encoding//src/com/login/LoginServlet.java=UTF-8
 encoding//src/com/service/GenUserService.java=UTF-8
 encoding//src/onlyus.sql=UTF-8
