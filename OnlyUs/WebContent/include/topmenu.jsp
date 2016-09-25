@@ -28,6 +28,7 @@
 		<%
   }else if(dto!=null){
 %>
+<span id="hiuser"> 안녕하세요! <a href="home.jsp" id="user"><%= dto.getNickname() %></a> 님 ^^* </span>
 <li><a class="on" href="LogOutServlet">로그아웃</a></li>
 		<li><a href="MyPageServlet">마이페이지</a></li>
 		<li><a href="genJoin_.jsp"><img

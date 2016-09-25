@@ -41,6 +41,7 @@
 .nav_ul li {
 	margin: 0px 65px 0px 36px; display: inline-block;
 }
+
 .nav_ul li a {
 	color: rgb(255, 255, 255); line-height: 40px; display: block;
 }

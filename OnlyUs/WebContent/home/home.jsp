@@ -53,23 +53,23 @@
 		<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
 		<li><a href="board_.jsp" id="subm2">문의하기</a></li>
 		<%
-			} else if (dto != null && userid != "admin") {
+			} else if (dto != null && "admin".equals(userid)) {
+		%>
+		<li><a href="" id="subm2">가입 관리</a></li>
+		<li><a href="" id="subm2">업체 관리</a></li>
+		<li><a href="" id="subm1">회원 관리</a></li>
+		<li><a href="" id="subm2">문의사항관리</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<%
+			} else if (dto != null) {
 		%>
 		<li><a href="CouponListServlet" id="subm2">내 쿠폰함</a></li>
 		<li><a href="TopTenServlet" id="subm2">TOP10</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
 		<li><a href="board_.jsp" id="subm2">문의하기</a></li>
 		<%
-			} else if (dto != null && "admin".equals(userid)) {
-		%>
-		<li><a href="CouponListServlet" id="subm2">가입 관리</a></li>
-		<li><a href="TopTenServlet" id="subm2">업체 관리</a></li>
-		<li><a class="on" href="home_.jsp?" id="subm1">회원 관리</a></li>
-		<li><a href="board_.jsp" id="subm2">문의사항관리</a></li>
-		<%
 			} else {//end if
 		%>
-		<li><a href="CouponListServlet" id="subm2">쿠폰관리</a></li>
+		<li><a href="" id="subm2">쿠폰관리</a></li>
 		<li><a href="TopTenServlet" id="subm2">TOP10</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
 		<li><a href="board_.jsp" id="subm2">문의하기</a></li>
@@ -284,18 +284,8 @@
 				</H3>
 				<P class="featute_note">쿠폰기능까지!</P>
 				<OL>
-					<LI><SPAN class="num">1</SPAN> S식품, K택배, L물류기업, Y물류기업 등의 다양한
-						업종에 <EM>차량관제 서비스 제공</EM> 및 운영 경험 보유</LI>
-					<LI><SPAN class="num">2</SPAN> 차량관제 차량당 부가되는 비용을 통해 <EM>저비용으로
-							전령</EM> 서비스 이용</LI>
-					<LI><SPAN class="num">3</SPAN> 관제 차량의 <EM>온도관제 실시간 확인</EM>서비스
-						제공</LI>
-					<LI><SPAN class="num">4</SPAN> <EM>웹사이트, 모바일(APP/WEB)</EM>을 통한
-						다양한 환경에서의 서비스 제공</LI>
-					<LI><SPAN class="num">5</SPAN> 추가 장비 없이 <EM>스마트폰을 활용한
-							차량관제</EM>서비스 제공</LI>
-					<LI><SPAN class="num">6</SPAN> <EM>전문 상담원과 콜센터</EM>를 통한 실시간 고객
-						응대</LI>
+					<LI><SPAN class="num">1</SPAN>첫번째 장점</LI>
+					
 				</OL>
 			</DIV>
 			<!--//cont01-->
