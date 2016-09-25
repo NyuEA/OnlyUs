@@ -22,6 +22,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE COUPON.BISID = BISUSER.BISID
 		order by COUPON.CLICKCOUNT desc
 	</select>
+	<select id="first10" resultType="Top10DTO" parameterType="String">
+		select COUPON.CLICKCOUNT
+		CLICKCOUNT, BISUSER.BISNAME BISNAME, COUPON.CONTENT CONTENT,
+		COUPON.PERIOD_F PERIOD_F, COUPON.PERIOD_T PERIOD_T, COUPON.COUID COUID
+		from COUPON, BISUSER
+		WHERE COUPON.BISID = BISUSER.BISID 
+    and COUPON.BISID =  (select BISUSER.BISID from BISUSER where BISUSER.ADDR1 like #{searchName}||'%')
+		order by COUPON.CLICKCOUNT desc
+	</select>
+	
 
 
 </mapper>
