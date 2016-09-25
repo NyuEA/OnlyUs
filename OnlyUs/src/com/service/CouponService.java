@@ -57,4 +57,18 @@ public class CouponService {
 		return list;	
 	}
 
+	public List<Top10DTO> search(String searchName) throws CommonException {
+		List<Top10DTO> list = null;
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			list = session.selectList("serch10",searchName);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("지역10가져오기 실패");
+		} finally {
+			session.close();
+		}
+		return list;	
+	}
+
 }
