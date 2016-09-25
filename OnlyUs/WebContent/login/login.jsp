@@ -5,7 +5,17 @@
 
 
 <link href="css/login.css" rel="stylesheet" type="text/css">
-
+<%
+	String loginError = (String) request.getAttribute("loginError");
+	if (loginError != null) {
+%>
+<script type="text/javascript">
+	var str = "<%=loginError%>";
+	alert("<%=loginError%>");
+</script>
+<%
+	}
+%>
 <div class="nav">
 	<h2 class="blind">로컬네이게이션</h2>
 	<ul class="nav_ul fix">

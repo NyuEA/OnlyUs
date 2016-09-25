@@ -35,11 +35,9 @@ public class BisLoginServlet extends HttpServlet {
 		try {
 			BisUserDTO dto = service.bislogin(map);
 			if (dto == null) {
-				title = "����α��μ��� ";
-				String link = "LoginFormServlet";
-				target = "error.jsp";
-				request.setAttribute("title", title);
-				request.setAttribute("link", link);
+				title = "아이디 비밀번호를 확인하여주세요.";
+				target = "LoginFormServlet";
+				request.setAttribute("loginError", title);
 			} else {
 				HttpSession session = request.getSession();
 				session.setAttribute("bislogin", dto);

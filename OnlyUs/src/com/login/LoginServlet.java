@@ -37,10 +37,8 @@ public class LoginServlet extends HttpServlet {
 			GenUserDTO dto = service.login(map);
 			if (dto == null) {
 				title = "아이디 비밀번호를 확인하여주세요.";
-				String link = "LoginFormServlet";
-				target = "error.jsp";
-				request.setAttribute("title", title);
-				request.setAttribute("link", link);
+				target = "LoginFormServlet";
+				request.setAttribute("loginError", title);
 			} else {
 				HttpSession session = request.getSession();
 				session.setAttribute("login", dto);
