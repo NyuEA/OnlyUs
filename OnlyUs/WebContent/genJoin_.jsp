@@ -13,7 +13,7 @@
 <jsp:include page="include/topmenu.jsp" flush="true"></jsp:include><br>
 <jsp:include page="include/top.jsp" flush="true"></jsp:include>
 
-<jsp:include page="login/Join.jsp" flush="true"></jsp:include>
+<jsp:include page="login/genJoin.jsp" flush="true"></jsp:include>
 <jsp:include page="include/footer.jsp" flush="true"></jsp:include>
 </body>
 </html>

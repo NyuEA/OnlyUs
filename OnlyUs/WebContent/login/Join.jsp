@@ -23,7 +23,7 @@
 			<div class="box">
 				<table>
 					<tr>
-						<td><a href=""><img src="images/bisjoin.png"/></a></td>
+						<td><a href="bisJoin_.jsp"><img src="images/bisjoin.png"/></a></td>
 					</tr>
 				</table>
 			</div>
@@ -38,7 +38,7 @@
 			<div class="box">
 				<table>
 					<tr>
-						<td><a href=""><img src="images/genjoin.png"/></a></td>
+						<td><a href="genJoin_.jsp"><img src="images/genjoin.png"/></a></td>
 					</tr>
 				</table>
 			</div>
