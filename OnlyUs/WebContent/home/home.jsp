@@ -57,7 +57,7 @@
 		%>
 		<li><a href="" id="subm2">가입 관리</a></li>
 		<li><a href="" id="subm2">업체 관리</a></li>
-		<li><a class="on" href="" id="subm1">회원 관리</a></li>
+		<li><a href="" id="subm1">회원 관리</a></li>
 		<li><a href="" id="subm2">문의사항관리</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<%
 			} else if (dto != null) {
