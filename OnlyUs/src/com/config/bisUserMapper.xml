@@ -9,7 +9,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		from bisUser
 		where bisid = #{userid}
 	</select>
-	<insert id="addbisUser" parameterType="BisUserDTO">
+	<insert id="addBisUser" parameterType="BisUserDTO">
 		insert into bisUser(
 		bisid, passwd,
 		bisname, post1, post2, addr1, addr2, phone1, phone2,
