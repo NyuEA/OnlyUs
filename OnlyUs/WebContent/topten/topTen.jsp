@@ -141,7 +141,7 @@
 
 
 		<%
-			for (int i = 0; i < 10; i++) {
+			for (int i = 0; i < list.size() ; i++) {
 				Top10DTO mdto = list.get(i);
 				String period_f = mdto.getPeriod_f();
 				String period_t = mdto.getPeriod_t();
