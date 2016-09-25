@@ -1,3 +1,4 @@
+<%@page import="com.dto.BisUserDTO"%>
 <%@page import="com.dto.GenUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -16,8 +17,8 @@
 	if (add != null) {
 %>
 <script type="text/javascript">
-      var str = "<%=add%>";
-      alert("<%=add%>");
+	var str = "<%=add%>";
+	alert("<%=add%>");
 </script>
 <%
 	}
@@ -27,8 +28,8 @@
 	if (logout != null) {
 %>
 <script type="text/javascript">
-      var str = "<%=logout%>";
-      alert("<%=logout%>");
+	var str = "<%=logout%>";
+	alert("<%=logout%>");
 </script>
 <%
 	}
@@ -38,22 +39,42 @@
 	<ul class="nav_ul fix">
 		<!-- 	☆ 현재페이지 표시 class="on" -->
 		<%
+			String userid = "";
 			GenUserDTO dto = (GenUserDTO) session.getAttribute("login");
+			BisUserDTO bisdto = (BisUserDTO) session.getAttribute("bislogin");
+			if (dto != null) {
+				userid = dto.getUserid();
+				System.out.println(userid);
+			}
 		%>
 		<%
-			if (dto == null) {
+			if (dto == null && bisdto == null) {
 		%>
 		<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
 		<li><a href="board_.jsp" id="subm2">문의하기</a></li>
 		<%
-			} else {
+			} else if (dto != null && userid != "admin") {
 		%>
 		<li><a href="CouponListServlet" id="subm2">내 쿠폰함</a></li>
 		<li><a href="TopTenServlet" id="subm2">TOP10</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
 		<li><a href="board_.jsp" id="subm2">문의하기</a></li>
 		<%
-			} //end if
+			} else if (dto != null && userid == "admin") {
+		%>
+		<li><a href="CouponListServlet" id="subm2">가입 관리</a></li>
+		<li><a href="TopTenServlet" id="subm2">업체 관리</a></li>
+		<li><a class="on" href="home_.jsp?" id="subm1">회원 관리</a></li>
+		<li><a href="board_.jsp" id="subm2">문의사항관리</a></li>
+		<%
+			} else {//end if
+		%>
+		<li><a href="CouponListServlet" id="subm2">쿠폰관리</a></li>
+		<li><a href="TopTenServlet" id="subm2">TOP10</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
+		<li><a href="board_.jsp" id="subm2">문의하기</a></li>
+		<%
+			}
 		%>
 
 	</ul>
@@ -378,8 +399,8 @@
 			a.src = g;
 			m.parentNode.insertBefore(a, m)
 		})(window, document, 'script',
-				'//www.google-analytics.com/analytics.js', 'ga');
-
+			'//www.google-analytics.com/analytics.js', 'ga');
+	
 		ga('create', 'UA-74438158-1', 'auto');
 		ga('send', 'pageview');
 	</SCRIPT>
@@ -394,32 +415,31 @@
 
 <SCRIPT type="text/javascript">
 	function layer_open(lay_name, num) {
-
 		var temp = $('#' + lay_name);
 
 		if (num == '1') {
 			$(".pop-conts").css("background-image",
-					"url(/images/img_popup_1.jpg)");
+				"url(/images/img_popup_1.jpg)");
 			$(".pop-conts").height("700px");
 			$(".pop-conts").width("1024px");
 		}
 		if (num == '2') {
 			$(".pop-conts").css("background-image",
-					"url(/images/img_popup_2.jpg)");
+				"url(/images/img_popup_2.jpg)");
 			$(".pop-conts").height("700px");
 			$(".pop-conts").width("1024px");
 		}
 
 		if (num == '3') {
 			$(".pop-conts").css("background-image",
-					"url(/images/img_popup_3.jpg)");
+				"url(/images/img_popup_3.jpg)");
 			$(".pop-conts").height("700px");
 			$(".pop-conts").width("1024px");
 		}
 
 		if (num == '4') {
 			$(".pop-conts").css("background-image",
-					"url(/images/img_popup_4.jpg)");
+				"url(/images/img_popup_4.jpg)");
 			$(".pop-conts").height("700px");
 			$(".pop-conts").width("1024px");
 		}
