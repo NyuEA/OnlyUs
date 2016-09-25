@@ -5,10 +5,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="mycoupon">
 
 	<select id="myCoupon" parameterType="string" resultType="MycouponDTO">
-		select DOWNCOUPON.dcouid,  to_char(COUPON.period_f,'YYYY/MM/dd') period_f, to_char(COUPON.period_t,'YYYY/MM/dd') period_t, BISUSER.BISNAME,  DOWNCOUPON.use_yn, DOWNCOUPON.userid, COUPON.content
-		from DOWNCOUPON , COUPON , BISUSER
-		where DOWNCOUPON.COUID = COUPON.COUID 
-    and COUPON.BISID = BISUSER.BISID and userid =  #{userid}
+		select
+		DOWNCOUPON.dcouid, to_char(COUPON.period_f,'YYYY/MM/dd') period_f,
+		to_char(COUPON.period_t,'YYYY/MM/dd') period_t, BISUSER.BISNAME,
+		DOWNCOUPON.use_yn, DOWNCOUPON.userid, COUPON.content
+		from DOWNCOUPON ,
+		COUPON , BISUSER
+		where DOWNCOUPON.COUID = COUPON.COUID
+		and COUPON.BISID = BISUSER.BISID and userid = #{userid}
+	</select>
+	<select id="first10" resultType="Top10DTO">
+		select COUPON.CLICKCOUNT
+		CLICKCOUNT, BISUSER.BISNAME BISNAME, COUPON.CONTENT CONTENT,
+		COUPON.PERIOD_F PERIOD_F, COUPON.PERIOD_T PERIOD_T, COUPON.COUID COUID
+		from COUPON, BISUSER
+		WHERE COUPON.BISID = BISUSER.BISID
+		order by COUPON.CLICKCOUNT desc
 	</select>
 
 

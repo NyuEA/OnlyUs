@@ -16,6 +16,7 @@ import com.dto.CouponDTO;
 import com.dto.DownCouponDTO;
 import com.dto.GenUserDTO;
 import com.dto.MycouponDTO;
+import com.dto.Top10DTO;
 import com.exception.CommonException;
 import com.service.CouponService;
 
@@ -25,19 +26,17 @@ public class TopTenServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		HttpSession session = request.getSession();
+		
 		CouponService service = new CouponService();
-		GenUserDTO dto = (GenUserDTO) session.getAttribute("login");
-		BisUserDTO bisdto = (BisUserDTO)session.getAttribute("bislogin");
-		String userid = dto.getUserid();
 		try {
-			request.setAttribute("mycoupon", list);
+			List<Top10DTO> list = service.first10();
+			request.setAttribute("top10", list);
 		} catch (CommonException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		RequestDispatcher dis = request.getRequestDispatcher("coupon_.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("top_.jsp");
 		dis.forward(request, response);
 
 	}

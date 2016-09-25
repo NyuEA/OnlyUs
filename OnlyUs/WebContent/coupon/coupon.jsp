@@ -45,26 +45,18 @@
 	</ul>
 </div>
 
-<%  List<MycouponDTO> list = (List<MycouponDTO>) request.getAttribute("mycoupon");
- %>
+<%  List<MycouponDTO> list = (List<MycouponDTO>) request.getAttribute("mycoupon"); %>
  <div id="coupon">
 <table  width="90%"cellspacing="0" cellpadding="0"   align="center">
 	
 		
 			<tr>
-				<td colspan="9" class="cmain">&nbsp;&nbsp;&nbsp; <font
-					size="6" ><b>내 쿠폰함</b> </font> &nbsp;
+				<td colspan="9" class="cmain">&nbsp;&nbsp;&nbsp; <font size="6" ><b>내 쿠폰함</b> </font> &nbsp;
 				</td>
 				
 			</tr>
 
-			
 
-		
-			
-			
-		
-	
 	<tr>
 		
 		<th>쿠폰코드</th>
