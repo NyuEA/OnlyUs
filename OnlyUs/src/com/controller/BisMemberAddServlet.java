@@ -19,9 +19,9 @@ import com.service.BisUserService;
 @WebServlet("/bisMemberAddServlet")
 public class BisMemberAddServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String bisid = request.getParameter("bisid");
+		String bisid = request.getParameter("userid");
 		String passwd = request.getParameter("passwd");
-		String bisname = request.getParameter("bisname");
+		String bisname = request.getParameter("nickname");
 		String post1 = request.getParameter("post1");
 		String post2 = request.getParameter("post2");
 		String addr1 = request.getParameter("addr1");
@@ -36,8 +36,8 @@ public class BisMemberAddServlet extends HttpServlet {
 		    String target="";
 		    try {
 				service.addBisUser(dto);
-				target = "login.jsp";
-				request.setAttribute("result", "success");
+				target = "home_.jsp";
+				request.setAttribute("add", "회원가입이 정상적으로 되셨습니다.");
 			} catch (CommonException e) {
 				title= e.getMessage();
 				String link="join.jsp";
