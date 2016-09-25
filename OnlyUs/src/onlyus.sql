@@ -12,6 +12,9 @@ create table bisUser
   phone2 varchar2(4) not null,
   phone3 varchar2(4) not null);
   select * from bisUser;
+  
+  alter table bisUser add(approval char(1) default 'N');
+  
 --충남
 insert into bisUser(bisid, passwd, bisname, post1, post2, addr1, addr2, phone1, phone2, phone3)
 values('s1','s1','맘스터치' ,'310','83','충남 천안 서북구','신당동 271-9 ','041','554','3392'); 
