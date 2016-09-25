@@ -60,7 +60,7 @@
 		<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
 		<li><a href="board_.jsp" id="subm2">문의하기</a></li>
 		<%
-			} else if (dto != null && userid == "admin") {
+			} else if (dto != null && "admin".equals(userid)) {
 		%>
 		<li><a href="CouponListServlet" id="subm2">가입 관리</a></li>
 		<li><a href="TopTenServlet" id="subm2">업체 관리</a></li>
