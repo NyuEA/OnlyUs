@@ -4,6 +4,8 @@
 
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/login.css" rel="stylesheet" type="text/css">
+<link href="css/mypage.css" rel="stylesheet" type="text/css">
+
 <style type="text/css">
 .blue {
 	color: blue;
@@ -31,9 +33,7 @@
 <form id="joinF" action="GenMemberAddServlet" >
 
    <table id="joinT">
-    <tr>
-			<th colspan="6" ><font size="6"><br></font><br><br><br><br></th>
-		</tr>
+   
 		<tr>
 			<td colspan="2">
 				<hr size="1" color="CCCCCC">
@@ -44,31 +44,23 @@
 			<td><input type="text" name="userid" id="userid" value=""><span
 				id="result"></span></td>
 		</tr>
-		<tr>
-			<td height="7" colspan="2">
-		</tr>
+		
 		<tr>
 			<th>비밀번호</th>
 			<td><input type="password" name="passwd" id="passwd" ><span
 				id="result2"></span></td>
 		</tr>
-		<tr>
-			<td height="7" colspan="2">
-		</tr>
+		
 		<tr>
 			<th>비밀번호 확인</th>
 			<td><input type="password" name="passwd2" id="passwd2"></td>
 		</tr>
-		<tr>
-			<td height="7" colspan="2">
-		</tr>
+	
 		<tr>
 			<th>닉네임</th>
 			<td><input type="text" name="nickname" id="nickname" value=""></td>
 		</tr>
-		<tr>
-			<td height="7" colspan="2">
-		</tr>
+		
 		<tr>
 			<th>핸드폰<br><font color="gray" size="2">(-는 제외하고 입력하여 주세요)</font></th>
 			<td><input type="text" name="phone" id="phone" value="" maxlength="11"></td>
