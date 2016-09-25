@@ -95,7 +95,7 @@
 
 		<tr>
 			<td colspan="2">
-				<button onclick="bismemberAdd(myform)" class="mypageBtn">가입</button>
+				<button onclick="bismemberAdd(myform)" class="mypageBtn">가입신청</button>
 				<button onclick="home_.jsp" class="mypageBtn">취소</button>
 			</td>
 		</tr>
