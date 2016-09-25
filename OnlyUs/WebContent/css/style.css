@@ -441,6 +441,8 @@ px
 body {
 	font-family: sans-serif;
 
+	width: 1280px;
+
 	/*background-color: #ffffff;
 	background-image: -webkit-linear-gradient(bottom, #323B55 0%, #424F71 100%);
 	background-image: -moz-linear-gradient(bottom, #323B55 0%, #424F71 100%);
