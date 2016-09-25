@@ -105,7 +105,7 @@
 
 <script type="text/javascript">
 	function bismemberAdd(f) {
-		f.action = "GenMemberUpdateServlet";
+		f.action = "bisMemberAddServlet";
 	}
 
 	$(document).ready(function() {
