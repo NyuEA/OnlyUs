@@ -31,7 +31,7 @@
 	</div>
 
 
-<img src ="images/sun.png" style="margin-top: 50px"/>
+<img src ="images/sun.png" style="margin-top: 90px"/>
 
 		<div class="loginForm1" style="padding-left :130px">
 		<form name="" action="LoginServlet">
