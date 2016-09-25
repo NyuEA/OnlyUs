@@ -24,6 +24,17 @@
 	}
 %>
 <%
+	String logerror = (String) request.getAttribute("login");
+	if (logerror != null) {
+%>
+<script type="text/javascript">
+	var str = "<%=logerror%>";
+	alert("dd");
+</script>
+<%
+	}
+%>
+<%
 	String logout = (String) request.getAttribute("logout");
 	if (logout != null) {
 %>
@@ -211,46 +222,12 @@
 			</DIV>
 		</DIV>
 		<!--4대 서비스 종료-->
-		<!--컨텐츠 영역-->
-		<DIV class="content">
-			<!--기대효과-->
-			<H3 class="title">
-				<STRONG class="line01">요깄넹 <SPAN>기대효과</SPAN></STRONG>
-			</H3>
-			<P class="featute_note">실시간 쿠폰ㆍ광고 관리를 원한다면?</P>
-			<UL class="sevice01 fix">
-				<LI>
-					<H4 class="s01">
-						<SPAN>쿠폰문화 정착</SPAN>
-					</H4>
-					<P class="line03">
-						<SPAN class="br">쿠폰</SPAN>
-					</P>
-				</LI>
-				<LI>
-					<H4 class="s02">
-						<SPAN>쿠폰문화 정착</SPAN>
-					</H4>
-					<P class="line03">
-						<SPAN class="br">쿠폰</SPAN>
-					</P>
-				</LI>
-				<LI>
-					<H4 class="s03">
-						<SPAN>쿠폰문화 정착</SPAN>
-					</H4>
-					<P class="line03">
-						<SPAN class="br">쿠폰</SPAN>
-					</P>
-				</LI>
-			</UL>
-		</DIV>
-		<!--//content-->
+		
 		<DIV class="content03">
 			<DIV class="cont01">
 				<!--티지오넷 선택-->
 				<H3 class="title txt_gray">
-					<STRONG class="line02">요깄넹 <SPAN>선택</SPAN>하는 이유?
+					<STRONG class="line02">요깄넹 <SPAN>기대효과</SPAN>는 이래요
 					</STRONG>
 				</H3>
 				<P class="featute_note">쿠폰기능까지!</P>
