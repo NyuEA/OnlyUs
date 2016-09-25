@@ -9,6 +9,7 @@
 
  <div id="header">
 	<a href="home_.jsp"><img alt="요깄넹" src="images/logotitle.png"
+	 
 		id="logoimg"></a>
 	<P class="page_note">내 위치 쿠폰 제공 최강 솔루션</P>
 </div>

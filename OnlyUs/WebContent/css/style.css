@@ -535,10 +535,20 @@ footer, div {
 	margin: 0 auto;
 }
 
-img {
+img{
+		display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+img #logoimg {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+img #imgmain {
+	display: block;
+	
 }
 
 #bisjoinback {

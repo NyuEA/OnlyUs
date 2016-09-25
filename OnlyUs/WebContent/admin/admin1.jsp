@@ -20,7 +20,7 @@
 %>
 <div class="nav">
 	<h2 class="blind">로컬네이게이션</h2>
-	<ul class="nav_ul fix">
+<ul class="nav_ul fix">
 		<!-- 	☆ 현재페이지 표시 class="on" -->
 		<%
 			String userid = "";
@@ -64,7 +64,7 @@
 	</ul>
 </div>
 
-<%  List<MycouponDTO> list = (List<MycouponDTO>) request.getAttribute("mycoupon"); %>
+<%  List<BisUserDTO> list = (List<BisUserDTO>) request.getAttribute("admin"); %>
  <div id="coupon">
 <table  width="90%"cellspacing="0" cellpadding="0"   align="center">
 	
@@ -74,14 +74,9 @@
 				</td>
 				
 			</tr>
-
-
-	<tr>
-		
+	<tr>		
 		<th>쿠폰코드</th>
 		<th>업체명</th>
-		<th>내용</th>
-		<th colspan="2">기간</th>
 		<th>사용여부</th>
 	</tr>
 
@@ -99,7 +94,7 @@
 					<td height="5">
 				</tr>
 				<tr>
-					<td class="td_default" align="center" colspan="10"><br>카트에 추가된 쿠폰이 없습니다.<br><br><br></td>
+					<td class="td_default" align="center" colspan="10"><br>승인 할 업체가 없습니다<br><br><br></td>
 				</tr>
 			<%
 			   }else{
@@ -118,20 +113,15 @@
 <form name="myForm">
 		<% 
 		
-		for (MycouponDTO mdto : list) {
-			String dcouid = mdto.getDcouid();
-			String period_f = mdto.getPeriod_f();
-			String period_t = mdto.getPeriod_t();
-			String bisname = mdto.getBisname();
-			String use_yn = mdto.getUse_yn();
-			String content = mdto.getContent();
+		for (BisUserDTO bdto : list) {
+			String dcouid = bdto.getDcouid();
+			String bisname = bdto.getBisname();
+			String use_yn = bdto.getUse_yn();
+		
 	%>
 	<tr>
 		<td class="coutd"><%=dcouid%></td>
 		<td class="coutd"><%=bisname%></td>
-		<td class="coutd"><%=content%></td>
-		<td class="coutd"><%=period_f%>~</td>
-		<td class="coutd"><%=period_t%></td>
 		<td class="coutd"><%=use_yn%></td>
 	</tr>
 	

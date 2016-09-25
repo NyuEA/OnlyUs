@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.config.MySqlSessionFactory;
+import com.dto.BisUserDTO;
 import com.dto.CouponDTO;
 import com.dto.DownCouponDTO;
 import com.dto.GenUserDTO;
@@ -21,7 +22,7 @@ public class CouponService {
 			list = session.selectList("myCoupon", userid);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("내쿠폰가져오기실패");
+			throw new CommonException("�궡荑좏룿媛��졇�삤湲곗떎�뙣");
 		} finally {
 			session.close();
 		}
@@ -35,7 +36,21 @@ public class CouponService {
 			list = session.selectList("first10");
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new CommonException("10가져오기 실패");
+			throw new CommonException("10媛��졇�삤湲� �떎�뙣");
+		} finally {
+			session.close();
+		}
+		return list;	
+	}
+	
+	public List<BisUserDTO> admin1() throws CommonException {
+		List<BisUserDTO> list = null;
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			list = session.selectList("admin");
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("가입관리");
 		} finally {
 			session.close();
 		}

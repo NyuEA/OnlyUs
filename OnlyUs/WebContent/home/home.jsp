@@ -55,7 +55,7 @@
 		<%
 			} else if (dto != null && "admin".equals(userid)) {
 		%>
-		<li><a href="" id="subm2">가입 관리</a></li>
+		<li><a href="Admin1Servlet" id="subm2">가입 관리</a></li>
 		<li><a href="" id="subm2">업체 관리</a></li>
 		<li><a href="" id="subm1">회원 관리</a></li>
 		<li><a href="" id="subm2">문의사항관리</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -82,36 +82,7 @@
 
 
 <DIV id="wrapper">
-	<!--운행일지 블로그 링크 이동 버튼-->
-	<DIV class="btn_blog">
-		<BUTTON></BUTTON>
-	</DIV>
-	<!--★동영상 추가-->
-	<DIV class="video_wrap">
-		<DIV class="btn_video" id="btn_video">
-			<BUTTON onclick="Main.showVideo();">
-				<SPAN class="blind">소개 동영상 보기</SPAN>
-			</BUTTON>
-		</DIV>
-		<!--//btn_video-->
-		<!--☆동영상 보여주기               ↓block-->
-
-		<DIV class="video" id="use_video" style="display: none;">
-			<DIV class="v_iframe">
-				<H3>전령 소개 영상</H3>
-				<P class="v_close">
-					<BUTTON id="close_video" onclick="Main.closeVideo();">
-						<SPAN class="blind">팝업 닫기</SPAN>
-					</BUTTON>
-				</P>
-				<IFRAME width="640" height="390" id="tgeonet_video"
-					src="전령_files/HLJbA47NonQ.htm" frameborder="0" allowfullscreen=""></IFRAME>
-			</DIV>
-			<DIV class="mask"></DIV>
-		</DIV>
-		<!--//video-->
-	</DIV>
-	<!--//video_wrap-->
+	
 
 	<HR>
 
@@ -119,7 +90,7 @@
 		<!--비쥬얼영역-->
 
 		<DIV class="visual">
-			<img src="images/main.jpg" />
+			<img id="imgmain" src="images/main.jpg" />
 		</DIV>
 		<!--//visual-->
 		<!--컨텐츠 영역-->
