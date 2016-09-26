@@ -42,7 +42,7 @@
 
 
 		<tr>
-			<td colspan="9" class="">&nbsp;&nbsp;&nbsp; <font size="6"><b>업체 가입신청 목록</b> </font> &nbsp;
+			<td colspan="9" class="">&nbsp;&nbsp;&nbsp; <font size="6"><b>업체 목록</b> </font> &nbsp;
 			</td>
 
 		</tr>
@@ -54,7 +54,7 @@
 			<th>업체이름</th>
 			<th>우편번호</th>
 			<th>도로명주소</th>
-			<th>주소</th>
+			<th>지번주소</th>
 			<th>연락처</th>
 			<th>승인여부</th>
 		</tr>
