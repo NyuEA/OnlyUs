@@ -24,6 +24,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		from bisUser
 		where bisid = #{bisid} and passwd=#{passwd}
 	</select>
+	<select id="bisjoinList" resultType="BisUserDTO">
+		select
+		bisid, 
+		bisname, post1, post2, addr1, addr2, phone1, phone2,
+		phone3
+		from bisUser
+		where approval = 'N'
+	</select>
 	<select id="bisMypage" parameterType="String" resultType="BisUserDTO">
 		select
 		bisid, passwd,
@@ -44,6 +52,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		phone2 = #{phone2},
 		phone3 =
 		#{phone3}
+		where bisid = #{bisid}
+	</update>
+	<update id="approvalY" parameterType="String">
+		update bisUser
+		set
+		approval = 'Y'
 		where bisid = #{bisid}
 	</update>
 </mapper>

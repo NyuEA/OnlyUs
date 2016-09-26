@@ -1,6 +1,7 @@
 package com.service;
 
 import java.util.HashMap;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -23,20 +24,34 @@ public class BisUserService {
 		}
 
 	}// end addMember
+
 	public BisUserDTO bislogin(HashMap<String, String> map) throws CommonException {
 		BisUserDTO dto = null;
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
 			dto = session.selectOne("bislogin", map);
-			System.out.println("login");
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new CommonException("로그인실패.");
 		} finally {
 			session.close();
 		}
-		return dto;	
+		return dto;
+	}
+
+	public List<BisUserDTO> bisjoinList() throws CommonException {
+		List<BisUserDTO> list = null;
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			list = session.selectList("bisjoinList");
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("가입신청목록 가져오기 실패.");
+		} finally {
+			session.close();
 		}
+		return list;
+	}
 	public BisUserDTO bisMypage(String bisid) throws CommonException {
 		BisUserDTO dto = null;
 		SqlSession session = MySqlSessionFactory.getSession();
@@ -51,7 +66,6 @@ public class BisUserService {
 		return dto;	
 	}
 	public void updatebisUser(BisUserDTO bisdto) throws CommonException {
-		System.out.println(bisdto.getAddr1());
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
 			int n = session.update("updatebisUser", bisdto);
@@ -60,6 +74,20 @@ public class BisUserService {
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new CommonException("회원 수정 실패");
+		} finally {
+			session.close();
+		}
+	}
+
+	public void approvalY(String bisid) throws CommonException {
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			int n = session.update("approvalY", bisid);
+			session.commit();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("승인 실패");
 		} finally {
 			session.close();
 		}

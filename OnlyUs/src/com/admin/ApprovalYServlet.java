@@ -16,27 +16,33 @@ import com.dto.CouponDTO;
 import com.dto.DownCouponDTO;
 import com.dto.GenUserDTO;
 import com.dto.MycouponDTO;
-import com.dto.Top10DTO;
 import com.exception.CommonException;
+import com.service.BisUserService;
 import com.service.CouponService;
 
-@WebServlet("/Admin1Servlet")
-public class Admin1Servlet extends HttpServlet {
-
+@WebServlet("/ApprovalYServlet")
+public class ApprovalYServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		CouponService service = new CouponService();
+		HttpSession session = request.getSession();
+		BisUserService service = new BisUserService();
+		String bisid = request.getParameter("bisid");
+		String title = "";
+		String target = "";
 		try {
-			List<Top10DTO> list = service.first10();
-			request.setAttribute("admin", list);
+			service.approvalY(bisid);
+			request.setAttribute("approvalUpdate", bisid + "가 수정되었습니다.");
+			target = "JoinMFormServlet";
 		} catch (CommonException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			title = e.getMessage();
+			String link = "home.jsp";
+			target = "error.jsp";
+			request.setAttribute("title", title);
+			request.setAttribute("link", link);
 		}
 
-		RequestDispatcher dis = request.getRequestDispatcher("admin1_.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher(target);
 		dis.forward(request, response);
 
 	}
