@@ -1,10 +1,12 @@
 package com.service;
 
 import java.util.HashMap;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
 import com.config.MySqlSessionFactory;
+import com.dto.BisUserDTO;
 import com.dto.GenUserDTO;
 import com.exception.CommonException;
 
@@ -23,7 +25,19 @@ public class GenUserService {
 		}
 
 	}// end addMember
-
+	public List<GenUserDTO> genList() throws CommonException {
+		List<GenUserDTO> list = null;
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			list = session.selectList("genList");
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("회원목록 가져오기 실패.");
+		} finally {
+			session.close();
+		}
+		return list;
+	}
 
 		//占싸깍옙占쏙옙
 	public GenUserDTO login(HashMap<String, String> map) throws CommonException {

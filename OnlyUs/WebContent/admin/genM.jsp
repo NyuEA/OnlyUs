@@ -28,14 +28,14 @@
 	<ul class="nav_ul fix">
 		<!-- 	☆ 현재페이지 표시 class="on" -->
 		<li><a href="JoinMServlet" id="subm2">가입 관리</a></li>
-		<li><a href="bisMServlet" id="subm2">업체 관리</a></li>
-		<li><a class="on" href="" id="subm1">회원 관리</a></li>
+		<li><a href="BisMServlet" id="subm2">업체 관리</a></li>
+		<li><a class="on" href="GenMServlet" id="subm1">회원 관리</a></li>
 		<li><a href="" id="subm2">문의사항관리</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 	</ul>
 </div>
 
 <%
-	List<BisUserDTO> list = (List<BisUserDTO>) request.getAttribute("bisList");
+	List<GenUserDTO> list = (List<GenUserDTO>) request.getAttribute("genList");
 %>
 <div id="bisjoinList">
 	<table width="90%" cellspacing="0" cellpadding="0" align="center">
@@ -50,11 +50,8 @@
 
 		<tr>
 
-			<th>사업자회원 ID</th>
-			<th>업체이름</th>
-			<th>우편번호</th>
-			<th>도로명주소</th>
-			<th>주소</th>
+			<th>일반회원ID</th>
+			<th>닉네임</th>
 			<th>연락처</th>
 		</tr>
 
@@ -92,24 +89,14 @@
 
 		<form name="myForm">
 			<%
-				for (BisUserDTO bisdto : list) {
-					String bisid = bisdto.getBisid();
-					String bisname = bisdto.getBisname();
-					String post1 = bisdto.getPost1();
-					String post2 = bisdto.getPost2();
-					String addr1 = bisdto.getAddr1();
-					String addr2 = bisdto.getAddr2();
-					String phone1 = bisdto.getPhone1();
-					String phone2 = bisdto.getPhone2();
-					String phone3 = bisdto.getPhone3();
-					String phone = phone1 +"-"+phone2+"-"+phone3;
+				for (GenUserDTO dto : list) {
+					String userid = dto.getUserid();
+					String nickname = dto.getNickname();
+					String phone = dto.getPhone();
 			%>
 			<tr>
-				<td class=""><%=bisid%></td>
-				<td class=""><%=bisname%></td>
-				<td class=""><%=post1%>-<%=post2%></td>
-				<td class=""><%=addr1%></td>
-				<td class=""><%=addr2%></td>
+				<td class=""><%=userid%></td>
+				<td class=""><%=nickname%></td>
 				<td class=""><%=phone%></td>
 			</tr>
 

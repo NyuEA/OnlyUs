@@ -11,31 +11,26 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dto.BisUserDTO;
-import com.dto.CouponDTO;
-import com.dto.DownCouponDTO;
 import com.dto.GenUserDTO;
-import com.dto.MycouponDTO;
 import com.exception.CommonException;
-import com.service.BisUserService;
-import com.service.CouponService;
+import com.service.GenUserService;
 
-@WebServlet("/bisMServlet")
-public class bisMServlet extends HttpServlet {
+@WebServlet("/GenMServlet")
+public class GenMServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		BisUserService service = new BisUserService();
+		GenUserService service = new GenUserService();
 		try {
-			List<BisUserDTO> list = service.bisList();
-			request.setAttribute("bisList", list);
+			List<GenUserDTO> list = service.genList();
+			request.setAttribute("genList", list);
 		} catch (CommonException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		RequestDispatcher dis = request.getRequestDispatcher("bisM_.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("genM_.jsp");
 		dis.forward(request, response);
 
 	}

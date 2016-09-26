@@ -41,7 +41,6 @@
 		<%
 			} else if (dto != null && "admin".equals(userid)) {
 		%>
-		<<<<<<< HEAD =======
 		<li><a href="CouponListServlet" id="subm2">가입 관리</a></li>
 		<li><a href="TopTenServlet" id="subm2">업체 관리</a></li>
 		<li><a class="on" href="home_.jsp?" id="subm1">회원 관리</a></li>
