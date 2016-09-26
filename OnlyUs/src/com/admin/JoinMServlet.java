@@ -35,7 +35,7 @@ public class JoinMServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		RequestDispatcher dis = request.getRequestDispatcher("joinMFormServlet");
+		RequestDispatcher dis = request.getRequestDispatcher("joinM_.jsp");
 		dis.forward(request, response);
 
 	}

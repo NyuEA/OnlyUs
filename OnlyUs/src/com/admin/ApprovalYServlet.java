@@ -33,7 +33,7 @@ public class ApprovalYServlet extends HttpServlet {
 		try {
 			service.approvalY(bisid);
 			request.setAttribute("approvalUpdate", bisid + "가 수정되었습니다.");
-			target = "JoinMFormServlet";
+			target = "JoinMServlet";
 		} catch (CommonException e) {
 			title = e.getMessage();
 			String link = "home.jsp";
