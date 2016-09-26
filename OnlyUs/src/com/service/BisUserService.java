@@ -52,6 +52,19 @@ public class BisUserService {
 		}
 		return list;
 	}
+	public List<BisUserDTO> bisList() throws CommonException {
+		List<BisUserDTO> list = null;
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			list = session.selectList("bisList");
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("업체목록 가져오기 실패.");
+		} finally {
+			session.close();
+		}
+		return list;
+	}
 	public BisUserDTO bisMypage(String bisid) throws CommonException {
 		BisUserDTO dto = null;
 		SqlSession session = MySqlSessionFactory.getSession();

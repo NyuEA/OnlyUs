@@ -11,6 +11,13 @@ public class BisUserDTO {
 	private String phone1;
 	private String phone2;
 	private String phone3;
+	private String approval;
+	public String getApproval() {
+		return approval;
+	}
+	public void setApproval(String approval) {
+		this.approval = approval;
+	}
 	public BisUserDTO() {
 		super();
 		// TODO Auto-generated constructor stub

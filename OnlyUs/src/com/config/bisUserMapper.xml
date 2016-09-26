@@ -32,6 +32,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		from bisUser
 		where approval = 'N'
 	</select>
+	<select id="bisList" resultType="BisUserDTO">
+		select
+		bisid, 
+		bisname, post1, post2, addr1, addr2, phone1, phone2,
+		phone3, approval
+		from bisUser
+	</select>
 	<select id="bisMypage" parameterType="String" resultType="BisUserDTO">
 		select
 		bisid, passwd,
