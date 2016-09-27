@@ -68,7 +68,8 @@
 		<ul>
 			<li><a href="#">등록문의</a></li>
 			<li><a href="#">일반문의</a></li>
-</ul></li>
+</ul>
+</li>
 		<%
 			} else if (dto != null && "admin".equals(userid)) {
 		%>
@@ -82,14 +83,22 @@
 		<li><a href="CouponListServlet" id="subm2">내 쿠폰함</a></li>
 		<li><a href="TopTenServlet" id="subm2">TOP10</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
-		<li><a href="board_.jsp" id="subm2">문의하기</a></li>
+		<li><a href="board_.jsp" id="subm2">문의하기</a>
+		<ul>
+			<li><a href="#">등록문의</a></li>
+			<li><a href="#">일반문의</a></li>
+</ul></li>
 		<%
 			} else {//end if
 		%>
 		<li><a href="" id="subm2">쿠폰관리</a></li>
 		<li><a href="TopTenServlet" id="subm2">TOP10</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
-		<li><a href="board_.jsp" id="subm2">문의하기</a></li>
+		<li><a href="board_.jsp" id="subm2">문의하기</a>
+		<ul>
+			<li><a href="#">등록문의</a></li>
+			<li><a href="#">일반문의</a></li>
+</ul></li>
 		<%
 			}
 		%>
