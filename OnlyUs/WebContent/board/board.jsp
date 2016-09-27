@@ -160,7 +160,7 @@ th {
 				<td colspan="2" background="images/dotline.gif"></td>
 			</tr>
 			<tr class="txt01">
-				<th>제휴문의내용</th>
+				<th>문의내용</th>
 				<td colspan="4"><textarea Rows="7" cols="100%">음식점 등록시 필수 입력 사항
 (제휴 문의는 음식점 등록 필수 입력 사항과 관계 없이 자유롭게 작성하시면 됩니다)
 
