@@ -45,6 +45,7 @@
 <%
 	}
 %>
+<div id="blogMenu">
 <div class="nav">
 	<h2 class="blind">로컬네이게이션</h2>
 	<ul class="nav_ul fix">
@@ -62,7 +63,12 @@
 			if (dto == null && bisdto == null) {
 		%>
 		<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
-		<li><a href="board_.jsp" id="subm2">문의하기</a></li>
+		<li><a href="board_.jsp" id="subm2">문의하기</a>
+		
+		<ul>
+			<li><a href="#">등록문의</a></li>
+			<li><a href="#">일반문의</a></li>
+</ul></li>
 		<%
 			} else if (dto != null && "admin".equals(userid)) {
 		%>
@@ -90,7 +96,7 @@
 
 	</ul>
 </div>
-
+</div>
 
 <DIV id="wrapper">
 	
