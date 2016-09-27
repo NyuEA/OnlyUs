@@ -156,3 +156,7 @@ legend {
 select {
 	vertical-align: middle;
 }
+
+#Insert{
+	margin: auto 0;
+}
