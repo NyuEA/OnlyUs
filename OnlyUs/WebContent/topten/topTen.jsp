@@ -14,8 +14,7 @@
 %>
 <script type="text/javascript">
       var str = "<%=logout%>";
-      alert("<%=logout%>
-	");
+      alert("<%=logout%>");
 </script>
 <%
 	}

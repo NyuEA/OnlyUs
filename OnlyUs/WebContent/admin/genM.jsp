@@ -5,6 +5,7 @@
 <%@page import="com.dto.GenUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<link href="css/topten.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 <script type="text/javascript">
 	function approvalY(bisid) {
@@ -42,7 +43,7 @@
 
 
 		<tr>
-			<td colspan="9" class="">&nbsp;&nbsp;&nbsp; <font size="6"><b>업체 목록</b> </font> &nbsp;
+			<td colspan="9" class="coutd">&nbsp;&nbsp;&nbsp; <font size="6"><b>업체 목록</b> </font> &nbsp;
 			</td>
 
 		</tr>
@@ -95,9 +96,9 @@
 					String phone = dto.getPhone();
 			%>
 			<tr>
-				<td class=""><%=userid%></td>
-				<td class=""><%=nickname%></td>
-				<td class=""><%=phone%></td>
+				<td class="coutd"><%=userid%></td>
+				<td class="coutd"><%=nickname%></td>
+				<td class="coutd"><%=phone%></td>
 			</tr>
 
 			<%

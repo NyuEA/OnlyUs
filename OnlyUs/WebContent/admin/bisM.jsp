@@ -5,6 +5,7 @@
 <%@page import="com.dto.GenUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<link href="css/topten.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 <script type="text/javascript">
 	function approvalY(bisid) {
@@ -42,7 +43,7 @@
 
 
 		<tr>
-			<td colspan="9" class="">&nbsp;&nbsp;&nbsp; <font size="6"><b>업체 목록</b> </font> &nbsp;
+			<td colspan="9" class="coutd">&nbsp;&nbsp;&nbsp; <font size="6"><b>업체 목록</b> </font> &nbsp;
 			</td>
 
 		</tr>
@@ -107,13 +108,13 @@
 					String approval = bisdto.getApproval();
 			%>
 			<tr>
-				<td class=""><%=bisid%></td>
-				<td class=""><%=bisname%></td>
-				<td class=""><%=post1%>-<%=post2%></td>
-				<td class=""><%=addr1%></td>
-				<td class=""><%=addr2%></td>
-				<td class=""><%=phone%></td>
-				<td class=""><%=approval%></td>
+				<td class="coutd"><%=bisid%></td>
+				<td class="coutd"><%=bisname%></td>
+				<td class="coutd"><%=post1%>-<%=post2%></td>
+				<td class="coutd"><%=addr1%></td>
+				<td class="coutd"><%=addr2%></td>
+				<td class="coutd"><%=phone%></td>
+				<td class="coutd"><%=approval%></td>
 			</tr>
 
 			<%
