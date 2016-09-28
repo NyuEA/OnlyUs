@@ -53,9 +53,10 @@
 		<!-- 	☆ 현재페이지 표시 class="on" -->
 		<li id="submli1"><a href="home_.jsp?" id="subm1">서비스소개</a></li>
 		<li id="submli2"><a href="board_.jsp" id="subm2">문의하기</a>
-		<ul><li><a href="#">등록문의</a></li>
+		<ul>
+		<li><a href="#">등록문의</a></li>
 			<li><a href="#">일반문의</a></li></ul></li>
-	</ul>
+		</ul>
 </div>
 </div>
 
@@ -79,7 +80,7 @@
 		<tr>
 			<th>업체명</th>
 			<td><input type="text" name="nickname" id="nickname">
-			</th>
+			</td>
 		</tr>
 		<tr>
 		<th>주소</th>

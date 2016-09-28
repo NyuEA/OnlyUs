@@ -359,6 +359,17 @@
 		ga('send', 'pageview');
 	</SCRIPT>
 </DIV>
+
+<a
+href="#"
+title="Back to Top"
+style="display:scroll;position:fixed;bottom:30px;right:5px;"
+onfocus='this.blur()'>
+
+<img src="images/logo.png" style="width:25px; height:25px; border-radius: 15px;"
+/>
+
+</a>
 <!--카운터-->
 <SCRIPT type="text/javascript">
 	if (/Mobile | iPhone | Android | BlackBerry | IEMobile/i
