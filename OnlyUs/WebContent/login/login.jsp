@@ -5,6 +5,7 @@
 
 
 <link href="css/login.css" rel="stylesheet" type="text/css">
+<link href="css/top.css" rel="stylesheet" type="text/css">
 <%
 	String loginError = (String) request.getAttribute("loginError");
 	if (loginError != null) {
@@ -16,13 +17,17 @@
 <%
 	}
 %>
+<div id="blogMenu">
 <div class="nav">
 	<h2 class="blind">로컬네이게이션</h2>
 	<ul class="nav_ul fix">
 		<!-- 	☆ 현재페이지 표시 class="on" -->
 		<li id="submli1"><a href="home_.jsp?" id="subm1">서비스소개</a></li>
-		<li id="submli2"><a href="board_.jsp" id="subm2">문의하기</a></li>
+		<li id="submli2"><a href="board_.jsp" id="subm2">문의하기</a>
+		<ul><li><a href="#">등록문의</a></li>
+			<li><a href="#">일반문의</a></li></ul></li>
 	</ul>
+</div>
 </div>
 
 
