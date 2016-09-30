@@ -2,6 +2,7 @@
 <<<<<<<=HEAD
 >>>>>>>=branch 'master' of https\://github.com/NyuEA/OnlyUs
 eclipse.preferences.version=1
+encoding//WebContent/login/genJoin.jsp=UTF-8
 encoding//src/com/login/LogOutServlet.java=UTF-8
 encoding//src/com/login/LoginServlet.java=UTF-8
 encoding//src/com/service/CouponService.java=UTF-8

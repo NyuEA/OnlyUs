@@ -55,13 +55,13 @@
 	background: rgb(255, 255, 255); margin: 0px auto; width: 100%;
 }
 .visual {
-	background: url("../images/visual.jpg") no-repeat center 0px; height: 500px;
+	background: url("../images/visual.jpg") no-repeat center 0px; height: 520px;
 }
 .content {
-	margin: 60px auto; width: 900px; position: relative;
+	margin: 60px auto; width: 900px; height: 650px; position: relative;
 }
 .content02 {
-	background: rgb(233, 233, 233); padding: 30px 0px 0px; width: 100%; height: 710px; border-top-color: rgb(124, 124, 124); border-top-width: 3px; border-top-style: solid;
+	background: rgb(233, 233, 233); padding: 30px 0px 0px; width: 100%; height: 650px; border-top-color: rgb(124, 124, 124); border-top-width: 3px; border-top-style: solid;
 }
 .content02 .cont01 {
 	width: 100%; margin-top: 20px; display: inline-block;
@@ -1095,4 +1095,5 @@ button.pagebtn03:hover {
 
 #Insert{
 	width: 500px;
+	
 }
