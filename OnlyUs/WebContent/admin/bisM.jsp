@@ -41,7 +41,7 @@
 %>
 <div id="bisjoinList">
 
-<img src="images/a_menu1.png" class="menu" alt="">
+<img src="images/a_menu2.png" class="menu" alt="">
 	<table width="90%" cellspacing="0" cellpadding="0" align="center">
 
 

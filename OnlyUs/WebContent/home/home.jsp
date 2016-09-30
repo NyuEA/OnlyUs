@@ -92,7 +92,7 @@
 		<%
 			} else {//end if
 		%>
-		<li><a href="" id="subm2">쿠폰관리</a></li>
+		<li><a href="CouponBoardServlet" id="subm2">쿠폰관리</a></li>
 		<li><a href="TopTenServlet" id="subm2">TOP10</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
 		<li><a href="board_.jsp" id="subm2">문의하기</a>
@@ -164,13 +164,7 @@
 						<DIV class="listTitle">여기저기 쿠폰 드롭</DIV>
 						<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV>
 					</LI>
-					<LI>
-						<DIV class="numberBackground">
-							<P>6</P>
-						</DIV>
-						<DIV class="listTitle">여기저기 쿠폰 드롭</DIV>
-						<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV>
-					</LI>
+					
 
 				</UL>
 			</DIV>

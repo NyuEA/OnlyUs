@@ -36,7 +36,7 @@ public class TopTenServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		RequestDispatcher dis = request.getRequestDispatcher("top_.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("topten_.jsp");
 		dis.forward(request, response);
 
 	}

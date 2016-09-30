@@ -36,7 +36,7 @@ public class CouponBoardServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		RequestDispatcher dis = request.getRequestDispatcher("top_.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("couponboard_.jsp");
 		dis.forward(request, response);
 
 	}
