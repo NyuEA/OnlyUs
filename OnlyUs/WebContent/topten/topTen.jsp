@@ -7,6 +7,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <link href="css/topten.css" rel="stylesheet" type="text/css">
+<link href="css/top.css" rel="stylesheet" type="text/css">
 
 <%
 	String logout = (String) request.getAttribute("logout");
@@ -55,7 +56,7 @@
 		<%
 			} else {//end if
 		%>
-		<li><a href="CouponListServlet" id="subm2">쿠폰관리</a></li>
+		<li><a href="CouponBoardServlet" id="subm2">쿠폰관리</a></li>
 		<li><a class="on" href="TopTenServlet" id="subm2">TOP10</a></li>
 		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<li><a href="home_.jsp?" id="subm1">서비스소개</a></li>
@@ -67,15 +68,10 @@
 </div>
 
 <div id="topten">
+ <img src="images/menu2.png" class="menu">
+ 
 	<table width="90%" cellspacing="0" cellpadding="0" align="center">
 
-
-		<tr>
-			<td colspan="9" class="cmain">&nbsp;&nbsp;&nbsp; <font size="6"><b>Top
-						10</b> </font> &nbsp;
-			</td>
-
-		</tr>
 		<tr>
 			<td class="cmain" colspan="9"><font size="3"><b>지역선택</b>
 					&nbsp; </font>

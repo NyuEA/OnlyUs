@@ -125,9 +125,7 @@
 		<DIV class="content02">
 			<!--쿠폰제는 왜?-->
 			<H3 class="title">
-				<STRONG class="line01">쿠폰제 솔루션 “<SPAN>요깄넹</SPAN>”의 <SPAN>7</SPAN>가지
-					특장점
-				</STRONG>
+				<img src="images/main_1.png" alt="특장점"/>
 			</H3>
 			<DIV class="cont01">
 				<UL>

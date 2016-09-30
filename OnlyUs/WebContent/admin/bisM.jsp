@@ -6,6 +6,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	<link href="css/topten.css" rel="stylesheet" type="text/css">
+	<link href="css/top.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 <script type="text/javascript">
 	function approvalY(bisid) {
@@ -39,14 +40,12 @@
 	List<BisUserDTO> list = (List<BisUserDTO>) request.getAttribute("bisList");
 %>
 <div id="bisjoinList">
+
+<img src="images/a_menu1.png" class="menu" alt="">
 	<table width="90%" cellspacing="0" cellpadding="0" align="center">
 
 
-		<tr>
-			<td colspan="9" class="coutd">&nbsp;&nbsp;&nbsp; <font size="6"><b>업체 목록</b> </font> &nbsp;
-			</td>
-
-		</tr>
+	
 
 
 		<tr>

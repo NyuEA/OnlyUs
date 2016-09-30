@@ -39,14 +39,9 @@
 	List<GenUserDTO> list = (List<GenUserDTO>) request.getAttribute("genList");
 %>
 <div id="bisjoinList">
+<img src="images/a_menu3.png" class="menu" alt="">
 	<table width="90%" cellspacing="0" cellpadding="0" align="center">
 
-
-		<tr>
-			<td colspan="9" class="coutd">&nbsp;&nbsp;&nbsp; <font size="6"><b>업체 목록</b> </font> &nbsp;
-			</td>
-
-		</tr>
 
 
 		<tr>
