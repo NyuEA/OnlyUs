@@ -63,7 +63,7 @@
             </java.beans.PropertyChangeSupport>
           </listeners>
           <constraint>
-            <height>236</height>
+            <height>267</height>
             <width>5</width>
             <x>48</x>
             <y>20</y>
@@ -86,7 +86,7 @@
                 </java.beans.PropertyChangeSupport>
               </listeners>
               <constraint>
-                <height>149</height>
+                <height>180</height>
                 <width>10</width>
                 <x>43</x>
                 <y>77</y>
@@ -119,9 +119,9 @@
                       </java.beans.PropertyChangeSupport>
                     </listeners>
                     <constraint>
-                      <height>124</height>
+                      <height>155</height>
                       <width>10</width>
-                      <x>264</x>
+                      <x>271</x>
                       <y>92</y>
                     </constraint>
                     <sourceConnections>
@@ -152,10 +152,10 @@
                             </java.beans.PropertyChangeSupport>
                           </listeners>
                           <constraint>
-                            <height>102</height>
+                            <height>135</height>
                             <width>10</width>
-                            <x>465</x>
-                            <y>104</y>
+                            <x>486</x>
+                            <y>102</y>
                           </constraint>
                           <sourceConnections>
                             <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
@@ -185,10 +185,10 @@
                                   </java.beans.PropertyChangeSupport>
                                 </listeners>
                                 <constraint>
-                                  <height>75</height>
+                                  <height>105</height>
                                   <width>10</width>
-                                  <x>668</x>
-                                  <y>121</y>
+                                  <x>695</x>
+                                  <y>122</y>
                                 </constraint>
                                 <sourceConnections>
                                   <net.java.amateras.uml.sequencediagram.model.SyncMessageModel>
@@ -223,7 +223,7 @@
                                         <height>30</height>
                                         <width>10</width>
                                         <x>48</x>
-                                        <y>156</y>
+                                        <y>187</y>
                                       </constraint>
                                       <sourceConnections/>
                                       <targetConnections>
@@ -236,7 +236,7 @@
                                       <movable>true</movable>
                                     </target>
                                     <bendpoints/>
-                                    <name>로그인 성공시 메인창 제공</name>
+                                    <name>성공 시 main_.jsp 화면 출력</name>
                                     <direction>false</direction>
                                     <order>4</order>
                                     <oldOrder>4</oldOrder>
@@ -262,9 +262,9 @@
                                     </java.beans.PropertyChangeSupport>
                                   </listeners>
                                   <constraint>
-                                    <height>236</height>
+                                    <height>267</height>
                                     <width>5</width>
-                                    <x>673</x>
+                                    <x>700</x>
                                     <y>20</y>
                                   </constraint>
                                   <sourceConnections/>
@@ -290,7 +290,7 @@
                                     <constraint>
                                       <height>-1</height>
                                       <width>100</width>
-                                      <x>623</x>
+                                      <x>650</x>
                                       <y>20</y>
                                     </constraint>
                                     <sourceConnections/>
@@ -307,7 +307,7 @@
                                 <movable>true</movable>
                               </target>
                               <bendpoints/>
-                              <name>아이디, 비밀번호 확인</name>
+                              <name>bisid, passwd 확인</name>
                               <direction>true</direction>
                               <order>3</order>
                               <oldOrder>3</oldOrder>
@@ -333,9 +333,9 @@
                               </java.beans.PropertyChangeSupport>
                             </listeners>
                             <constraint>
-                              <height>236</height>
+                              <height>267</height>
                               <width>5</width>
-                              <x>470</x>
+                              <x>491</x>
                               <y>20</y>
                             </constraint>
                             <sourceConnections/>
@@ -360,8 +360,8 @@
                               </listeners>
                               <constraint>
                                 <height>-1</height>
-                                <width>186</width>
-                                <x>378</x>
+                                <width>193</width>
+                                <x>394</x>
                                 <y>20</y>
                               </constraint>
                               <sourceConnections/>
@@ -398,12 +398,12 @@
                                       </java.beans.PropertyChangeSupport>
                                     </listeners>
                                     <visibility class="net.java.amateras.uml.classdiagram.model.Visibility$1"/>
-                                    <name>addGenUser</name>
+                                    <name>addBisUser</name>
                                     <type>void</type>
                                     <params>
                                       <net.java.amateras.uml.classdiagram.model.Argument>
                                         <name>dto</name>
-                                        <type>GenUserDTO</type>
+                                        <type>BisUserDTO</type>
                                       </net.java.amateras.uml.classdiagram.model.Argument>
                                     </params>
                                     <isAbstract>false</isAbstract>
@@ -422,27 +422,8 @@
                                       </java.beans.PropertyChangeSupport>
                                     </listeners>
                                     <visibility class="net.java.amateras.uml.classdiagram.model.Visibility$1" reference="../../net.java.amateras.uml.classdiagram.model.OperationModel/visibility"/>
-                                    <name>genList</name>
-                                    <type>List&lt;GenUserDTO&gt;</type>
-                                    <params/>
-                                    <isAbstract>false</isAbstract>
-                                    <isStatic>false</isStatic>
-                                  </net.java.amateras.uml.classdiagram.model.OperationModel>
-                                  <net.java.amateras.uml.classdiagram.model.OperationModel>
-                                    <showIcon>true</showIcon>
-                                    <parent class="net.java.amateras.uml.classdiagram.model.ClassModel" reference="../../.."/>
-                                    <listeners serialization="custom">
-                                      <java.beans.PropertyChangeSupport>
-                                        <default>
-                                          <source class="net.java.amateras.uml.classdiagram.model.OperationModel" reference="../../../.."/>
-                                          <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
-                                        </default>
-                                        <null/>
-                                      </java.beans.PropertyChangeSupport>
-                                    </listeners>
-                                    <visibility class="net.java.amateras.uml.classdiagram.model.Visibility$1" reference="../../net.java.amateras.uml.classdiagram.model.OperationModel/visibility"/>
-                                    <name>login</name>
-                                    <type>GenUserDTO</type>
+                                    <name>bislogin</name>
+                                    <type>BisUserDTO</type>
                                     <params>
                                       <net.java.amateras.uml.classdiagram.model.Argument>
                                         <name>map</name>
@@ -465,11 +446,49 @@
                                       </java.beans.PropertyChangeSupport>
                                     </listeners>
                                     <visibility class="net.java.amateras.uml.classdiagram.model.Visibility$1" reference="../../net.java.amateras.uml.classdiagram.model.OperationModel/visibility"/>
-                                    <name>mypage</name>
-                                    <type>GenUserDTO</type>
+                                    <name>bisjoinList</name>
+                                    <type>List&lt;BisUserDTO&gt;</type>
+                                    <params/>
+                                    <isAbstract>false</isAbstract>
+                                    <isStatic>false</isStatic>
+                                  </net.java.amateras.uml.classdiagram.model.OperationModel>
+                                  <net.java.amateras.uml.classdiagram.model.OperationModel>
+                                    <showIcon>true</showIcon>
+                                    <parent class="net.java.amateras.uml.classdiagram.model.ClassModel" reference="../../.."/>
+                                    <listeners serialization="custom">
+                                      <java.beans.PropertyChangeSupport>
+                                        <default>
+                                          <source class="net.java.amateras.uml.classdiagram.model.OperationModel" reference="../../../.."/>
+                                          <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                                        </default>
+                                        <null/>
+                                      </java.beans.PropertyChangeSupport>
+                                    </listeners>
+                                    <visibility class="net.java.amateras.uml.classdiagram.model.Visibility$1" reference="../../net.java.amateras.uml.classdiagram.model.OperationModel/visibility"/>
+                                    <name>bisList</name>
+                                    <type>List&lt;BisUserDTO&gt;</type>
+                                    <params/>
+                                    <isAbstract>false</isAbstract>
+                                    <isStatic>false</isStatic>
+                                  </net.java.amateras.uml.classdiagram.model.OperationModel>
+                                  <net.java.amateras.uml.classdiagram.model.OperationModel>
+                                    <showIcon>true</showIcon>
+                                    <parent class="net.java.amateras.uml.classdiagram.model.ClassModel" reference="../../.."/>
+                                    <listeners serialization="custom">
+                                      <java.beans.PropertyChangeSupport>
+                                        <default>
+                                          <source class="net.java.amateras.uml.classdiagram.model.OperationModel" reference="../../../.."/>
+                                          <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
+                                        </default>
+                                        <null/>
+                                      </java.beans.PropertyChangeSupport>
+                                    </listeners>
+                                    <visibility class="net.java.amateras.uml.classdiagram.model.Visibility$1" reference="../../net.java.amateras.uml.classdiagram.model.OperationModel/visibility"/>
+                                    <name>bisMypage</name>
+                                    <type>BisUserDTO</type>
                                     <params>
                                       <net.java.amateras.uml.classdiagram.model.Argument>
-                                        <name>userid</name>
+                                        <name>bisid</name>
                                         <type>String</type>
                                       </net.java.amateras.uml.classdiagram.model.Argument>
                                     </params>
@@ -489,12 +508,12 @@
                                       </java.beans.PropertyChangeSupport>
                                     </listeners>
                                     <visibility class="net.java.amateras.uml.classdiagram.model.Visibility$1" reference="../../net.java.amateras.uml.classdiagram.model.OperationModel/visibility"/>
-                                    <name>updateGenUser</name>
+                                    <name>updatebisUser</name>
                                     <type>void</type>
                                     <params>
                                       <net.java.amateras.uml.classdiagram.model.Argument>
-                                        <name>dto</name>
-                                        <type>GenUserDTO</type>
+                                        <name>bisdto</name>
+                                        <type>BisUserDTO</type>
                                       </net.java.amateras.uml.classdiagram.model.Argument>
                                     </params>
                                     <isAbstract>false</isAbstract>
@@ -513,11 +532,11 @@
                                       </java.beans.PropertyChangeSupport>
                                     </listeners>
                                     <visibility class="net.java.amateras.uml.classdiagram.model.Visibility$1" reference="../../net.java.amateras.uml.classdiagram.model.OperationModel/visibility"/>
-                                    <name>deleteGenUser</name>
+                                    <name>approvalY</name>
                                     <type>void</type>
                                     <params>
                                       <net.java.amateras.uml.classdiagram.model.Argument>
-                                        <name>userid</name>
+                                        <name>bisid</name>
                                         <type>String</type>
                                       </net.java.amateras.uml.classdiagram.model.Argument>
                                     </params>
@@ -564,7 +583,7 @@
                                   </net.java.amateras.uml.properties.BooleanPropertyDescriptor>
                                 </propertyDescriptors>
                                 <stereoType></stereoType>
-                                <name>com.service.BizUserService</name>
+                                <name>com.service.BisUserService</name>
                                 <isAbstract>false</isAbstract>
                               </type>
                               <lifeLine reference="../.."/>
@@ -600,9 +619,9 @@
                         </java.beans.PropertyChangeSupport>
                       </listeners>
                       <constraint>
-                        <height>236</height>
+                        <height>267</height>
                         <width>5</width>
-                        <x>269</x>
+                        <x>276</x>
                         <y>20</y>
                       </constraint>
                       <sourceConnections/>
@@ -627,7 +646,7 @@
                         </listeners>
                         <constraint>
                           <height>-1</height>
-                          <width>152</width>
+                          <width>166</width>
                           <x>193</x>
                           <y>20</y>
                         </constraint>
@@ -758,7 +777,7 @@
                     <movable>true</movable>
                   </target>
                   <bendpoints/>
-                  <name>좌측 업체회원 로그인 버튼 클릭</name>
+                  <name>login_.jsp 좌측 업체회원 로그인 클릭</name>
                   <direction>true</direction>
                   <order>1</order>
                   <oldOrder>1</oldOrder>
@@ -778,13 +797,13 @@
         </net.java.amateras.uml.sequencediagram.model.LifeLineModel>
       </children>
       <filterProperty/>
-      <name>일반사용자</name>
+      <name>업체회원</name>
       <lifeLine reference="../children/net.java.amateras.uml.sequencediagram.model.LifeLineModel"/>
       <root reference="../../.."/>
     </net.java.amateras.uml.sequencediagram.model.ActorModel>
-    <net.java.amateras.uml.sequencediagram.model.ActorModel reference="../net.java.amateras.uml.sequencediagram.model.ActorModel/children/net.java.amateras.uml.sequencediagram.model.LifeLineModel/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/owner"/>
     <net.java.amateras.uml.sequencediagram.model.InstanceModel reference="../net.java.amateras.uml.sequencediagram.model.ActorModel/children/net.java.amateras.uml.sequencediagram.model.LifeLineModel/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/owner"/>
     <net.java.amateras.uml.sequencediagram.model.InstanceModel reference="../net.java.amateras.uml.sequencediagram.model.ActorModel/children/net.java.amateras.uml.sequencediagram.model.LifeLineModel/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/owner"/>
+    <net.java.amateras.uml.sequencediagram.model.ActorModel reference="../net.java.amateras.uml.sequencediagram.model.ActorModel/children/net.java.amateras.uml.sequencediagram.model.LifeLineModel/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine/owner"/>
   </instances>
   <activations>
     <net.java.amateras.uml.sequencediagram.model.ActivationModel reference="../../instances/net.java.amateras.uml.sequencediagram.model.ActorModel/children/net.java.amateras.uml.sequencediagram.model.LifeLineModel/children/net.java.amateras.uml.sequencediagram.model.ActivationModel"/>
@@ -796,8 +815,8 @@
   <fragments/>
   <lifelines>
     <net.java.amateras.uml.sequencediagram.model.LifeLineModel reference="../../instances/net.java.amateras.uml.sequencediagram.model.ActorModel/children/net.java.amateras.uml.sequencediagram.model.LifeLineModel"/>
-    <net.java.amateras.uml.sequencediagram.model.LifeLineModel reference="../../instances/net.java.amateras.uml.sequencediagram.model.ActorModel/children/net.java.amateras.uml.sequencediagram.model.LifeLineModel/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine"/>
     <net.java.amateras.uml.sequencediagram.model.LifeLineModel reference="../../instances/net.java.amateras.uml.sequencediagram.model.ActorModel/children/net.java.amateras.uml.sequencediagram.model.LifeLineModel/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine"/>
     <net.java.amateras.uml.sequencediagram.model.LifeLineModel reference="../../instances/net.java.amateras.uml.sequencediagram.model.ActorModel/children/net.java.amateras.uml.sequencediagram.model.LifeLineModel/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine"/>
+    <net.java.amateras.uml.sequencediagram.model.LifeLineModel reference="../../instances/net.java.amateras.uml.sequencediagram.model.ActorModel/children/net.java.amateras.uml.sequencediagram.model.LifeLineModel/children/net.java.amateras.uml.sequencediagram.model.ActivationModel/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/sourceConnections/net.java.amateras.uml.sequencediagram.model.SyncMessageModel/target/ownerLine"/>
   </lifelines>
 </net.java.amateras.uml.sequencediagram.model.InteractionModel>
