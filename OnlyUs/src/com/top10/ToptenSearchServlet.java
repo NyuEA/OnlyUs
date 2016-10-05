@@ -36,7 +36,7 @@ public class ToptenSearchServlet extends HttpServlet {
 
 		request.setAttribute("top10", list);
 
-		RequestDispatcher dis = request.getRequestDispatcher("topTen.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("topten_.jsp");
 		dis.forward(request, response);
 
 	}// end doGet
