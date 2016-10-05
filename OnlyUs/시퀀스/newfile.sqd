@@ -370,7 +370,7 @@
                                 <net.java.amateras.uml.sequencediagram.model.LifeLineModel reference="../../.."/>
                               </children>
                               <filterProperty/>
-                              <name>Instance12</name>
+                              <name></name>
                               <type class="net.java.amateras.uml.classdiagram.model.ClassModel">
                                 <showIcon>true</showIcon>
                                 <listeners serialization="custom">
