@@ -128,8 +128,8 @@
 
 		<div class="group-btn">
 	
-			<input type="submit" value="가입" class="btn-confirm">
-				<input type="reset" value="취소" class="btn-confirm">
+			<input type="submit" value="가입" class="joinBtn">
+				<input type="reset" value="취소" class="joinBtn">
 		</div>
 </form>
 		<h3 id="agreement1">서비스 이용약관</h3>
@@ -581,10 +581,10 @@
 </pre>
 		</div>
 		
-	</div>
-
-</div></div><!--  //.container -->
-
+</div>
+		</div>
+		</div>
+		
 
 
 <script type="text/javascript">
