@@ -19,7 +19,9 @@
 <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 <link href="css/mypage.css" rel="stylesheet" type="text/css">
 <link href="css/login.css" rel="stylesheet" type="text/css">
-<link href="css/top.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/sub.css?ver=201609271052">
+	<link href="css/top.css" rel="stylesheet" type="text/css">
+	<script src="js/memberjoin.js"></script>
 
 
 <%
@@ -62,51 +64,94 @@
 
 
 <form name="myform">
-	<table align="center" id="mytable">
-		<tr>
-			<th>아이디<br>(사업자번호)</th>
-			<td><input type="text" name="userid" id="userid"></td>
-		</tr>
 
-		<tr>
-			<th>비밀번호</th>
-			<td><input type="text" name="passwd" id="passwd"></td>
-		</tr>
-		<tr>
-			<th>비밀번호확인</th>
-			<td><input type="text" name="passwd" id="passwd"></td>
-		</tr>
+<div class="container member-container"><div class="w">
+	<div class="section-join">
+		
+		<fieldset class="group-form">
+			<legend>요깄넹 회원가입</legend>
+			<div class="area-form">
+				<span class="i-id">
+					<input type="text" maxlength="15" id="userid" name="userid" placeholder="아이디(사업자번호)">
+					
+					<a href="#" class="btn-check">중복확인</a>
+				</span>
+				<p class="text-alert" style="display:none;">아이디는 5~15자 이내의 영/숫자 조합으로만 사용 가능합니다.</p>
+			</div>
+			
+			<div class="area-form">
+				<span class="i-id">
+					<input type="password" maxlength="15" id="passwd" name="passwd" placeholder="비밀번호">
+					
+				</span>
+				<p class="text-alert" style="display:none;" id="msg1">비밀번호 는 8~15자 이내의 영문 대소문자, 숫자 및 특수문자 2가지 이상 조합이어야 합니다.</p>
+			</div>
+			<div class="area-form">
+				<span class="i-id">
+					<input type="password" maxlength="15" id="passwd2" name="passwd2" placeholder="비밀번호 재확인">
+					
+				</span>
+				<p class="text-alert" style="display:none;">입력하신 비밀번호가 일치하지 않습니다.</p>
+			</div>
+			<div class="area-form">
+				<span class="i-id">
+					<input type="text" maxlength="15" id="nickname" name="nickname" placeholder="업체명">										
+				</span>
+			</div>
+			
+			<div class="area-form">
+				<span class="i-add">
+					<input type="text" id="post1" name="userid" placeholder="주소" size="5" readonly="">-
+				<input type="text" id="post2" name="post2" size="5" readonly=""> <br>
+				 <span style="line-height: 10%;" ><br></span>
+				 	
+				 <input onclick="openDaumPostcode()" class="btn-check1" type="button" value="우편찾기" >
+				<input type="text"name="addr1" id="addr1" size="54"> <br> <span
+				style="line-height: 10%;" ><br></span> <input type="text" name="addr2"
+				id="addr2" size="54" > <!-- 다음주소 끝 -->
+					
+				</span>
+				
+			</div>
+			
+			<div class="area-form">
+				
+				
+				<span class="i-id">
+					<input type="text" maxlength="15" id="phone" name="phone" placeholder="휴대전화번호 (-는 제외하고 입력하여 주세요)">										
+				</span>
+			
+				<p class="text-alert" style="display:none;" id="msgTel">이미 사용중인 휴대전화번호입니다.</p>
+			</div>
+			
+			
+			
 
-		<tr>
-			<th>업체명</th>
-			<td><input type="text" name="nickname" id="nickname">
-			</td>
-		</tr>
-		<tr>
-		<th>주소</th>
-			<td>
-				<!-- 다음주소 시작--> <input name="post1" id="post1" size="5" readonly="">
-				- <input name="post2" id="post2" size="5" readonly="" > <input
-				onclick="openDaumPostcode()" type="button" value="우편번호찾기"> <br>
-				<input name="addr1" id="addr1" size="40"> <br> <span
-				style="line-height: 10%;"><br></span> <input name="addr2"
-				id="addr2" size="40" > <!-- 다음주소 끝 -->
-			</td>
-		</tr>
-		<tr>
-			<th>전화번호</th>
-			<td><input type="text" name="phone1" id="phone1" size="4" maxlength="3" >- <input type="text" name="phone2" id="phone2" size="4" maxlength="4" >- <input
-				type="text" name="phone3" id="phone3" size="4"maxlength="4" ><br></td>
-		</tr>
+		</fieldset>
 
-		<tr>
-			<td colspan="2">
-				<button onclick="bismemberAdd(myform)" class="mypageBtn">가입신청</button>
+		<div class="group-agrees">
+			<div class="area-all">
+				<label><input type="checkbox" id="termArgees">요깄넹 가입 전체 약관에 동의합니다.</label>
+			</div>
+			<ul class="area-items" id="listsTerms">
+				<li><label><input type="checkbox" id="agreement"> 서비스 이용약관에 동의</label><a href="#agreement1" class="btn">내용보기</a></li>
+				<li><label><input type="checkbox" id="location"> 위치정보 이용약관에 동의</label><a href="#agreement2" class="btn">내용보기</a></li>
+				<li><label><input type="checkbox" id="privacy"> 개인정보 수집 및 이용(필수)</label><a href="#agreement3" class="btn">내용보기</a></li>
+				<li style="display:none;"><label><input type="checkbox" id="privacy_rule"> 개인정보 취급위탁에 동의 (선택)</label><a href="#agreement4" class="btn">내용보기</a></li>
+			</ul>
+		</div>
+
+		<div class="group-btn">
+	
+			<button onclick="bismemberAdd(myform)" class="mypageBtn">가입신청</button>
 				<button onclick="home_.jsp" class="mypageBtn">취소</button>
-			</td>
-		</tr>
-
-	</table>
+		</div>
+		</div>
+		</div>
+				
+			</div>
+			
+		
 </form>
 
 <script type="text/javascript">
@@ -164,14 +209,4 @@
 
 	});
 </script>
-
-
-
-
-
-
-
-
-
-
 
