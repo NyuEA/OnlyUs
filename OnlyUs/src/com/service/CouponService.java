@@ -42,6 +42,19 @@ public class CouponService {
 		}
 		return list;	
 	}
+	public List<CouponDTO> BisCoupon(String bisid) throws CommonException {
+		List<CouponDTO> list = null;
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			list = session.selectList("BisCoupon", bisid);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("BisCoupon 리스트 가져오기 실패");
+		} finally {
+			session.close();
+		}
+		return list;	
+	}
 	
 	public List<BisUserDTO> admin1() throws CommonException {
 		List<BisUserDTO> list = null;

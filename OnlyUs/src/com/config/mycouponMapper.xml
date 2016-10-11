@@ -15,6 +15,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		and COUPON.BISID
 		= BISUSER.BISID and userid = #{userid}
 	</select>
+	<select id="BisCoupon" parameterType="string" resultType="CouponDTO">
+	select couid, amount, period_f, period_t, show_yn, clickcount
+    from coupon
+    where bisid = #{bisid}
+	</select>
 	<select id="first10" resultType="Top10DTO">
 		select rownum as ranking,
 		CLICKCOUNT, BISNAME, CONTENT,

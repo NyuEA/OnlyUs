@@ -65,7 +65,9 @@
 	</ul>
 </div>
 
-<%  List<MycouponDTO> list = (List<MycouponDTO>) request.getAttribute("mycoupon"); %>
+<%  List<CouponDTO> list = (List<CouponDTO>) request.getAttribute("BisCoupon"); 
+System.out.print(list);
+%>
  
  <div id="coupon">
  <img src="images/menu1.png" class="menu">
@@ -79,10 +81,10 @@
 	<tr>
 		
 		<th>쿠폰코드</th>
-		<th>업체명</th>
-		<th>내용</th>
+		<th>남은 장수</th>
 		<th colspan="2">기간</th>
-		<th>사용여부</th>
+		<th>제공여부</th>
+		<th>다운로드수</th>
 	</tr>
 
 			<%
@@ -99,7 +101,7 @@
 					<td height="5">
 				</tr>
 				<tr>
-					<td class="td_default" align="center" colspan="10"><br>카트에 추가된 쿠폰이 없습니다.<br><br><br></td>
+					<td class="td_default" align="center" colspan="10"><br>존재하는 쿠폰이 없습니다.<br><br><br></td>
 				</tr>
 			<%
 			   }else{
@@ -118,21 +120,21 @@
 <form name="myForm">
 		<% 
 		
-		for (MycouponDTO mdto : list) {
-			String dcouid = mdto.getDcouid();
-			String period_f = mdto.getPeriod_f();
-			String period_t = mdto.getPeriod_t();
-			String bisname = mdto.getBisname();
-			String use_yn = mdto.getUse_yn();
-			String content = mdto.getContent();
+		for (CouponDTO bdto : list) {
+			String couid = bdto.getCouid();
+			String amount = bdto.getAmount();
+			String period_f = bdto.getPeriod_f();
+			String period_t = bdto.getPeriod_t();
+			char show_yn = bdto.getShow_yn();
+			int clickcount = bdto.getClickcount();
 	%>
 	<tr>
-		<td class="coutd"><%=dcouid%></td>
-		<td class="coutd"><%=bisname%></td>
-		<td class="coutd"><%=content%></td>
+		<td class="coutd"><%=couid%></td>
+		<td class="coutd"><%=amount%></td>
 		<td class="coutd"><%=period_f%>~</td>
 		<td class="coutd"><%=period_t%></td>
-		<td class="coutd"><%=use_yn%></td>
+		<td class="coutd"><%=show_yn%></td>
+		<td class="coutd"><%=clickcount%></td>
 	</tr>
 	
 	<%
