@@ -1,6 +1,7 @@
-package com.controller;
+package com.coupon;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,33 +12,31 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.dto.BisUserDTO;
+import com.dto.CouponDTO;
+import com.dto.DownCouponDTO;
 import com.dto.GenUserDTO;
+import com.dto.MycouponDTO;
 import com.exception.CommonException;
 import com.service.BisUserService;
-import com.service.GenUserService;
+import com.service.CouponService;
 
-/**
- * Servlet implementation class LognFormServlet
- */
-@WebServlet("/GenMemberDeleteServlet")
-public class GenMemberDeleteServlet extends HttpServlet {
+@WebServlet("/DeleteCouponServlet")
+public class DeleteCouponServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		String userid = request.getParameter("userid");
-		GenUserService service = new GenUserService();
+		CouponService service = new CouponService();
+		String couid = request.getParameter("couid");
 		String title = "";
 		String target = "";
 		try {
-			System.out.println(userid);
-			service.deleteGenUser(userid);
-			target = "home_.jsp";
-			request.setAttribute("delete", "정상적으로 탈퇴되셨습니다.");
-			session.invalidate();
+			service.deleteCoupon(couid);
+			request.setAttribute("deleteCoupon", couid + "가 삭제되었습니다.");
+			target = "BisCouponListServlet";
 		} catch (CommonException e) {
 			title = e.getMessage();
-			String link = "MyPageServlet";
+			String link = "BisCouponListServlet";
 			target = "error.jsp";
 			request.setAttribute("title", title);
 			request.setAttribute("link", link);
@@ -45,12 +44,12 @@ public class GenMemberDeleteServlet extends HttpServlet {
 
 		RequestDispatcher dis = request.getRequestDispatcher(target);
 		dis.forward(request, response);
+
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+
 	}
 
 }

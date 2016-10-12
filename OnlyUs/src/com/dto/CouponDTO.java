@@ -5,15 +5,16 @@ public class CouponDTO {
 	private String amount;
 	private String period_f;
 	private String period_t;
-	private char show_yn;
+	private String show_yn;
 	private int clickcount;
 	private String bisid;
+	private String content;
 	public CouponDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public CouponDTO(String couid, String amount, String period_f, String period_t, char show_yn, int clickcount,
-			String bisid) {
+	public CouponDTO(String couid, String amount, String period_f, String period_t, String show_yn, int clickcount,
+			String bisid, String content) {
 		super();
 		this.couid = couid;
 		this.amount = amount;
@@ -22,6 +23,13 @@ public class CouponDTO {
 		this.show_yn = show_yn;
 		this.clickcount = clickcount;
 		this.bisid = bisid;
+		this.content = content;
+	}
+	@Override
+	public String toString() {
+		return "CouponDTO [couid=" + couid + ", amount=" + amount + ", period_f=" + period_f + ", period_t=" + period_t
+				+ ", show_yn=" + show_yn + ", clickcount=" + clickcount + ", bisid=" + bisid + ", content=" + content
+				+ "]";
 	}
 	public String getCouid() {
 		return couid;
@@ -47,10 +55,10 @@ public class CouponDTO {
 	public void setPeriod_t(String period_t) {
 		this.period_t = period_t;
 	}
-	public char getShow_yn() {
+	public String getShow_yn() {
 		return show_yn;
 	}
-	public void setShow_yn(char show_yn) {
+	public void setShow_yn(String show_yn) {
 		this.show_yn = show_yn;
 	}
 	public int getClickcount() {
@@ -65,12 +73,11 @@ public class CouponDTO {
 	public void setBisid(String bisid) {
 		this.bisid = bisid;
 	}
-	@Override
-	public String toString() {
-		return "couponDTO [couid=" + couid + ", amount=" + amount + ", period_f=" + period_f + ", period_t=" + period_t
-				+ ", show_yn=" + show_yn + ", clickcount=" + clickcount + ", bisid=" + bisid + "]";
+	public String getContent() {
+		return content;
 	}
-	
-	
+	public void setContent(String content) {
+		this.content = content;
+	}
 	
 }

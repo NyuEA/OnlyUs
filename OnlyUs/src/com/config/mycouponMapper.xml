@@ -15,6 +15,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		and COUPON.BISID
 		= BISUSER.BISID and userid = #{userid}
 	</select>
+	<select id="BisCoupon" parameterType="string" resultType="CouponDTO">
+	select couid, amount, period_f, period_t, show_yn, clickcount, content
+    from coupon
+    where bisid = #{bisid}
+	</select>
+	<delete id="deleteCoupon" parameterType="string">
+	delete from coupon where couid=#{couid}
+	</delete>
 	<select id="first10" resultType="Top10DTO">
 		select rownum as ranking,
 		CLICKCOUNT, BISNAME, CONTENT,
@@ -29,6 +37,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		order by COUPON.CLICKCOUNT desc)
 		WHERE <![CDATA[rownum <= 10]]>
 	</select>
+	<update id="update_YN" parameterType="Hashmap">
+		update coupon
+		set
+		show_yn = #{manage_yn}
+		where couid = #{couid}
+	</update>
 	<select id="serch10" resultType="Top10DTO" parameterType="String">
 		select
 		rownum as ranking,

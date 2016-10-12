@@ -105,4 +105,16 @@ public class BisUserService {
 			session.close();
 		}
 	}
+	public void deleteBis(String bisid) throws CommonException {
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			int n = session.delete("deletebis", bisid);
+			session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("삭제 실패");
+		} finally {
+			session.close();
+		}
+	}
 }

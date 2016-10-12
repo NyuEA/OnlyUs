@@ -8,6 +8,16 @@
 <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 <link href="css/coupon.css" rel="stylesheet" type="text/css">
 <LINK href="../css/top.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+	function deleteCoupon(couid) {
+		console.log("deleteCoupon");
+		location.href = "DeleteCouponServlet?couid="+couid;
+	}
+	function update_yn(couid, manage_yn) {
+		console.log("update_yn");
+		location.href = "Update_YNServlet?couid="+couid+"&manage_yn="+manage_yn;
+	}
+</script>
 <%
 	String logout = (String) request.getAttribute("logout");
 	if (logout != null) {
@@ -20,7 +30,7 @@
 	}
 %>
 <div class="nav">
-	<h2 class="blind">로컬네이게이션</h2>
+	<h2 class="blind">로컬네이게이션2</h2>
 	<ul class="nav_ul fix">
 		<!-- 	☆ 현재페이지 표시 class="on" -->
 		<%
@@ -65,7 +75,9 @@
 	</ul>
 </div>
 
-<%  List<MycouponDTO> list = (List<MycouponDTO>) request.getAttribute("mycoupon"); %>
+<%  List<CouponDTO> list = (List<CouponDTO>) request.getAttribute("BisCoupon"); 
+System.out.print(list);
+%>
  
  <div id="coupon">
  <img src="images/menu1.png" class="menu">
@@ -79,10 +91,12 @@
 	<tr>
 		
 		<th>쿠폰코드</th>
-		<th>업체명</th>
-		<th>내용</th>
+		<th>쿠폰내용</th>
+		<th>남은 장수</th>
 		<th colspan="2">기간</th>
-		<th>사용여부</th>
+		<th>제공여부</th>
+		<th>다운로드수</th>
+		<th>삭제여부</th>
 	</tr>
 
 			<%
@@ -99,7 +113,7 @@
 					<td height="5">
 				</tr>
 				<tr>
-					<td class="td_default" align="center" colspan="10"><br>카트에 추가된 쿠폰이 없습니다.<br><br><br></td>
+					<td class="td_default" align="center" colspan="10"><br>존재하는 쿠폰이 없습니다.<br><br><br></td>
 				</tr>
 			<%
 			   }else{
@@ -118,26 +132,38 @@
 <form name="myForm">
 		<% 
 		
-		for (MycouponDTO mdto : list) {
-			String dcouid = mdto.getDcouid();
-			String period_f = mdto.getPeriod_f();
-			String period_t = mdto.getPeriod_t();
-			String bisname = mdto.getBisname();
-			String use_yn = mdto.getUse_yn();
-			String content = mdto.getContent();
+		for (CouponDTO bdto : list) {
+			String couid = bdto.getCouid();
+			String amount = bdto.getAmount();
+			String period_f = bdto.getPeriod_f();
+			String period_t = bdto.getPeriod_t();
+			String show_yn = bdto.getShow_yn();
+			String manage_yn;
+			if(show_yn.equals("Y")){
+				manage_yn = "N";
+			}else{
+				manage_yn = "Y";
+			}
+			int clickcount = bdto.getClickcount();
+			String content = bdto.getContent();
 	%>
 	<tr>
-		<td class="coutd"><%=dcouid%></td>
-		<td class="coutd"><%=bisname%></td>
+		<td class="coutd"><%=couid%></td>
 		<td class="coutd"><%=content%></td>
+		<td class="coutd"><%=amount%></td>
 		<td class="coutd"><%=period_f%>~</td>
 		<td class="coutd"><%=period_t%></td>
-		<td class="coutd"><%=use_yn%></td>
+		<td class="coutd"><%=show_yn%>&nbsp&nbsp<input type="button" value="<%=manage_yn%>" onclick="update_yn('<%=couid%>','<%=manage_yn%>')"></td>
+		<td class="coutd"><%=clickcount%></td>
+		<td align="center"><input type="button" value="삭제" onclick="deleteCoupon('<%=couid%>')"></td>
 	</tr>
 	
 	<%
 		} //end for
 	%>
 	</form>
+	<tr>
+	<td align="center"><button>쿠폰등록</button></td>
+	</tr>
 </table>
 </div>

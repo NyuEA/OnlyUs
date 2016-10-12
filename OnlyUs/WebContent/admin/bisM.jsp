@@ -12,6 +12,9 @@
 	function approvalY(bisid) {
 		location.href = "ApprovalYServlet?bisid="+bisid;
 	}
+	function deleteBis(bisid) {
+		location.href = "BisDelServlet?bisid="+bisid;
+	}
 </script>
 <link href="css/coupon.css" rel="stylesheet" type="text/css">
 <%
@@ -54,9 +57,9 @@
 			<th>업체이름</th>
 			<th>우편번호</th>
 			<th>도로명주소</th>
-			<th>지번주소</th>
 			<th>연락처</th>
 			<th>승인여부</th>
+			<th>회원삭제</th>
 		</tr>
 
 		<%
@@ -111,9 +114,9 @@
 				<td class="coutd"><%=bisname%></td>
 				<td class="coutd"><%=post1%>-<%=post2%></td>
 				<td class="coutd"><%=addr1%></td>
-				<td class="coutd"><%=addr2%></td>
 				<td class="coutd"><%=phone%></td>
 				<td class="coutd"><%=approval%></td>
+				<td class="coutd"><input type="button" value="삭제" onclick="deleteBis('<%=bisid%>')"></td>
 			</tr>
 
 			<%

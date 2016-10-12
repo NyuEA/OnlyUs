@@ -1,5 +1,6 @@
 package com.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -29,6 +30,19 @@ public class CouponService {
 		return list;	
 	}
 
+	public void deleteCoupon(String couid) throws CommonException {
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			int n = session.delete("deleteCoupon", couid);
+			session.commit();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("쿠폰삭제 실패");
+		} finally {
+			session.close();
+		}
+	}
 	public List<Top10DTO> first10() throws CommonException {
 		List<Top10DTO> list = null;
 		SqlSession session = MySqlSessionFactory.getSession();
@@ -37,6 +51,32 @@ public class CouponService {
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new CommonException("10媛��졇�삤湲� �떎�뙣");
+		} finally {
+			session.close();
+		}
+		return list;	
+	}
+	public void update_YN(HashMap<String, String> map) throws CommonException {
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			int n = session.update("update_YN", map);
+			session.commit();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("쿠폰 제공여부 수정 실패");
+		} finally {
+			session.close();
+		}
+	}
+	public List<CouponDTO> BisCoupon(String bisid) throws CommonException {
+		List<CouponDTO> list = null;
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			list = session.selectList("BisCoupon", bisid);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("BisCoupon 리스트 가져오기 실패");
 		} finally {
 			session.close();
 		}
@@ -70,5 +110,6 @@ public class CouponService {
 		}
 		return list;	
 	}
+
 
 }
