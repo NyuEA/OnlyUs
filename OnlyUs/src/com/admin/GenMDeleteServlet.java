@@ -1,4 +1,4 @@
-package com.controller;
+package com.admin;
 
 import java.io.IOException;
 
@@ -8,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.dto.BisUserDTO;
 import com.dto.GenUserDTO;
@@ -19,12 +18,12 @@ import com.service.GenUserService;
 /**
  * Servlet implementation class LognFormServlet
  */
-@WebServlet("/GenMemberDeleteServlet")
-public class GenMemberDeleteServlet extends HttpServlet {
+@WebServlet("/GenMDeleteServlet")
+public class GenMDeleteServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		HttpSession session = request.getSession();
+
 		String userid = request.getParameter("userid");
 		GenUserService service = new GenUserService();
 		String title = "";
@@ -32,9 +31,7 @@ public class GenMemberDeleteServlet extends HttpServlet {
 		try {
 			System.out.println(userid);
 			service.deleteGenUser(userid);
-			target = "home_.jsp";
-			request.setAttribute("delete", "정상적으로 탈퇴되셨습니다.");
-			session.invalidate();
+			target = "GenMServlet";
 		} catch (CommonException e) {
 			title = e.getMessage();
 			String link = "MyPageServlet";

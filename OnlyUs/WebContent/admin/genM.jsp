@@ -8,8 +8,8 @@
 	<link href="css/topten.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 <script type="text/javascript">
-	function approvalY(bisid) {
-		location.href = "ApprovalYServlet?bisid="+bisid;
+	function deleteGenUser(userid) {
+		location.href = "GenMDeleteServlet?userid="+userid;
 	}
 </script>
 <link href="css/coupon.css" rel="stylesheet" type="text/css">
@@ -49,6 +49,7 @@
 			<th>일반회원ID</th>
 			<th>닉네임</th>
 			<th>연락처</th>
+			<th>회원탈퇴</th>
 		</tr>
 
 		<%
@@ -94,6 +95,7 @@
 				<td class="coutd"><%=userid%></td>
 				<td class="coutd"><%=nickname%></td>
 				<td class="coutd"><%=phone%></td>
+				<td class="coutd"><input type="button" value="탈퇴" onclick="deleteGenUser('<%=userid%>')"></td>
 			</tr>
 
 			<%
