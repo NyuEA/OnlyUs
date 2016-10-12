@@ -3,6 +3,12 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="genUser">
+     <select id="idCheck" parameterType="String"
+    resultType="String">
+      select userid
+      from genuser
+      where userid = #{userid}
+    </select>
 	<insert id="addGenUser" parameterType="GenUserDTO">
 		insert into genUser(
 		userid, passwd,
