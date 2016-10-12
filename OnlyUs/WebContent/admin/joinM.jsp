@@ -6,6 +6,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	<link href="css/topten.css" rel="stylesheet" type="text/css">
+	<LINK href="css/common.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 <script type="text/javascript">
 	function approvalY(bisid) {
@@ -24,6 +25,7 @@
 <%
 	}
 %>
+<div id="blogMenu">
 <div class="nav">
 	<h2 class="blind">로컬네이게이션</h2>
 	<ul class="nav_ul fix">
@@ -34,6 +36,8 @@
 		<li><a href="" id="subm2">문의사항관리</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 	</ul>
 </div>
+</div>
+
 
 <%
 	List<BisUserDTO> list = (List<BisUserDTO>) request.getAttribute("bisjoinList");

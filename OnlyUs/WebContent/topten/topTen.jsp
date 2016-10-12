@@ -8,6 +8,7 @@
 	pageEncoding="UTF-8"%>
 <link href="css/topten.css" rel="stylesheet" type="text/css">
 <link href="css/top.css" rel="stylesheet" type="text/css">
+<LINK href="css/common.css" rel="stylesheet" type="text/css">
 
 <%
 	String logout = (String) request.getAttribute("logout");
@@ -20,6 +21,7 @@
 <%
 	}
 %>
+<div id="blogMenu">
 <div class="nav">
 	<h2 class="blind">로컬네이게이션</h2>
 	<ul class="nav_ul fix">
@@ -65,6 +67,7 @@
 			}
 		%>
 	</ul>
+</div>
 </div>
 
 <div id="topten">

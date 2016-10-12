@@ -64,10 +64,57 @@
 		</ul>
 	</div>
 </div>
+<<<<<<< HEAD
 <form id="joinF" action="GenMemberAddServlet">
 	<div class="container member-container">
 		<div class="w">
 			<div class="section-join">
+=======
+</div>
+<form id="joinF" action="GenMemberAddServlet" >
+<div class="container member-container"><div class="w">
+	<div class="section-join">
+		
+		<fieldset class="group-form">
+			<legend>요깄넹 회원가입</legend>
+			<div class="area-form">
+				<span class="i-id">
+					<input type="text" maxlength="15" id="userid" name="userid" placeholder="아이디">
+					
+					<a href="#" class="btn-check">중복확인</a>
+				</span>
+				<p class="text-alert" style="display:none;">아이디는 5~15자 이내의 영/숫자 조합으로만 사용 가능합니다.</p>
+			</div>
+			
+			<div class="area-form">
+				<span class="i-id">
+					<input type="password" maxlength="15" id="passwd" name="passwd" placeholder="비밀번호">
+					
+				</span>
+				<p class="text-alert" style="display:none;" id="msg1">비밀번호 는 8~15자 이내의 영문 대소문자, 숫자 및 특수문자 2가지 이상 조합이어야 합니다.</p>
+			</div>
+			<div class="area-form">
+				<span class="i-id">
+					<input type="password" maxlength="15" id="passwd2" name="passwd2" placeholder="비밀번호 재확인">
+					
+				</span>
+				<p class="text-alert" style="display:none;">입력하신 비밀번호가 일치하지 않습니다.</p>
+			</div>
+			<div class="area-form">
+				<span class="i-id">
+					<input type="text" maxlength="15" id="nickname" name="nickname" placeholder="닉네임">										
+				</span>
+			</div>
+			<div class="area-form">
+				
+				
+				<span class="i-id">
+					<input type="text" maxlength="11" id="phone" name="phone" placeholder="휴대전화번호 (-는 제외하고 입력하여 주세요)">										
+				</span>
+				<p class="text-alert" style="display:none;" id="msgTel">이미 사용중인 휴대전화번호입니다.</p>
+			</div>
+			<div class="area-form area-check">
+>>>>>>> branch 'master' of https://github.com/NyuEA/OnlyUs.git
 
 				<fieldset class="group-form">
 					<legend>요깄넹 회원가입</legend>

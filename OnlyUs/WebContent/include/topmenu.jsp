@@ -22,20 +22,20 @@
   if(dto==null && bisdto == null){
 %>
 		<li><a class="on" href="LoginFormServlet">로그인</a></li>
-		<li><a href="Join_.jsp">회원가입</a></li>
+		<li><a class="on" href="Join_.jsp">회원가입</a></li>
 		
 		<%
   }else if(dto!=null){
 %>
 <span id="hiuser"> 안녕하세요! <a href="home_.jsp" id="user"><%= dto.getNickname() %></a> 님 ^^* </span>
 <li><a class="on" href="LogOutServlet">로그아웃</a></li>
-		<li><a href="MyPageServlet">마이페이지</a></li>
+		<li><a class="on" href="MyPageServlet">마이페이지</a></li>
 	
 <%
   }else{
   %>
   <li><a class="on" href="BisLogOutServlet">로그아웃</a></li>
-  		<li><a href="BisMyPageServlet">마이페이지</a></li>
+  		<li><a class="on" href="BisMyPageServlet">마이페이지</a></li>
   		
   <%
     }//end if

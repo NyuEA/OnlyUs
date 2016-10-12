@@ -5,8 +5,10 @@
 <%@page import="com.dto.GenUserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 	<link href="css/topten.css" rel="stylesheet" type="text/css">
-	<link href="css/top.css" rel="stylesheet" type="text/css">
+	<LINK href="css/common.css" rel="stylesheet" type="text/css">
+
 <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 <script type="text/javascript">
 	function approvalY(bisid) {
@@ -16,7 +18,7 @@
 		location.href = "BisDelServlet?bisid="+bisid;
 	}
 </script>
-<link href="css/coupon.css" rel="stylesheet" type="text/css">
+
 <%
 	String logout = (String) request.getAttribute("logout");
 	if (logout != null) {
@@ -28,15 +30,17 @@
 <%
 	}
 %>
+<div id="blogMenu">
 <div class="nav">
 	<h2 class="blind">로컬네이게이션</h2>
 	<ul class="nav_ul fix">
 		<!-- 	☆ 현재페이지 표시 class="on" -->
-		<li><a  href="JoinMServlet" id="subm2">가입 관리</a></li>
-		<li><a class="on" href="BisMServlet" id="subm2">업체 관리</a></li>
+		<li><a href="JoinMServlet" id="subm2">가입 관리</a></li>
+		<li><a  class="on"href="BisMServlet" id="subm2">업체 관리</a></li>
 		<li><a href="GenMServlet" id="subm1">회원 관리</a></li>
 		<li><a href="" id="subm2">문의사항관리</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 	</ul>
+</div>
 </div>
 
 <%
@@ -44,11 +48,11 @@
 %>
 <div id="bisjoinList">
 
-<img src="images/a_menu2.png" class="menu" alt="">
+	<img src="images/a_menu2.png" class="menu" alt="">
 	<table width="90%" cellspacing="0" cellpadding="0" align="center">
 
 
-	
+
 
 
 		<tr>
@@ -76,9 +80,7 @@
 		</tr>
 		<tr>
 			<td class="td_default" align="center" colspan="10"><br>
-				가입신청한 업체가 존재하지 않습니다.<br>
-			<br>
-			<br></td>
+				가입신청한 업체가 존재하지 않습니다.<br> <br> <br></td>
 		</tr>
 		<%
 			} else {
@@ -106,7 +108,7 @@
 					String phone1 = bisdto.getPhone1();
 					String phone2 = bisdto.getPhone2();
 					String phone3 = bisdto.getPhone3();
-					String phone = phone1 +"-"+phone2+"-"+phone3;
+					String phone = phone1 + "-" + phone2 + "-" + phone3;
 					String approval = bisdto.getApproval();
 			%>
 			<tr>
@@ -116,7 +118,8 @@
 				<td class="coutd"><%=addr1%></td>
 				<td class="coutd"><%=phone%></td>
 				<td class="coutd"><%=approval%></td>
-				<td class="coutd"><input type="button" value="삭제" onclick="deleteBis('<%=bisid%>')"></td>
+				<td class="coutd"><input type="button" value="삭제"
+					onclick="deleteBis('<%=bisid%>')"></td>
 			</tr>
 
 			<%
