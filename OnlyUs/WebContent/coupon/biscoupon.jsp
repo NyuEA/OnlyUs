@@ -8,6 +8,12 @@
 <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 <link href="css/coupon.css" rel="stylesheet" type="text/css">
 <LINK href="../css/top.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+	function deleteCoupon(couid) {
+		console.log("deleteCoupon");
+		location.href = "DeleteCouponServlet?couid="+couid;
+	}
+</script>
 <%
 	String logout = (String) request.getAttribute("logout");
 	if (logout != null) {
@@ -16,17 +22,11 @@
       var str = "<%=logout%>";
       alert("<%=logout%>");
 </script>
-<script type="text/javascript">
-	function deleteCoupon(couid) {
-		console.log("deleteCoupon");
-		location.href = "DeleteCouponServlet?couid="+couid;
-	}
-</script>
 <%
 	}
 %>
 <div class="nav">
-	<h2 class="blind">로컬네이게이션</h2>
+	<h2 class="blind">로컬네이게이션2</h2>
 	<ul class="nav_ul fix">
 		<!-- 	☆ 현재페이지 표시 class="on" -->
 		<%
