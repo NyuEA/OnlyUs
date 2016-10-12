@@ -110,7 +110,6 @@
 				<label style="display:none;"><input type="checkbox" checked="checked" id="mailYn" > 이메일 수신동의</label>
 				<label style="display:none;"><input type="checkbox" checked="checked" id="smsYn"> <span>SMS</span> 수신동의</label>
 			</div>
-
 		</fieldset>
 
 		<div class="group-agrees">
