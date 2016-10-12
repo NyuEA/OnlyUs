@@ -67,6 +67,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		approval = 'Y'
 		where bisid = #{bisid}
 	</update>
+	<delete id="deletebis" parameterType="String">
+	    delete bisUser
+	    where bisid = #{bisid}
+	</delete>
 </mapper>
 
 
