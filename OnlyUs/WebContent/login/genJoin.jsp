@@ -103,7 +103,6 @@
 				<span class="i-id">
 					<input type="text" maxlength="11" id="phone" name="phone" placeholder="휴대전화번호 (-는 제외하고 입력하여 주세요)">										
 				</span>
-			
 				<p class="text-alert" style="display:none;" id="msgTel">이미 사용중인 휴대전화번호입니다.</p>
 			</div>
 			<div class="area-form area-check">
