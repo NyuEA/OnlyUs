@@ -187,7 +187,7 @@
                                 <constraint>
                                   <height>75</height>
                                   <width>10</width>
-                                  <x>668</x>
+                                  <x>692</x>
                                   <y>121</y>
                                 </constraint>
                                 <sourceConnections>
@@ -236,7 +236,7 @@
                                       <movable>true</movable>
                                     </target>
                                     <bendpoints/>
-                                    <name>로그인 성공시 메인창 제공</name>
+                                    <name>로그인 성공시 main_.jsp 화면 출력</name>
                                     <direction>false</direction>
                                     <order>4</order>
                                     <oldOrder>4</oldOrder>
@@ -264,7 +264,7 @@
                                   <constraint>
                                     <height>236</height>
                                     <width>5</width>
-                                    <x>673</x>
+                                    <x>697</x>
                                     <y>20</y>
                                   </constraint>
                                   <sourceConnections/>
@@ -290,7 +290,7 @@
                                     <constraint>
                                       <height>-1</height>
                                       <width>100</width>
-                                      <x>623</x>
+                                      <x>647</x>
                                       <y>20</y>
                                     </constraint>
                                     <sourceConnections/>
@@ -307,7 +307,7 @@
                                 <movable>true</movable>
                               </target>
                               <bendpoints/>
-                              <name>아이디, 비밀번호 확인</name>
+                              <name>userid, passwd 확인</name>
                               <direction>true</direction>
                               <order>3</order>
                               <oldOrder>3</oldOrder>
@@ -758,7 +758,7 @@
                     <movable>true</movable>
                   </target>
                   <bendpoints/>
-                  <name>좌측 일반회원 로그인 버튼 클릭</name>
+                  <name>login_.jsp 좌측 일반회원 로그인 클릭</name>
                   <direction>true</direction>
                   <order>1</order>
                   <oldOrder>1</oldOrder>
@@ -778,7 +778,7 @@
         </net.java.amateras.uml.sequencediagram.model.LifeLineModel>
       </children>
       <filterProperty/>
-      <name>일반사용자</name>
+      <name>일반회원</name>
       <lifeLine reference="../children/net.java.amateras.uml.sequencediagram.model.LifeLineModel"/>
       <root reference="../../.."/>
     </net.java.amateras.uml.sequencediagram.model.ActorModel>

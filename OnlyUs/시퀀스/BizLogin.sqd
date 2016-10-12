@@ -187,7 +187,7 @@
                                 <constraint>
                                   <height>105</height>
                                   <width>10</width>
-                                  <x>695</x>
+                                  <x>718</x>
                                   <y>122</y>
                                 </constraint>
                                 <sourceConnections>
@@ -236,7 +236,7 @@
                                       <movable>true</movable>
                                     </target>
                                     <bendpoints/>
-                                    <name>성공 시 main_.jsp 화면 출력</name>
+                                    <name>로그인 성공 시 main_.jsp 화면 출력</name>
                                     <direction>false</direction>
                                     <order>4</order>
                                     <oldOrder>4</oldOrder>
@@ -264,7 +264,7 @@
                                   <constraint>
                                     <height>267</height>
                                     <width>5</width>
-                                    <x>700</x>
+                                    <x>723</x>
                                     <y>20</y>
                                   </constraint>
                                   <sourceConnections/>
@@ -290,7 +290,7 @@
                                     <constraint>
                                       <height>-1</height>
                                       <width>100</width>
-                                      <x>650</x>
+                                      <x>673</x>
                                       <y>20</y>
                                     </constraint>
                                     <sourceConnections/>

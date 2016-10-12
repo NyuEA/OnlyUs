@@ -138,7 +138,7 @@
                   <constraint>
                     <height>30</height>
                     <width>10</width>
-                    <x>48</x>
+                    <x>64</x>
                     <y>167</y>
                   </constraint>
                   <sourceConnections/>
@@ -164,7 +164,7 @@
                     <constraint>
                       <height>140</height>
                       <width>10</width>
-                      <x>43</x>
+                      <x>59</x>
                       <y>77</y>
                     </constraint>
                     <sourceConnections>
@@ -210,7 +210,7 @@
                       <constraint>
                         <height>227</height>
                         <width>5</width>
-                        <x>48</x>
+                        <x>64</x>
                         <y>20</y>
                       </constraint>
                       <sourceConnections/>
@@ -235,7 +235,7 @@
                         </listeners>
                         <constraint>
                           <height>-1</height>
-                          <width>100</width>
+                          <width>133</width>
                           <x>0</x>
                           <y>20</y>
                         </constraint>
@@ -245,7 +245,7 @@
                           <net.java.amateras.uml.sequencediagram.model.LifeLineModel reference="../../.."/>
                         </children>
                         <filterProperty/>
-                        <name>일반회원</name>
+                        <name>일반회원, 업체회원</name>
                         <lifeLine reference="../.."/>
                         <root reference="../../../../../../../../../../../.."/>
                       </owner>
