@@ -16,6 +16,12 @@
       var str = "<%=logout%>";
       alert("<%=logout%>");
 </script>
+<script type="text/javascript">
+	function deleteCoupon(couid) {
+		console.log("deleteCoupon");
+		location.href = "DeleteCouponServlet?couid="+couid;
+	}
+</script>
 <%
 	}
 %>
@@ -81,10 +87,12 @@ System.out.print(list);
 	<tr>
 		
 		<th>쿠폰코드</th>
+		<th>쿠폰내용</th>
 		<th>남은 장수</th>
 		<th colspan="2">기간</th>
 		<th>제공여부</th>
 		<th>다운로드수</th>
+		<th>삭제여부</th>
 	</tr>
 
 			<%
@@ -127,19 +135,25 @@ System.out.print(list);
 			String period_t = bdto.getPeriod_t();
 			char show_yn = bdto.getShow_yn();
 			int clickcount = bdto.getClickcount();
+			String content = bdto.getContent();
 	%>
 	<tr>
 		<td class="coutd"><%=couid%></td>
+		<td class="coutd"><%=content%></td>
 		<td class="coutd"><%=amount%></td>
 		<td class="coutd"><%=period_f%>~</td>
 		<td class="coutd"><%=period_t%></td>
 		<td class="coutd"><%=show_yn%></td>
 		<td class="coutd"><%=clickcount%></td>
+		<td align="center"><input type="button" value="삭제" onclick="deleteCoupon('<%=couid%>')"></td>
 	</tr>
 	
 	<%
 		} //end for
 	%>
 	</form>
+	<tr>
+	<td align="center"><button>쿠폰등록</button></td>
+	</tr>
 </table>
 </div>

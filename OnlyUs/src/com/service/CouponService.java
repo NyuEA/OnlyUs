@@ -29,6 +29,19 @@ public class CouponService {
 		return list;	
 	}
 
+	public void deleteCoupon(String couid) throws CommonException {
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			int n = session.delete("deleteCoupon", couid);
+			session.commit();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("쿠폰삭제 실패");
+		} finally {
+			session.close();
+		}
+	}
 	public List<Top10DTO> first10() throws CommonException {
 		List<Top10DTO> list = null;
 		SqlSession session = MySqlSessionFactory.getSession();
