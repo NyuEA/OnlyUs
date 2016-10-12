@@ -8,6 +8,7 @@
 <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 <link href="css/coupon.css" rel="stylesheet" type="text/css">
 <LINK href="../css/top.css" rel="stylesheet" type="text/css">
+<link href="../css/common.css" rel="stylesheet" type="text/css">
 <script type="text/javascript">
 	function deleteCoupon(couid) {
 		console.log("deleteCoupon");
@@ -29,6 +30,7 @@
 <%
 	}
 %>
+<div id="blogMenu">
 <div class="nav">
 	<h2 class="blind">로컬네이게이션2</h2>
 	<ul class="nav_ul fix">
@@ -73,6 +75,7 @@
 		%>
 
 	</ul>
+</div>
 </div>
 
 <%  List<CouponDTO> list = (List<CouponDTO>) request.getAttribute("BisCoupon"); 
