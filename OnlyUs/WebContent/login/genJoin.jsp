@@ -1,75 +1,67 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<link rel="stylesheet" href="css/sub.css?ver=201609271052">
-<link href="css/top.css" rel="stylesheet" type="text/css">
-<script src="js/memberjoin.js"></script>
-<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+	<link rel="stylesheet" href="css/sub.css?ver=201609271052">
+	<link href="css/top.css" rel="stylesheet" type="text/css">
+	<script src="js/memberjoin.js"></script>
 
-
+	
+	
 
 
 
 <script>
-	$(document).ready(
-			function() {
-				var joinMember = new JoinMember();
-				joinMember.setRUrl('');
+	$(document).ready(function () {
+		var joinMember = new JoinMember();
+		joinMember.setRUrl('');
 
-				var date = new Date();
-				var thisYear = date.getFullYear();
+		var date = new Date();
+		var thisYear = date.getFullYear();
 
-				for (var i = thisYear - 14; i > 1899; i--) {
-					$('#userBirthYear').append($('<option/>', {
-						value : i,
-						text : i
-					}));
-				}
-				$('#userBirthYear').parent().uiSelect();
+		for (var i = thisYear-14; i > 1899; i--) {
+			$('#userBirthYear').append($('<option/>', {
+				value: i,
+				text: i
+			}));
+		}
+		$('#userBirthYear').parent().uiSelect();
 
-				$("#selectDomain").on(
-						"change",
-						function() {
+		$("#selectDomain").on("change", function () {
 
-							var value = $(this).val();
-							var $target = $($(this).data("target"));
+			var value = $(this).val();
+			var $target = $($(this).data("target"));
 
-							if (value == "선택") {
-								return false;
-							} else if (value == "직접입력") {
-								$target.val("").attr("disabled", false)
-										.removeClass("disabled").focus();
-							} else {
-								$target.val(value).attr("disabled", true)
-										.addClass("disabled");
-								$target.val(value);
-							}
-						});
+			if (value == "선택") {
+				return false;
+			} else if (value == "직접입력") {
+				$target.val("")
+						.attr("disabled", false)
+						.removeClass("disabled")
+						.focus();
+			} else {
+				$target.val(value)
+						.attr("disabled", true)
+						.addClass("disabled");
+				$target.val(value);
+			}
+		});
 
-			});
+
+	});
 
 </script>
 
 <div id="blogMenu">
-	<div class="nav">
-		<h2 class="blind">로컬네이게이션</h2>
-		<ul class="nav_ul fix">
-			<!-- 	☆ 현재페이지 표시 class="on" -->
-			<li id="submli1"><a href="home_.jsp?" id="subm1">서비스소개</a></li>
-			<li id="submli2"><a href="board_.jsp" id="subm2">문의하기</a>
-				<ul>
-					<li><a href="#">등록문의</a></li>
-					<li><a href="#">일반문의</a></li>
-				</ul></li>
-		</ul>
-	</div>
+<div class="nav">
+	<h2 class="blind">로컬네이게이션</h2>
+	<ul class="nav_ul fix">
+		<!-- 	☆ 현재페이지 표시 class="on" -->
+		<li id="submli1"><a href="home_.jsp?" id="subm1">서비스소개</a></li>
+		<li id="submli2"><a href="board_.jsp" id="subm2">문의하기</a>
+		<ul><li><a href="#">등록문의</a></li>
+			<li><a href="#">일반문의</a></li></ul></li>
+	</ul>
 </div>
-<<<<<<< HEAD
-<form id="joinF" action="GenMemberAddServlet">
-	<div class="container member-container">
-		<div class="w">
-			<div class="section-join">
-=======
 </div>
 <form id="joinF" action="GenMemberAddServlet" >
 <div class="container member-container"><div class="w">
@@ -114,96 +106,36 @@
 				<p class="text-alert" style="display:none;" id="msgTel">이미 사용중인 휴대전화번호입니다.</p>
 			</div>
 			<div class="area-form area-check">
->>>>>>> branch 'master' of https://github.com/NyuEA/OnlyUs.git
 
-<<<<<<< HEAD
 				<label style="display:none;"><input type="checkbox" checked="checked" id="mailYn" > 이메일 수신동의</label>
 				<label style="display:none;"><input type="checkbox" checked="checked" id="smsYn"> <span>SMS</span> 수신동의</label>
 			</div>
+
 		</fieldset>
-=======
-				<fieldset class="group-form">
-					<legend>요깄넹 회원가입</legend>
-					<div class="area-form">
-						<span class="i-id"> <input type="text" maxlength="15"
-							id="userid" name="userid" placeholder="아이디"> <div id="idCheck"></div>
-						</span>
-						<p class="text-alert" style="display: none;">아이디는 5~15자 이내의
-							영/숫자 조합으로만 사용 가능합니다.</p>
-					</div>
 
-					<div class="area-form">
-						<span class="i-id"> <input type="password" maxlength="15"
-							id="passwd" name="passwd" placeholder="비밀번호">
->>>>>>> branch 'master' of https://github.com/NyuEA/OnlyUs
+		<div class="group-agrees">
+			<div class="area-all">
+				<label><input type="checkbox" id="termArgees">요깄넹 가입 전체 약관에 동의합니다.</label>
+			</div>
+			<ul class="area-items" id="listsTerms">
+				<li><label><input type="checkbox" id="agreement"> 서비스 이용약관에 동의</label><a href="#agreement1" class="btn">내용보기</a></li>
+				<li><label><input type="checkbox" id="location"> 위치정보 이용약관에 동의</label><a href="#agreement2" class="btn">내용보기</a></li>
+				<li><label><input type="checkbox" id="privacy"> 개인정보 수집 및 이용(필수)</label><a href="#agreement3" class="btn">내용보기</a></li>
+				<li style="display:none;"><label><input type="checkbox" id="privacy_rule"> 개인정보 취급위탁에 동의 (선택)</label><a href="#agreement4" class="btn">내용보기</a></li>
+			</ul>
+		</div>
 
-						</span>
-						<p class="text-alert" style="display: none;" id="msg1">비밀번호 는
-							8~15자 이내의 영문 대소문자, 숫자 및 특수문자 2가지 이상 조합이어야 합니다.</p>
-					</div>
-					<div class="area-form">
-						<span class="i-id"> <input type="password" maxlength="15"
-							id="passwd2" name="passwd2" placeholder="비밀번호 재확인">
-
-						</span>
-						<div id="result2"></div>
-						
-					</div>
-					<div class="area-form">
-						<span class="i-id"> <input type="text" maxlength="15"
-							id="nickname" name="nickname" placeholder="닉네임">
-						</span>
-					</div>
-					<div class="area-form">
-
-
-						<span class="i-id"> <input type="text" maxlength="15"
-							id="phone" name="phone" placeholder="휴대전화번호 (-는 제외하고 입력하여 주세요)">
-						</span>
-
-						<p class="text-alert" style="display: none;" id="msgTel">이미
-							사용중인 휴대전화번호입니다.</p>
-					</div>
-					<div class="area-form area-check">
-
-						<label style="display: none;"><input type="checkbox"
-							checked="checked" id="mailYn"> 이메일 수신동의</label> <label
-							style="display: none;"><input type="checkbox"
-							checked="checked" id="smsYn"> <span>SMS</span> 수신동의</label>
-					</div>
-
-				</fieldset>
-
-				<div class="group-agrees">
-					<div class="area-all">
-						<label><input type="checkbox" id="termArgees">요깄넹
-							가입 전체 약관에 동의합니다.</label>
-					</div>
-					<ul class="area-items" id="listsTerms">
-						<li><label><input type="checkbox" id="agreement">
-								서비스 이용약관에 동의</label><a href="#agreement1" class="btn">내용보기</a></li>
-						<li><label><input type="checkbox" id="location">
-								위치정보 이용약관에 동의</label><a href="#agreement2" class="btn">내용보기</a></li>
-						<li><label><input type="checkbox" id="privacy">
-								개인정보 수집 및 이용(필수)</label><a href="#agreement3" class="btn">내용보기</a></li>
-						<li style="display: none;"><label><input
-								type="checkbox" id="privacy_rule"> 개인정보 취급위탁에 동의 (선택)</label><a
-							href="#agreement4" class="btn">내용보기</a></li>
-					</ul>
-				</div>
-
-				<div class="group-btn">
-
-					<input type="submit" value="가입" class="joinBtn"> <input
-						type="reset" value="취소" class="joinBtn">
-				</div>
+		<div class="group-btn">
+	
+			<input type="submit" value="가입" class="joinBtn">
+				<input type="reset" value="취소" class="joinBtn">
+		</div>
 </form>
-<h3 id="agreement1">서비스 이용약관</h3>
-<div class="group-frame" id="textAgrees1">
+		<h3 id="agreement1">서비스 이용약관</h3>
+		<div class="group-frame" id="textAgrees1">
 
 
-	<pre>
-		<strong>제 1 조 목적</strong>
+<pre><strong>제 1 조 목적</strong>
 
 이 약관은 주식회사 요깄넹(이하 "회사"라 함)와 회사가 운영하는 인터넷사이트를 통해서 제공하는 광고·마케팅 관련 서비스 등(이하 "서비스"라 함)을 이용하는 자의 권리, 의무를 정함으로써 상호 발전을 도모하는 것을 그 목적으로 합니다.
 
@@ -449,11 +381,10 @@
 
 이 약관은 2015년 9월 9일부터 적용됩니다.
 
-<a href="/terms/policyOld_v2.do">이전 이용약관 보기 (2015년 4월 13일 - 2015년 9월 8일 적용)</a>
-	</pre>
-</div>
-<h3 id="agreement2">위치정보 이용약관</h3>
-<div class="group-frame" id="textAgrees2">
+<a href="/terms/policyOld_v2.do">이전 이용약관 보기 (2015년 4월 13일 - 2015년 9월 8일 적용)</a></pre>
+		</div>
+		<h3 id="agreement2">위치정보 이용약관</h3>
+		<div class="group-frame" id="textAgrees2">
 
 
 
@@ -463,8 +394,7 @@
 
 
 
-	<pre>
-		<strong>제 1 조 (목적)</strong>
+<pre><strong>제 1 조 (목적)</strong>
 
 이 약관은 (주)옐로쇼핑미디어(이하 “회사”)가 제공하는 위치기반서비스와 관련하여 회사와 개인위치정보주체와의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
 
@@ -579,11 +509,10 @@
 
 
 
-<a href="/terms/location_20150413.do">이전 개인정보처리방침 보기 (2015년 4월 13일 - 2015년 10월 26일 적용)</a>
-	</pre>
-</div>
-<h3 id="agreement3">개인정보 처리방침</h3>
-<div class="group-frame" id="textAgrees3">
+<a href="/terms/location_20150413.do">이전 개인정보처리방침 보기 (2015년 4월 13일 - 2015년 10월 26일 적용)</a></pre>
+		</div>
+		<h3 id="agreement3">개인정보 처리방침</h3>
+		<div class="group-frame" id="textAgrees3">
 
 
 
@@ -593,14 +522,11 @@
 
 
 
-	<pre>
-		<strong>1. 개인정보의 수집 및 이용(필수)</strong>
+<pre><strong>1. 개인정보의 수집 및 이용(필수)</strong>
 
 <table class="table-terms">
 	<colgroup>
-		<col width="80px">
-				<col>
-				<col>
+		<col width="80px"><col><col>
 	</colgroup>
 	<thead>
 		<tr>
@@ -652,15 +578,16 @@
 	</tbody>
 </table>* 동의를 거부하시는 경우에도 쿠차서비스는 이용하실 수 있습니다.  단 새로운 상품안내 및 마케팅 참여에 제한이 있을 수 있습니다.
 </pre>
+		</div>
+		
 </div>
-
-</div>
-</div>
-</div>
-
+		</div>
+		</div>
+		
 
 
 <script type="text/javascript">
+
 	$(document).ready(function() {
 
 		$("#passwd2").on("keyup", function(event) {
@@ -675,8 +602,14 @@
 			}
 		});
 
+
+
+
+
+
+
 		// 아이디 중복체크 Ajax 연동
-		$("#userid").on("keyup", function(event) {
+		$("#bisid").on("keyup", function(event) {
 
 			//Ajax 연동 
 			//ajax통신
@@ -685,17 +618,23 @@
 				url : "idCheck.jsp",
 				dataType : "text",
 				data : {
-					userid : $("#userid").val()
+					userid : $("#bisid").val()
 				},
 				success : function(responseData, status, xhr) {
 					console.log(responseData);
-					$("#idCheck").text(responseData);
+					$("#result").text(responseData);
 				},
 				error : function(xhr, status, error) {
 					console.log("error");
 				}
 			});
 		});
+
+
+
+
+
+
 
 		$("form").on("submit", function(event) {
 
