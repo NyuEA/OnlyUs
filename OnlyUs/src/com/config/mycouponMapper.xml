@@ -37,6 +37,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		order by COUPON.CLICKCOUNT desc)
 		WHERE <![CDATA[rownum <= 10]]>
 	</select>
+	<update id="update_YN" parameterType="Hashmap">
+		update coupon
+		set
+		show_yn = #{manage_yn}
+		where couid = #{couid}
+	</update>
 	<select id="serch10" resultType="Top10DTO" parameterType="String">
 		select
 		rownum as ranking,

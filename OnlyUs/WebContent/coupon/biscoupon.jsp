@@ -13,6 +13,10 @@
 		console.log("deleteCoupon");
 		location.href = "DeleteCouponServlet?couid="+couid;
 	}
+	function update_yn(couid, manage_yn) {
+		console.log("update_yn");
+		location.href = "Update_YNServlet?couid="+couid+"&manage_yn="+manage_yn;
+	}
 </script>
 <%
 	String logout = (String) request.getAttribute("logout");
@@ -133,7 +137,13 @@ System.out.print(list);
 			String amount = bdto.getAmount();
 			String period_f = bdto.getPeriod_f();
 			String period_t = bdto.getPeriod_t();
-			char show_yn = bdto.getShow_yn();
+			String show_yn = bdto.getShow_yn();
+			String manage_yn;
+			if(show_yn.equals("Y")){
+				manage_yn = "N";
+			}else{
+				manage_yn = "Y";
+			}
 			int clickcount = bdto.getClickcount();
 			String content = bdto.getContent();
 	%>
@@ -143,7 +153,7 @@ System.out.print(list);
 		<td class="coutd"><%=amount%></td>
 		<td class="coutd"><%=period_f%>~</td>
 		<td class="coutd"><%=period_t%></td>
-		<td class="coutd"><%=show_yn%></td>
+		<td class="coutd"><%=show_yn%>&nbsp&nbsp<input type="button" value="<%=manage_yn%>" onclick="update_yn('<%=couid%>','<%=manage_yn%>')"></td>
 		<td class="coutd"><%=clickcount%></td>
 		<td align="center"><input type="button" value="삭제" onclick="deleteCoupon('<%=couid%>')"></td>
 	</tr>

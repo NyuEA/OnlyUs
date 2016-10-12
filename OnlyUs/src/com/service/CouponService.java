@@ -1,5 +1,6 @@
 package com.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -55,6 +56,19 @@ public class CouponService {
 		}
 		return list;	
 	}
+	public void update_YN(HashMap<String, String> map) throws CommonException {
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			int n = session.update("update_YN", map);
+			session.commit();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("쿠폰 제공여부 수정 실패");
+		} finally {
+			session.close();
+		}
+	}
 	public List<CouponDTO> BisCoupon(String bisid) throws CommonException {
 		List<CouponDTO> list = null;
 		SqlSession session = MySqlSessionFactory.getSession();
@@ -96,5 +110,6 @@ public class CouponService {
 		}
 		return list;	
 	}
+
 
 }
