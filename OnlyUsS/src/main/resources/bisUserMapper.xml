@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="genUser">
+
+	<select id="idCheck" parameterType="string" resultType="string">
+		select bisid
+		from bisUser
+		where bisid = #{userid}
+	</select>
+	<insert id="addBisUser" parameterType="BisUserDTO">
+		insert into bisUser(
+		bisid, passwd,
+		bisname, post1, post2, addr1, addr2, phone1, phone2,
+		phone3)
+		values(#{bisid},#{passwd},#{bisname},#{post1},#{post2},#{addr1},#{addr2},#{phone1},#{phone2},#{phone3})
+	</insert>
+	<select id="bislogin" parameterType="hashmap" resultType="BisUserDTO">
+		select
+		bisid, passwd,
+		bisname, post1, post2, addr1, addr2, phone1, phone2,
+		phone3
+		from bisUser
+		where bisid = #{bisid} and passwd=#{passwd}
+	</select>
+	<select id="bisjoinList" resultType="BisUserDTO">
+		select
+		bisid, 
+		bisname, post1, post2, addr1, addr2, phone1, phone2,
+		phone3
+		from bisUser
+		where approval = 'N'
+	</select>
+	<select id="bisList" resultType="BisUserDTO">
+		select
+		bisid, 
+		bisname, post1, post2, addr1, addr2, phone1, phone2,
+		phone3, approval
+		from bisUser
+	</select>
+	<select id="bisMypage" parameterType="String" resultType="BisUserDTO">
+		select
+		bisid, passwd,
+		bisname, post1, post2, addr1, addr2, phone1, phone2,
+		phone3
+		from bisUser
+		where bisid = #{bisid}
+	</select>
+	<update id="updatebisUser" parameterType="BisUserDTO">
+		update bisUser
+		set
+		passwd = #{passwd},
+		post1 = #{post1},
+		post2 = #{post2},
+		addr1 = #{addr1},
+		addr2 = #{addr2},
+		phone1 = #{phone1},
+		phone2 = #{phone2},
+		phone3 =
+		#{phone3}
+		where bisid = #{bisid}
+	</update>
+	<update id="approvalY" parameterType="String">
+		update bisUser
+		set
+		approval = 'Y'
+		where bisid = #{bisid}
+	</update>
+	<delete id="deletebis" parameterType="String">
+	    delete bisUser
+	    where bisid = #{bisid}
+	</delete>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+

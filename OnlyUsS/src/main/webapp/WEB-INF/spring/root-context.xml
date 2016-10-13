@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd" xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
+	<!-- DB연동코드 -->
+
+	<!-- jdbc.properties 설정 -->
+	<context:property-placeholder location="classpath:jdbc.properties" />
+
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+		<property value="${jdbc.driver}" name="driverClassName" />
+
+		<property value="${jdbc.url}" name="url" />
+
+		<property value="${jdbc.userid}" name="username" />
+
+		<property value="${jdbc.passwd}" name="password" />
+	</bean>
+
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+	<property  name="mapperLocations">
+	<list>
+	<value>classPath:bisUserMapper.xml</value>
+	<value>classPath:genUserMapper.xml</value>
+	<value>classPath:mycouponMapper.xml</value>
+
+	</list>
+	</property>
+
+		<property name="typeAliases">
+			<list>
+				<value>com.dto.BisUserDTO</value>
+				<value>com.dto.GenUserDTO</value>
+				<value>com.dto.CouponDTO</value>
+				<value>com.dto.DownCouponDTO</value>
+				<value>com.dto.MycouponDTO</value>
+				<value>com.dto.Top10DTO</value>
+			</list>
+		</property>
+	</bean>
+	<bean class="org.mybatis.spring.SqlSessionTemplate" id="sqlSession">
+
+		<constructor-arg ref="sqlSessionFactory" index="0"/>
+
+</bean>
+
+
+</beans>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="genUser">
+	<insert id="addGenUser" parameterType="GenUserDTO">
+		insert into genUser(
+		userid, passwd,
+		nickname, phone)
+		values(#{userid},#{passwd},#{nickname},#{phone})
+	</insert>
+	<select id="login" parameterType="hashmap" resultType="GenUserDTO">
+		select
+		userid, passwd,
+		nickname, phone
+		from genUser
+		where userid = #{userid} and passwd=#{passwd}
+	</select>
+	<select id="genList" resultType="GenUserDTO">
+		select
+		userid,
+		nickname, phone
+		from genUser
+	</select>
+	<select id="mypage" parameterType="String" resultType="GenUserDTO">
+		select
+		userid, passwd,
+		nickname, phone
+		from genUser
+		where userid = #{userid}
+	</select>
+	<update id="updateGenUser" parameterType="GenUserDTO">
+		update genUser
+		set passwd = #{passwd},
+		nickname = #{nickname},
+		phone = #{phone}
+	   where userid = #{userid}	
+	</update>
+	<delete id="deleteGenUser" parameterType="String">
+	delete from genUser where userid = #{userid}	
+	</delete>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
