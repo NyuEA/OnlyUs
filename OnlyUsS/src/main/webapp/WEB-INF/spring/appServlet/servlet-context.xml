@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<context:annotation-config/>
+	
+	<mvc:annotation-driven/>
+	<mvc:default-servlet-handler/>
+	<mvc:resources location="/WEB-INF/image/" mapping="/image/**/"></mvc:resources>
+	<mvc:resources location="/WEB-INF/images/" mapping="/images/**/"></mvc:resources>
+	<mvc:resources location="/WEB-INF/js/" mapping="/js/**/"></mvc:resources>
+	<mvc:resources location="/WEB-INF/css/" mapping="/css/**/"></mvc:resources>
+	
+	
+	 <!-- MVC 관련코드 Controller, HandlerMapping, ViewResolver -->
+	   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<bean class="com.login.LoginController" id="LoginController"/>
+	<bean class="com.member.MemberController" id="MemberController"/>	
+	<bean class="com.admin.AdminController" id="AdminController"/>
+	<bean class="com.coupon.CouponController" id="CouponController"/>
+	
+	<bean class="com.service.BisUserService" id="BisUserService"/>
+	<bean class="com.service.CouponService" id="CouponService"/>
+	<bean class="com.service.GenUserService" id="GenUserService"/>
+	
+
+	<bean class="com.dao.BisUserDAO" id="BisUserDAO"/>
+	<bean class="com.dao.CouponDAO" id="CouponDAO"/>
+	<bean class="com.dao.GenUserDAO" id="GenUserDAO"/>
+
+	
+	
+
+</beans>

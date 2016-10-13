@@ -1,0 +1,30 @@
+body{
+	width: 1280px;
+}
+
+
+table{
+	text-align: center;
+}
+
+th{
+	width: 120px;
+	height: 30px;
+	color: #626262;
+	background-color: #ddd;
+}
+
+td{
+	padding-top:5px;
+	height: 30px;
+	color: #626262;
+	
+}
+
+
+#mytable{
+	
+	padding-top: 100px;
+	padding-bottom: 100px;
+	
+}

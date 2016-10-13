@@ -1,0 +1,29 @@
+body{
+	width: 1280px;
+}
+
+
+.coutd{
+	height:55px;
+}
+
+th{
+	background-color: #cccccc;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+td{
+	height:20px;
+}
+
+#topten{
+	 height:800px; 
+}
+
+table{
+	margin-top: 80px;
+}
+
+.cmain{
+	height: 50px;
+}

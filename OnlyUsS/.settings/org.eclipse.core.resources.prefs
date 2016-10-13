@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/admin/AdminController.java=UTF-8
+encoding//src/main/java/com/coupon/CouponController.java=UTF-8
+encoding//src/main/java/com/dao/BisUserDAO.java=UTF-8
+encoding//src/main/java/com/dao/CouponDAO.java=UTF-8
+encoding//src/main/java/com/dao/GenUserDAO.java=UTF-8
+encoding//src/main/java/com/login/LoginController.java=UTF-8
+encoding//src/main/java/com/service/CouponService.java=UTF-8
+encoding//src/main/java/com/service/GenUserService.java=UTF-8

@@ -1,0 +1,162 @@
+
+
+
+input {
+	color: rgb(110, 110, 110); line-height: 1.5em; font-family: "µ¸¿ò",Dotum,Helvetica,AppleGothic,Sans-serif; font-size: 12px;
+}
+textarea {
+	color: rgb(110, 110, 110); line-height: 1.5em; font-family: "µ¸¿ò",Dotum,Helvetica,AppleGothic,Sans-serif; font-size: 12px;
+}
+select {
+	color: rgb(110, 110, 110); line-height: 1.5em; font-family: "µ¸¿ò",Dotum,Helvetica,AppleGothic,Sans-serif; font-size: 12px;
+}
+option {
+	color: rgb(110, 110, 110); line-height: 1.5em; font-family: "µ¸¿ò",Dotum,Helvetica,AppleGothic,Sans-serif; font-size: 12px;
+}
+button {
+	color: rgb(110, 110, 110); line-height: 1.5em; font-family: "µ¸¿ò",Dotum,Helvetica,AppleGothic,Sans-serif; font-size: 12px;
+}
+
+
+fieldset {
+	border: 0px currentColor; border-image: none;
+}
+iframe {
+	border: 0px currentColor; border-image: none;
+}
+img {
+	border: 0px currentColor; border-image: none; vertical-align: top;
+}
+li {
+	list-style: none;
+}
+a {
+	color: rgb(110, 110, 110); text-decoration: none;
+}
+a:hover {
+	color: rgb(32, 32, 32); text-decoration: none;
+}
+a:focus {
+	
+}
+button {
+	
+}
+em {
+	font-style: normal;
+}
+address {
+	font-style: normal;
+}
+button {
+	cursor: pointer; _cursor: hand;
+}
+label {
+	cursor: pointer; _cursor: hand;
+}
+button * {
+	position: relative;
+}
+button img {
+	left: -3px; top: -1px;
+}
+textarea {
+	overflow: auto;
+}
+html:first-child select {
+	height: 20px; padding-right: 6px;
+}
+option {
+	padding-right: 6px;
+}
+input {
+	vertical-align: middle;
+}
+textarea {
+	vertical-align: middle;
+}
+select {
+	vertical-align: middle;
+}
+option {
+	vertical-align: middle;
+}
+button {
+	vertical-align: middle;
+}
+label {
+	vertical-align: middle;
+}
+.fix::after {
+	clear: both; display: block; content: "";
+}
+* {
+	-webkit-text-size-adjust: none;
+}
+.input_text {
+	padding-right: 1px;
+}
+textarea {
+	padding-right: 1px;
+}
+.input_check {
+	width: 13px; height: 13px;
+}
+.input_radio {
+	width: 13px; height: 13px;
+}
+.blind {
+	left: 0px; top: -5000px; overflow: hidden; display: block; position: absolute;
+}
+legend {
+	left: 0px; top: -5000px; overflow: hidden; display: block; position: absolute;
+}
+hr {
+	display: none;
+}
+legend {
+	
+}
+:root legend {
+	line-height: 0; font-size: 0px; margin-top: -1px;
+}
+* html .png24 {
+	tmp: expression(setPng24(this));
+}
+.fix::after {
+	clear: both; display: block; content: "";
+}
+.p_relative {
+	position: relative;
+}
+.clear {
+	clear: both;
+}
+.a_left {
+	text-align: left;
+}
+.a_right {
+	text-align: right !important;
+}
+.a_center {
+	text-align: center;
+}
+.float_l {
+	float: left;
+}
+.float_r {
+	float: right;
+}
+.v_middle {
+	vertical-align: middle;
+}
+.bold {
+	font-weight: bold;
+}
+select {
+	vertical-align: middle;
+}
+
+#Insert{
+	margin: auto 0;
+}
