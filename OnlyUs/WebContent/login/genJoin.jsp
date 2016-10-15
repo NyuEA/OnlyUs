@@ -626,7 +626,7 @@
 			//ajax통신
 			jQuery.ajax({
 				type : "GET",
-				url : "idCheck.jsp",
+				url : "idCheck2.jsp",
 				dataType : "text",
 				data : {
 					userid : $("#userid").val()

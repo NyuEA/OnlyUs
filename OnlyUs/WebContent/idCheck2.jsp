@@ -7,7 +7,7 @@
 	SqlSession sess = MySqlSessionFactory.getSession();
 	String userid = null;
 	try {
-		userid = sess.selectOne("bisUser.idCheck", id);
+		userid = sess.selectOne("genUser.idCheck", id);
 	} finally {
 		sess.close();
 	}

@@ -73,9 +73,8 @@
 			<div class="area-form">
 				<span class="i-id">
 					<input type="text" maxlength="15" id="userid" name="userid" placeholder="아이디(사업자번호)">
-					
-					<a href="#" class="btn-check">중복확인</a>
 				</span>
+				<div id="result" ></div>
 				<p class="text-alert" style="display:none;">아이디는 5~15자 이내의 영/숫자 조합으로만 사용 가능합니다.</p>
 			</div>
 			
@@ -91,7 +90,7 @@
 					<input type="password" maxlength="15" id="passwd2" name="passwd2" placeholder="비밀번호 재확인">
 					
 				</span>
-				<p class="text-alert" style="display:none;">입력하신 비밀번호가 일치하지 않습니다.</p>
+				<div id="result2"></div>
 			</div>
 			<div class="area-form">
 				<span class="i-id">
@@ -161,6 +160,40 @@
 	}
 
 	$(document).ready(function() {
+
+		$("#passwd2").on("keyup", function(event) {
+			$("#result2").removeClass();
+			var p = $("#passwd").val();
+			var p2 = $("#passwd2").val();
+			if (p == p2) {
+				$("#result2").text("일치합니다").addClass("blue");
+			} else {
+				$("#result2").text("일치하지않습니다").addClass("red");
+				;
+			}
+		});
+
+		// 아이디 중복체크 Ajax 연동
+		$("#userid").on("keyup", function(event) {
+
+			//Ajax 연동 
+			//ajax통신
+			jQuery.ajax({
+				type : "GET",
+				url : "idCheck.jsp",
+				dataType : "text",
+				data : {
+					userid : $("#userid").val()
+				},
+				success : function(responseData, status, xhr) {
+					console.log(responseData);
+					$("#result").text(responseData);
+				},
+				error : function(xhr, status, error) {
+					console.log("error");
+				}
+			});
+		});
 
 		$("form").on("submit", function(event) {
 
