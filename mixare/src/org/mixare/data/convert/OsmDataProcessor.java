@@ -55,18 +55,17 @@ public class OsmDataProcessor extends DataHandler implements DataProcessor {
 		String[] str = { "mapquestapi", "osm" };
 		return str;
 	}
-	
+
 	@Override
 	public boolean matchesRequiredType(String type) {
-		if(type.equals(DataSource.TYPE.OSM.name())){
+		if (type.equals(DataSource.TYPE.OSM.name())) {
 			return true;
 		}
 		return false;
 	}
 
 	@Override
-	public List<Marker> load(String rawData, int taskId, int colour)
-			throws JSONException {
+	public List<Marker> load(String rawData, int taskId, int colour) throws JSONException {
 		Element root = convertToXmlDocument(rawData).getDocumentElement();
 
 		List<Marker> markers = new ArrayList<Marker>();
@@ -79,29 +78,17 @@ public class OsmDataProcessor extends DataHandler implements DataProcessor {
 			for (int j = 0; j < tags.getLength(); j++) {
 				Node tag = tags.item(j);
 				if (tag.getNodeType() != Node.TEXT_NODE) {
-					String key = tag.getAttributes().getNamedItem("k")
-							.getNodeValue();
+					String key = tag.getAttributes().getNamedItem("k").getNodeValue();
 					if (key.equals("name")) {
 
-						String name = tag.getAttributes().getNamedItem("v")
-								.getNodeValue();
+						String name = tag.getAttributes().getNamedItem("v").getNodeValue();
 						String id = att.getNamedItem("id").getNodeValue();
-						double lat = Double.valueOf(att.getNamedItem("lat")
-								.getNodeValue());
-						double lon = Double.valueOf(att.getNamedItem("lon")
-								.getNodeValue());
+						double lat = Double.valueOf(att.getNamedItem("lat").getNodeValue());
+						double lon = Double.valueOf(att.getNamedItem("lon").getNodeValue());
 
-						Log.v(MixView.TAG, "OSM Node: " + name + " lat " + lat
-								+ " lon " + lon + "\n");
+						Log.v(MixView.TAG, "OSM Node: " + name + " lat " + lat + " lon " + lon + "\n");
 
-						Marker ma = new NavigationMarker(
-								id,
-								name,
-								lat,
-								lon,
-								0,
-								"http://www.openstreetmap.org/?node="+ id,
-								taskId, colour);
+						Marker ma = new NavigationMarker(id, name, lat, lon, 0,"http://www.openstreetmap.org/?node=" + id, taskId, colour);
 						markers.add(ma);
 
 						// skip to next node
@@ -116,8 +103,7 @@ public class OsmDataProcessor extends DataHandler implements DataProcessor {
 	public Document convertToXmlDocument(String rawData) {
 		Document doc = null;
 		try {
-			DocumentBuilder builder = DocumentBuilderFactory.newInstance()
-					.newDocumentBuilder();
+			DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			// Document doc = builder.parse(is);d
 			doc = builder.parse(new InputSource(new StringReader(rawData)));
 		} catch (Exception e) {
