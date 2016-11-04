@@ -1,4 +1,20 @@
-
+-- 등록문의 게시판 테이블
+create table RegistBoard
+( registNo varchar2(10) primary key,
+  bisname varchar2(10) not null,
+  addr varchar2(500) not null,
+  phone1 varchar2(3) not null,
+  phone2 varchar2(4) not null,
+  phone3 varchar2(4) not null,
+  content varchar2(4000) not null);
+  
+  commit;
+  --일반문의 게시판 테이블
+    create table Board
+( BoardNo varchar2(10) primary key,
+  title varchar2(20) not null,
+  content varchar2(4000) not null);
+  
 --업체 회원 테이블
 create table bisUser
 ( bisid varchar2(10) primary key,
