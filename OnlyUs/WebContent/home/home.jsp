@@ -133,36 +133,36 @@
 						<DIV class="numberBackground">
 							<P>1</P>
 						</DIV>
-						<DIV class="listTitle">여기저기 쿠폰 드롭</DIV>
-						<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV>
+						<DIV class="listTitle">보이는 쿠폰은 터치!</DIV>
+						<DIV class="listWord">검색할 필요도 없이 카메라로 스캔만 하면 OK</DIV>
 					</LI>
 					<LI>
 						<DIV class="numberBackground">
 							<P>2</P>
 						</DIV>
-						<DIV class="listTitle">여기저기 쿠폰 드롭</DIV>
-						<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV>
+						<DIV class="listTitle">쿠폰의 손쉬운 사용 </DIV>
+						<DIV class="listWord">편리하게 쿠폰 사용가능</DIV>
 					</LI>
 					<LI>
 						<DIV class="numberBackground">
 							<P>3</P>
 						</DIV>
-						<DIV class="listTitle">여기저기 쿠폰 드롭</DIV>
-						<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV>
+						<DIV class="listTitle">주변의 가까운 매장 찾기</DIV>
+						<DIV class="listWord">카메라를 통한 거리확인과 위치 확인</DIV>
 					</LI>
 					<LI>
 						<DIV class="numberBackground">
 							<P>4</P>
 						</DIV>
-						<DIV class="listTitle">여기저기 쿠폰 드롭</DIV>
-						<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV>
+						<DIV class="listTitle">증강현실 체험과 재미</DIV>
+						<DIV class="listWord">카메라를 통한 쿠폰찾기에서 오는 즐거움</DIV>
 					</LI>
 					<LI>
 						<DIV class="numberBackground">
 							<P>5</P>
 						</DIV>
-						<DIV class="listTitle">여기저기 쿠폰 드롭</DIV>
-						<DIV class="listWord">요깄넹을 이용하는 고객은 아무런 액션없이 시스템에서 쿠폰보기 가능</DIV>
+						<DIV class="listTitle">불편한 검색은 더이상 NO</DIV>
+						<DIV class="listWord">몇번의 클릭으로 매장 정보까지 ~</DIV>
 					</LI>
 					
 
@@ -240,8 +240,9 @@
 				</H3>
 				<P class="featute_note">쿠폰기능까지!</P>
 				<OL>
-					<LI><SPAN class="num">1</SPAN>첫번째 장점</LI>
-					
+					<LI><SPAN class="num">1</SPAN>스마트폰을 이용한 간단 광고서비스</LI>
+					<LI><SPAN class="num">2</SPAN>AR을 이용한 흥미유발</LI>
+					<LI><SPAN class="num">3</SPAN>쉬운 사용법</LI>
 				</OL>
 			</DIV>
 			<!--//cont01-->

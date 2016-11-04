@@ -14,6 +14,8 @@ create table bisUser
   select * from bisUser;
   
   alter table bisUser add(approval char(1) default 'N');
+  alter table bisUser add(X_coordinate varchar2(15));
+  alter table bisUser add(Y_coordinate varchar2(15));
   
 --충남
 insert into bisUser(bisid, passwd, bisname, post1, post2, addr1, addr2, phone1, phone2, phone3)
