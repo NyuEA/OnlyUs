@@ -1,8 +1,4 @@
 <%@page import="com.dto.GenUserDTO"%>
-<<<<<<< HEAD
-=======
-
->>>>>>> branch 'master' of https://github.com/NyuEA/OnlyUs
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 

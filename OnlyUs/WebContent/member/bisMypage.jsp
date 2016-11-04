@@ -50,7 +50,11 @@
 		<li><a href="BisCouponListServlet" id="subm2">쿠폰관리</a></li>
 		<li><a href="TopTenServlet" id="subm2">TOP10</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<li><a href="home_.jsp?" id="subm1">서비스소개</a></li>
-		<li><a href="board_.jsp" id="subm2">문의하기</a></li>
+		<li><a href="" id="subm2">문의하기</a>
+				<ul>
+					<li><a href="board_.jsp">등록문의</a></li>
+					<li><a href="write_.jsp">일반문의</a></li>
+				</ul></li>
 
 
 	</ul>

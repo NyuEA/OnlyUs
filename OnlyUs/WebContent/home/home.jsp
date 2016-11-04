@@ -46,70 +46,69 @@
 <%
 	}
 %>
-	<div id="blogMenu">
-<div class="nav">
-	<h2 class="blind">로컬네이게이션</h2>
+<div id="blogMenu">
+	<div class="nav">
+		<h2 class="blind">로컬네이게이션</h2>
 
-	<ul class="nav_ul fix">
-		<!-- 	☆ 현재페이지 표시 class="on" -->
-		<%
-			String userid = "";
-			GenUserDTO dto = (GenUserDTO) session.getAttribute("login");
-			BisUserDTO bisdto = (BisUserDTO) session.getAttribute("bislogin");
-			if (dto != null) {
-				userid = dto.getUserid();
-				System.out.println(userid);
-			}
-		%>
-		<%
-			if (dto == null && bisdto == null) {
-		%>
-		<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
-		<li><a href="board_.jsp" id="subm2">문의하기</a>
-		
-		<ul>
-			<li><a href="#">등록문의</a></li>
-			<li><a href="#">일반문의</a></li>
-</ul>
-</li>
-		<%
-			} else if (dto != null && "admin".equals(userid)) {
-		%>
-		<li><a href="JoinMServlet" id="subm2">가입 관리</a></li>
-		<li><a href="BisMServlet" id="subm2">업체 관리</a></li>
-		<li><a href="GenMServlet" id="subm1">회원 관리</a></li>
-		<li><a href="" id="subm2">문의사항관리</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		<%
-			} else if (dto != null) {
-		%>
-		<li><a href="CouponListServlet" id="subm2">내 쿠폰함</a></li>
-		<li><a href="TopTenServlet" id="subm2">TOP10</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
-		<li><a href="board_.jsp" id="subm2">문의하기</a>
-		<ul><li><a href="#">등록문의</a></li>
-			<li><a href="#">일반문의</a></li></ul>
-			</li>
-		<%
-			} else {//end if
-		%>
-		<li><a href="BisCouponListServlet" id="subm2">쿠폰관리</a></li>
-		<li><a href="TopTenServlet" id="subm2">TOP10</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
-		<li><a href="board_.jsp" id="subm2">문의하기</a>
-		<ul>
-			<li><a href="#">등록문의</a></li>
-			<li><a href="#">일반문의</a></li>
-</ul></li>
-		<%
-			}
-		%>
+		<ul class="nav_ul fix">
+			<!-- 	☆ 현재페이지 표시 class="on" -->
+			<%
+				String userid = "";
+				GenUserDTO dto = (GenUserDTO) session.getAttribute("login");
+				BisUserDTO bisdto = (BisUserDTO) session.getAttribute("bislogin");
+				if (dto != null) {
+					userid = dto.getUserid();
+					System.out.println(userid);
+				}
+			%>
+			<%
+				if (dto == null && bisdto == null) {
+			%>
+			<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
+			<li><a href="" id="subm2">문의하기</a>
+				<ul>
+					<li><a href="board_.jsp">등록문의</a></li>
+					<li><a href="write_.jsp">일반문의</a></li>
+				</ul></li>
+			<%
+				} else if (dto != null && "admin".equals(userid)) {
+			%>
+			<li><a href="JoinMServlet" id="subm2">가입 관리</a></li>
+			<li><a href="BisMServlet" id="subm2">업체 관리</a></li>
+			<li><a href="GenMServlet" id="subm1">회원 관리</a></li>
+			<li><a href="" id="subm2">문의사항관리</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<%
+				} else if (dto != null) {
+			%>
+			<li><a href="CouponListServlet" id="subm2">내 쿠폰함</a></li>
+			<li><a href="TopTenServlet" id="subm2">TOP10</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
+			<li><a href="" id="subm2">문의하기</a>
+				<ul>
+					<li><a href="board_.jsp">등록문의</a></li>
+					<li><a href="write_.jsp">일반문의</a></li>
+				</ul></li>
+			<%
+				} else {//end if
+			%>
+			<li><a href="BisCouponListServlet" id="subm2">쿠폰관리</a></li>
+			<li><a href="TopTenServlet" id="subm2">TOP10</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
+			<li><a href="" id="subm2">문의하기</a>
+				<ul>
+					<li><a href="board_.jsp">등록문의</a></li>
+					<li><a href="write_.jsp">일반문의</a></li>
+				</ul></li>
+			<%
+				}
+			%>
 
-	</ul>
-</div>
+		</ul>
+	</div>
 </div>
 
 <DIV id="wrapper">
-	
+
 
 	<HR>
 
@@ -125,7 +124,7 @@
 		<DIV class="content02">
 			<!--쿠폰제는 왜?-->
 			<H3 class="title">
-				<img src="images/main_1.png" alt="특장점"/>
+				<img src="images/main_1.png" alt="특장점" />
 			</H3>
 			<DIV class="cont01">
 				<UL>
@@ -140,7 +139,7 @@
 						<DIV class="numberBackground">
 							<P>2</P>
 						</DIV>
-						<DIV class="listTitle">쿠폰의 손쉬운 사용 </DIV>
+						<DIV class="listTitle">쿠폰의 손쉬운 사용</DIV>
 						<DIV class="listWord">편리하게 쿠폰 사용가능</DIV>
 					</LI>
 					<LI>
@@ -164,7 +163,7 @@
 						<DIV class="listTitle">불편한 검색은 더이상 NO</DIV>
 						<DIV class="listWord">몇번의 클릭으로 매장 정보까지 ~</DIV>
 					</LI>
-					
+
 
 				</UL>
 			</DIV>
@@ -230,7 +229,7 @@
 			</DIV>
 		</DIV>
 		<!--4대 서비스 종료-->
-		
+
 		<DIV class="content03">
 			<DIV class="cont01">
 				<!--티지오넷 선택-->
@@ -353,14 +352,10 @@
 	</SCRIPT>
 </DIV>
 
-<a
-href="#"
-title="Back to Top"
-style="display:scroll;position:fixed;bottom:30px;right:5px;"
-onfocus='this.blur()'>
-
-<img src="images/topback.png" style="width:60px; height:60px; border-radius: 15px;"
-/>
+<a href="#" title="Back to Top"
+	style="display: scroll; position: fixed; bottom: 30px; right: 5px;"
+	onfocus='this.blur()'> <img src="images/topback.png"
+	style="width: 60px; height: 60px; border-radius: 15px;" />
 
 </a>
 <!--카운터-->

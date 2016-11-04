@@ -13,8 +13,8 @@
 	if (logout != null) {
 %>
 <script type="text/javascript">
-      var str = "<%=logout%>";
-alert("<%=logout%>");
+	var str = "<%=logout%>";
+	alert("<%=logout%>");
 </script>
 <%
 	}
@@ -29,15 +29,24 @@ alert("<%=logout%>");
 		<%
 			if (dto == null) {
 		%>
-		<li><a class="on" href="home_.jsp?" id="subm1">서비스소개</a></li>
-		<li><a href="board_.jsp" id="subm2">문의하기</a></li>
+		<li><a href="home_.jsp?" id="subm1">서비스소개</a></li>
+		<li><a class="on" href="" id="subm2">문의하기</a>
+			<!-- <ul>
+				<li><a href="board_.jsp">등록문의</a></li>
+				<li><a href="write_.jsp">일반문의</a></li>
+			</ul> -->
+			</li>
 		<%
 			} else {
 		%>
 		<li><a href="CouponListServlet" id="subm2">내 쿠폰함</a></li>
 		<li><a href="TopTenServlet" id="subm2">TOP10</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<li><a href="home_.jsp?" id="subm1">서비스소개</a></li>
-		<li><a class="on" href="board_.jsp" id="subm2">문의하기</a></li>
+		<li><a class="on" href="" id="subm2">문의하기</a>
+			<ul>
+				<li><a href="board_.jsp">등록문의</a></li>
+				<li><a href="write_.jsp">일반문의</a></li>
+			</ul></li>
 		<%
 			} //end if
 		%>
@@ -60,10 +69,10 @@ alert("<%=logout%>");
 		</tr>
 		<tr>
 			<td><input type="submit" value="글쓰기"></td>
-			
+
 		</tr>
 	</table>
-		
+
 </form>
 <br>
 <a href="BoardListServlet">목록보기</a>
