@@ -134,10 +134,7 @@ th {
 
 
 
-		<table width="60%" cellpadding="5" cellspacing="0" border="0"
-			align="center">
-
-
+		<table width="60%" cellpadding="5" cellspacing="0" border="0" align="center">
 			<tr height="10">
 				<td colspan="4"></td>
 			</tr>
