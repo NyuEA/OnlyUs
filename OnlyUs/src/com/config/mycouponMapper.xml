@@ -6,8 +6,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<select id="myCoupon" parameterType="string" resultType="MycouponDTO">
 		select
-		coupon.couid, DOWNCOUPON.dcouid, to_char(COUPON.period_f,'YYYY/MM/dd') period_f,
-		to_char(COUPON.period_t,'YYYY/MM/dd') period_t, BISUSER.BISNAME,
+		coupon.couid, DOWNCOUPON.dcouid, to_char(COUPON.period_f,'YYYY/MM/dd')
+		period_f,
+		to_char(COUPON.period_t,'YYYY/MM/dd') period_t,
+		BISUSER.BISNAME,
 		DOWNCOUPON.use_yn, DOWNCOUPON.userid, COUPON.content
 		from DOWNCOUPON ,
 		COUPON , BISUSER
@@ -16,53 +18,74 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		= BISUSER.BISID and userid = #{userid}
 	</select>
 	<select id="BisCoupon" parameterType="string" resultType="CouponDTO">
-	select couid, amount, period_f, period_t, show_yn, clickcount, content
-    from coupon
-    where bisid = #{bisid}
+		select
+		couid, amount, period_f, period_t, show_yn, clickcount, content
+		from
+		coupon
+		where bisid = #{bisid}
 	</select>
 	<delete id="deleteCoupon" parameterType="string">
-	delete from coupon where couid=#{couid}
+		delete from coupon where
+		couid=#{couid}
 	</delete>
 	<delete id="deleteMyCoupon" parameterType="string">
-	delete from downCoupon where dcouid=#{dcouid}
+		delete from downCoupon
+		where dcouid=#{dcouid}
 	</delete>
 	<select id="first10" resultType="Top10DTO">
 		select rownum as ranking,
 		CLICKCOUNT, BISNAME, CONTENT,
-		PERIOD_F, PERIOD_T, COUID
+		PERIOD_F,
+		PERIOD_T, COUID
 		from ( select COUPON.CLICKCOUNT
 		CLICKCOUNT,
 		BISUSER.BISNAME BISNAME, COUPON.CONTENT CONTENT,
 		COUPON.PERIOD_F
 		PERIOD_F, COUPON.PERIOD_T PERIOD_T, COUPON.COUID COUID
-		from COUPON, BISUSER
+		from COUPON,
+		BISUSER
 		WHERE COUPON.BISID = BISUSER.BISID
-		order by COUPON.CLICKCOUNT desc)
+		order by COUPON.CLICKCOUNT
+		desc)
 		WHERE <![CDATA[rownum <= 10]]>
 	</select>
 	<update id="update_YN" parameterType="Hashmap">
 		update coupon
 		set
-		show_yn = #{manage_yn}
+		show_yn =
+		#{manage_yn}
 		where couid = #{couid}
 	</update>
 	<select id="serch10" resultType="Top10DTO" parameterType="String">
 		select
 		rownum as ranking,
 		CLICKCOUNT, BISNAME, CONTENT,
-		PERIOD_F, PERIOD_T, COUID
+		PERIOD_F,
+		PERIOD_T, COUID
 		from ( select COUPON.CLICKCOUNT
 		CLICKCOUNT,
 		BISUSER.BISNAME BISNAME, COUPON.CONTENT CONTENT,
 		COUPON.PERIOD_F
 		PERIOD_F, COUPON.PERIOD_T PERIOD_T, COUPON.COUID COUID
-		from COUPON, BISUSER
+		from COUPON,
+		BISUSER
 		WHERE COUPON.BISID = BISUSER.BISID
-		and COUPON.BISID = (select BISUSER.BISID from BISUSER where BISUSER.ADDR1
+		and COUPON.BISID = (select
+		BISUSER.BISID from BISUSER where BISUSER.ADDR1
 		like #{searchName}||'%')
 		order by COUPON.CLICKCOUNT desc)
 		WHERE <![CDATA[rownum <= 10]]>
 	</select>
+	<select id="getcouid" parameterType="String" resultType="String">
+
+		select couid from coupon where bisid = (select bisid from BISUSER where
+		bisname = #{title})
+	</select>
+	<insert id="downcoupon" parameterType="hashmap">
+		insert into downCoupon
+		values(dco_sequences.nextval , #{couid} , 'n',
+		#{userid})
+	</insert>
 </mapper>
 
 

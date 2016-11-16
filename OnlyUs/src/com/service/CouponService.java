@@ -123,6 +123,37 @@ public class CouponService {
 		}
 		return list;	
 	}
+	public String getcouid(String title) throws CommonException{
+		String couid = null;
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			couid = session.selectOne("getcouid",title);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("couid 가져오기 실패");
+		} finally {
+			session.close();
+		}
+		return couid;
+		
+	}
+	public void downcoupon(String userid, String couid) throws CommonException {
+		SqlSession session = MySqlSessionFactory.getSession();
+		HashMap<String, String> map = new HashMap<>();
+		map.put("userid", userid);
+		map.put("couid", couid);
+		try {
+			int n = session.insert("downcoupon", map);
+			session.commit();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new CommonException("회원등록 실패");
+		} finally {
+			session.close();
+		}
+
+	}// end addMember
 
 
 }
