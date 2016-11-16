@@ -6,7 +6,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<select id="myCoupon" parameterType="string" resultType="MycouponDTO">
 		select
-		DOWNCOUPON.dcouid, to_char(COUPON.period_f,'YYYY/MM/dd') period_f,
+		coupon.couid, DOWNCOUPON.dcouid, to_char(COUPON.period_f,'YYYY/MM/dd') period_f,
 		to_char(COUPON.period_t,'YYYY/MM/dd') period_t, BISUSER.BISNAME,
 		DOWNCOUPON.use_yn, DOWNCOUPON.userid, COUPON.content
 		from DOWNCOUPON ,
@@ -22,6 +22,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	<delete id="deleteCoupon" parameterType="string">
 	delete from coupon where couid=#{couid}
+	</delete>
+	<delete id="deleteMyCoupon" parameterType="string">
+	delete from downCoupon where dcouid=#{dcouid}
 	</delete>
 	<select id="first10" resultType="Top10DTO">
 		select rownum as ranking,

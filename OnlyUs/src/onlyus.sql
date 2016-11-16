@@ -36,6 +36,12 @@ create table bisUser
 --충남
 insert into bisUser(bisid, passwd, bisname, post1, post2, addr1, addr2, phone1, phone2, phone3)
 values('s1','s1','맘스터치' ,'310','83','충남 천안 서북구','신당동 271-9 ','041','554','3392'); 
+insert into bisUser(bisid, passwd, bisname, post1, post2, addr1, addr2, phone1, phone2, phone3)
+values('test1','test1','마이커피랩' ,'111','111','충남 천안 서북구','신당동 251-20','041','554','3392'); 
+insert into bisUser(bisid, passwd, bisname, post1, post2, addr1, addr2, phone1, phone2, phone3)
+values('test2','test2','천안당호두과자' ,'111','111','충남 천안 동남구','대흥동 299-3 ','041','555','5111'); 
+insert into bisUser(bisid, passwd, bisname, post1, post2, addr1, addr2, phone1, phone2, phone3)
+values('test3','test3','풍경' ,'111','111','충남 천안 서북구','업성동 153-1','041','588','8270'); 
 --서울
 insert into bisUser(bisid, passwd, bisname, post1, post2, addr1, addr2, phone1, phone2, phone3) 
 values('s2','s2','배스킨라빈스 압구정2호점' ,'310','83','서울특별시 강남구 압구정로28길 11 ','서울특별시 강남구 신사동 581-9','02','511','9100');
@@ -110,6 +116,16 @@ drop table bisUser;
     bisid varchar2(10),
     constraint coupon_bisuser_fk foreign key(bisid) references bisUser(bisid)
   );
+  
+  
+  
+  
+  --test
+  insert into coupon values('ctest1','9','2016-10-01','2016-12-01','N',0,'test1','아메리카노 무료 사이즈업'); 
+  insert into coupon values('ctest2','9','2016-10-01','2016-12-01','N',0,'test2','호두과자 맛보기'); 
+  insert into coupon values('ctest3','9','2016-10-01','2016-12-01','N',0,'test3','공기밥 무료!'); 
+  
+  
   drop table coupon;
   insert into coupon values('c1','9','2016-10-01','2016-11-01','N',0,'s1','싸이버거 10% 할인권'); 
   insert into coupon values('c2','9','2016-10-01','2016-11-01','N',0,'s1','햄버거 주문시 콜라 증정'); 
@@ -190,3 +206,6 @@ commit;
 		where DOWNCOUPON.COUID = COUPON.COUID 
     and COUPON.BISID = BISUSER.BISID
     and userid = 'ydw';
+    add constraint downcoupon_couid_fk foreign key (couid) 
+references coupon (couid) on delete cascade;
+COMMIT;
